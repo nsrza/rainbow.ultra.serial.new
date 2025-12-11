@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Ultra - Literary Version | By Fanli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-content: #111118;
+            --text-primary: #e8e8f0;
+            --text-secondary: #888;
+            --accent-gold: #ffd700;
+            --accent-purple: #da77f2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Crimson Pro', Georgia, serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.9;
+            font-size: 19px;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(180deg, var(--bg-content) 0%, var(--bg-dark) 100%);
+            padding: 60px 20px 40px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,215,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header .subtitle {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .header .version-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(255,215,0,0.1);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7em;
+            color: var(--accent-gold);
+            letter-spacing: 0.1em;
+        }
+
+        .nav-links {
+            margin-top: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.85em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .word-count {
+            margin-top: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75em;
+            color: var(--text-secondary);
+        }
+
+        .content {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 60px 30px 100px;
+        }
+
+        .content h1 {
+            font-size: 2em;
+            font-weight: 400;
+            margin: 60px 0 20px;
+            color: var(--accent-gold);
+        }
+
+        .content h2 {
+            font-size: 1.6em;
+            font-weight: 400;
+            margin: 50px 0 15px;
+            color: var(--accent-purple);
+        }
+
+        .content h3 {
+            font-size: 1.3em;
+            font-weight: 500;
+            margin: 40px 0 10px;
+            color: var(--text-primary);
+        }
+
+        .content p {
+            margin-bottom: 1.5em;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .content hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,215,0,0.3), transparent);
+            margin: 40px 0;
+        }
+
+        .content blockquote {
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        .content em {
+            color: var(--accent-purple);
+        }
+
+        .content strong {
+            color: var(--accent-gold);
+            font-weight: 500;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 100px;
+            color: var(--text-secondary);
+        }
+
+        .loading::after {
+            content: '';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-purple));
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--bg-content);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+            color: var(--accent-gold);
+            font-size: 1.5em;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background: rgba(255,215,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progress"></div>
+
+    <header class="header">
+        <h1>RAINBOW ULTRA</h1>
+        <p class="subtitle">A Novel by Fanli</p>
+        <span class="version-badge">LITERARY VERSION</span>
+        <div class="word-count" id="wordCount">Loading...</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="ya.html">YA Version</a>
+        </nav>
+    </header>
+
+    <main class="content" id="content">
+        <div class="loading">Loading story</div>
+    </main>
+
+    <div class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+    <script>
+        // Load and render markdown
+        fetch('LITERARY_NOVEL.md')
+            .then(response => {
+                if (!response.ok) throw new Error('File not found');
+                return response.text();
+            })
+            .then(markdown => {
+                document.getElementById('content').innerHTML = marked.parse(markdown);
+
+                // Count words
+                const wordCount = markdown.split(/\s+/).length;
+                document.getElementById('wordCount').textContent =
+                    wordCount.toLocaleString() + ' words';
+            })
+            .catch(error => {
+                document.getElementById('content').innerHTML =
+                    '<p style="color: #ff6b6b; text-align: center;">Story file not available yet. Check back soon!</p>';
+                document.getElementById('wordCount').textContent = '';
+            });
+
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+
+            // Back to top button
+            document.getElementById('backToTop').classList.toggle('visible', scrollTop > 500);
+        });
+    </script>
+</body>
+</html>

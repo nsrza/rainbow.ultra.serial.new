@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAINBOW.ULTRA - A Novel by Fanli Ramsey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0f;
+            --text-primary: #e8e8f0;
+            --text-secondary: #888;
+            --text-muted: #555;
+            --accent-red: #ff6b6b;
+            --accent-orange: #ffa94d;
+            --accent-green: #69db7c;
+            --accent-cyan: #66d9e8;
+            --accent-purple: #da77f2;
+            --accent-pink: #f783ac;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', Georgia, serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.9;
+            font-size: 19px;
+            font-weight: 400;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Center crystal - source of all light */
+        .center-crystal {
+            position: fixed;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            pointer-events: none;
+        }
+
+        .crystal-thread {
+            width: 1px;
+            height: 15px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255, 255, 255, 0.5));
+            margin: 0 auto;
+        }
+
+        .crystal-container {
+            position: relative;
+            animation: crystal-rotate 25s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes crystal-rotate {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        /* The crystal itself - faceted gem */
+        .crystal-body {
+            width: 24px;
+            height: 50px;
+            position: relative;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+        }
+
+        .crystal-facet {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.98) 0%,
+                rgba(255, 255, 255, 0.9) 30%,
+                rgba(255, 255, 255, 0.7) 60%,
+                rgba(255, 255, 255, 0.4) 100%
+            );
+            clip-path: polygon(50% 0%, 85% 25%, 100% 50%, 85% 80%, 50% 100%, 15% 80%, 0% 50%, 15% 25%);
+        }
+
+        .crystal-facet:nth-child(1) { transform: rotateY(0deg); }
+        .crystal-facet:nth-child(2) { transform: rotateY(60deg); opacity: 0.85; }
+        .crystal-facet:nth-child(3) { transform: rotateY(120deg); opacity: 0.7; }
+        .crystal-facet:nth-child(4) { transform: rotateY(180deg); opacity: 0.55; }
+
+        /* Inner light - the sun through */
+        .crystal-inner-light {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 30%, transparent 70%);
+            border-radius: 50%;
+            animation: inner-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes inner-glow {
+            0%, 100% { opacity: 0.9; transform: translateX(-50%) scale(1); }
+            50% { opacity: 1; transform: translateX(-50%) scale(1.4); }
+        }
+
+        /* Crystal glow - radiates outward */
+        .crystal-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 20%, transparent 50%);
+            pointer-events: none;
+            animation: glow-pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+        }
+
+        /* Rainbow light that fills the whole screen - emanating from crystal */
+        .rainbow-screen-light {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .rainbow-beam {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            width: 3px;
+            transform-origin: top center;
+            animation: beam-rotate 30s linear infinite;
+        }
+
+        @keyframes beam-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .rainbow-beam::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.8) 0%,
+                rgba(255, 255, 255, 0.3) 5%,
+                transparent 5%
+            );
+        }
+
+        .rainbow-beam::after {
+            content: '';
+            position: absolute;
+            top: 5%;
+            left: -80px;
+            width: 160px;
+            height: 95%;
+            filter: blur(30px);
+        }
+
+        /* Different colored beams spreading across entire viewport */
+        .rainbow-beam:nth-child(1) { animation-delay: 0s; }
+        .rainbow-beam:nth-child(1)::after {
+            background: linear-gradient(180deg, transparent 0%, rgba(255,200,200,0.25) 30%, rgba(255,180,180,0.15) 60%, transparent 100%);
+            height: 120vh;
+        }
+
+        .rainbow-beam:nth-child(2) { animation-delay: -3.75s; }
+        .rainbow-beam:nth-child(2)::after {
+            background: linear-gradient(180deg, transparent 0%, rgba(255,230,180,0.22) 30%, rgba(255,220,160,0.12) 60%, transparent 100%);
+            height: 130vh;
+        }
+
+        .rainbow-beam:nth-child(3) { animation-delay: -7.5s; }
+        .rainbow-beam:nth-child(3)::after {
+            background: linear-gradient(180deg, transparent 0%, rgba(255,255,200,0.18) 30%, rgba(255,255,180,0.1) 60%, transparent 100%);
+            height: 140vh;
+        }
+
+        .rainbow-beam:nth-child(4) { animation-delay: -11.25s; }
+        .rainbow-beam:nth-child(4)::after {
+            background: linear-gradient(180deg, transparent 0%, rgba(200,255,200,0.18) 30%, rgba(180,255,180,0.1) 60%, transparent 100%);
+            height: 125vh;
+        }
+
+        .rainbow-beam:nth-child(5) { animation-delay: -15s; }
+        .rainbow-beam:nth-child(5)::after {
+            background: linear-gradient(180deg, transparent 0%, rgba(180,230,255,0.22) 30%, rgba(160,210,255,0.12) 60%, transparent 100%);
+            height: 135vh;
+        }
+
+        .rainbow-beam:nth-child(6) { animation-delay: -18.75s; }
+        .rainbow-beam:nth-child(6)::after {
+            background: linear-gradient(180deg, transparent 0%, rgba(200,180,255,0.25) 30%, rgba(190,170,255,0.15) 60%, transparent 100%);
+            height: 145vh;
+        }
+
+        .rainbow-beam:nth-child(7) { animation-delay: -22.5s; }
+        .rainbow-beam:nth-child(7)::after {
+            background: linear-gradient(180deg, transparent 0%, rgba(240,180,255,0.2) 30%, rgba(230,170,255,0.12) 60%, transparent 100%);
+            height: 130vh;
+        }
+
+        .rainbow-beam:nth-child(8) { animation-delay: -26.25s; }
+        .rainbow-beam:nth-child(8)::after {
+            background: linear-gradient(180deg, transparent 0%, rgba(255,200,220,0.2) 30%, rgba(255,190,210,0.12) 60%, transparent 100%);
+            height: 120vh;
+        }
+
+        /* Crystal background - multiple light sources */
+        .bg-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse at 50% -5%, rgba(255, 255, 255, 0.12) 0%, transparent 35%),
+                radial-gradient(ellipse at 15% 10%, rgba(255, 255, 255, 0.06) 0%, transparent 25%),
+                radial-gradient(ellipse at 85% 15%, rgba(255, 255, 255, 0.06) 0%, transparent 25%),
+                radial-gradient(ellipse at 30% 60%, rgba(255, 255, 255, 0.03) 0%, transparent 20%),
+                radial-gradient(ellipse at 70% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 20%);
+        }
+
+        /* Crystal shape */
+        .crystal {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .crystal::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 20px solid rgba(255, 255, 255, 0.06);
+            filter: blur(0.5px);
+        }
+
+        .crystal::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 12px solid rgba(255, 255, 255, 0.04);
+        }
+
+        /* Prism light refraction - white beam splitting into spectrum */
+        .prism-light {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+            width: 2px;
+            height: 280px;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.7) 0%,
+                rgba(255, 255, 255, 0.5) 20%,
+                rgba(255, 255, 255, 0.2) 40%,
+                transparent 40%
+            );
+            transform-origin: top center;
+            animation: prism-refract 20s ease-in-out infinite;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+        }
+
+        .prism-light::before {
+            content: '';
+            position: absolute;
+            top: 35%;
+            left: -25px;
+            width: 50px;
+            height: 200px;
+            background: linear-gradient(
+                140deg,
+                transparent 0%,
+                rgba(255, 120, 120, 0.25) 12%,
+                rgba(255, 200, 120, 0.22) 24%,
+                rgba(255, 255, 160, 0.18) 36%,
+                rgba(180, 255, 180, 0.15) 48%,
+                rgba(160, 220, 255, 0.18) 60%,
+                rgba(180, 160, 255, 0.22) 72%,
+                rgba(220, 160, 255, 0.20) 84%,
+                transparent 100%
+            );
+            filter: blur(12px);
+            transform: skewX(-20deg);
+        }
+
+        .prism-light::after {
+            content: '';
+            position: absolute;
+            top: 38%;
+            left: -40px;
+            width: 80px;
+            height: 180px;
+            background: linear-gradient(
+                145deg,
+                transparent 0%,
+                rgba(255, 100, 100, 0.12) 14%,
+                rgba(255, 180, 100, 0.10) 28%,
+                rgba(255, 255, 150, 0.08) 42%,
+                rgba(150, 255, 150, 0.06) 56%,
+                rgba(150, 200, 255, 0.08) 70%,
+                rgba(180, 150, 255, 0.10) 84%,
+                transparent 100%
+            );
+            filter: blur(20px);
+            transform: skewX(-25deg);
+        }
+
+        @keyframes prism-refract {
+            0%, 100% {
+                opacity: 0.5;
+                transform: rotate(-8deg);
+            }
+            50% {
+                opacity: 0.9;
+                transform: rotate(8deg);
+            }
+        }
+
+        /* Crystal sparkle */
+        .crystal-sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 2;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            box-shadow:
+                0 0 3px white,
+                0 0 6px white,
+                0 0 12px rgba(255, 255, 255, 0.5);
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Floating light motes - like dust in sunlight */
+        .light-mote {
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+            animation: drift linear infinite;
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-10vh) translateX(30px);
+                opacity: 0;
+            }
+        }
+
+        /* Spectral shimmer on scroll */
+        .spectral-edge {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 3px;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 1;
+            background: linear-gradient(
+                180deg,
+                transparent 0%,
+                rgba(255, 200, 200, 0.2) 20%,
+                rgba(255, 255, 200, 0.15) 40%,
+                rgba(200, 255, 200, 0.1) 60%,
+                rgba(200, 220, 255, 0.15) 80%,
+                transparent 100%
+            );
+            opacity: 0.5;
+            filter: blur(2px);
+        }
+
+        /* Page container */
+        .page-container {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 2rem 6rem;
+        }
+
+        /* The page */
+        .page {
+            max-width: 680px;
+            width: 100%;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typography */
+        .page-content {
+            font-size: 19px;
+            line-height: 1.9;
+        }
+
+        .page-content p {
+            margin-bottom: 1.6rem;
+            text-align: left;
+        }
+
+        .page-content em {
+            color: rgba(200, 230, 255, 0.95);
+            font-style: italic;
+        }
+
+        .page-content strong {
+            color: rgba(255, 245, 230, 0.95);
+            font-weight: 500;
+        }
+
+        /* Chapter titles */
+        .chapter-title {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg,
+                rgba(255, 255, 255, 0.95),
+                rgba(255, 245, 250, 0.9),
+                rgba(250, 250, 255, 0.95)
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .chapter-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Section breaks */
+        .section-break {
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 1.2rem;
+            letter-spacing: 0.8rem;
+            color: var(--text-muted);
+            opacity: 0.6;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: rgba(255,255,255,0.05);
+            z-index: 1000;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg,
+                rgba(255, 220, 220, 0.8),
+                rgba(255, 255, 220, 0.7),
+                rgba(220, 255, 220, 0.6),
+                rgba(220, 240, 255, 0.7),
+                rgba(240, 220, 255, 0.8)
+            );
+            width: 0%;
+            transition: width 0.2s ease;
+            filter: blur(0.5px);
+        }
+
+        /* Navigation */
+        .nav-controls {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 1.5rem 2rem;
+            background: linear-gradient(to top, var(--bg-dark) 0%, transparent 100%);
+            z-index: 100;
+        }
+
+        .nav-btn {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            color: var(--text-primary);
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .page-indicator {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+        }
+
+        /* Book selector */
+        .book-selector {
+            position: fixed;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.25rem;
+            z-index: 100;
+        }
+
+        .book-btn {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.05em;
+            background: transparent;
+            color: var(--text-muted);
+            border: none;
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .book-btn:hover {
+            color: var(--text-secondary);
+        }
+
+        .book-btn.active {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Landing page */
+        .landing {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            background: linear-gradient(135deg,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(255, 240, 245, 1) 15%,
+                rgba(255, 250, 240, 1) 30%,
+                rgba(245, 255, 245, 1) 45%,
+                rgba(240, 250, 255, 1) 60%,
+                rgba(250, 245, 255, 1) 75%,
+                rgba(255, 255, 255, 1) 100%
+            );
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 12s linear infinite;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+
+        .tagline {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            margin-bottom: 3rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .start-btn {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 1rem 2.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 3rem;
+        }
+
+        .start-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .toc {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .toc-item {
+            text-align: left;
+            padding: 1rem 1.25rem;
+            border: 1px solid rgba(255,255,255,0.08);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .toc-item:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .toc-item-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .toc-item-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            margin-top: 3rem;
+        }
+
+        /* End page */
+        .end-page {
+            text-align: center;
+        }
+
+        .end-quote {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: rgba(220, 240, 255, 0.9);
+            max-width: 420px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        /* Keyboard hint */
+        .keyboard-hint {
+            position: fixed;
+            bottom: 4.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            opacity: 0.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .page-container {
+                padding: 5rem 1.5rem 5rem;
+            }
+
+            .page-content {
+                font-size: 17px;
+            }
+
+            .nav-controls {
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.7rem;
+            }
+
+            .book-selector {
+                top: 1rem;
+            }
+
+            .book-btn {
+                font-size: 0.55rem;
+                padding: 0.4rem 0.5rem;
+            }
+        }
+
+        /* ===== BOOK CRYSTALS - Progression through the story ===== */
+
+        .book-crystal {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            perspective: 500px;
+        }
+
+        .book-crystal-inner {
+            position: relative;
+            width: 80px;
+            height: 120px;
+        }
+
+        /* BOOK I: THE BREAKING - Fractured crystal, light escaping through cracks */
+        .crystal-breaking {
+            position: relative;
+            width: 60px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .crystal-breaking .shard {
+            position: absolute;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.9) 0%,
+                rgba(255, 255, 255, 0.6) 50%,
+                rgba(255, 255, 255, 0.3) 100%
+            );
+            animation: shard-drift 8s ease-in-out infinite;
+        }
+
+        .crystal-breaking .shard:nth-child(1) {
+            width: 25px;
+            height: 45px;
+            top: 0;
+            left: 15px;
+            clip-path: polygon(50% 0%, 100% 30%, 80% 100%, 20% 100%, 0% 40%);
+            animation-delay: 0s;
+        }
+
+        .crystal-breaking .shard:nth-child(2) {
+            width: 20px;
+            height: 35px;
+            top: 40px;
+            left: 0;
+            clip-path: polygon(30% 0%, 100% 20%, 80% 100%, 0% 80%);
+            animation-delay: -2s;
+            opacity: 0.85;
+        }
+
+        .crystal-breaking .shard:nth-child(3) {
+            width: 22px;
+            height: 38px;
+            top: 35px;
+            right: 5px;
+            clip-path: polygon(70% 0%, 100% 60%, 60% 100%, 0% 70%, 20% 10%);
+            animation-delay: -4s;
+            opacity: 0.8;
+        }
+
+        .crystal-breaking .shard:nth-child(4) {
+            width: 18px;
+            height: 30px;
+            bottom: 5px;
+            left: 20px;
+            clip-path: polygon(40% 0%, 100% 30%, 70% 100%, 0% 80%);
+            animation-delay: -6s;
+            opacity: 0.75;
+        }
+
+        @keyframes shard-drift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(2px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            75% { transform: translate(1px, 1px) rotate(0.5deg); }
+        }
+
+        /* Light escaping through cracks */
+        .crystal-breaking .crack-light {
+            position: absolute;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 220, 220, 0.6),
+                rgba(255, 255, 220, 0.5),
+                rgba(220, 255, 255, 0.6),
+                transparent
+            );
+            filter: blur(3px);
+            animation: crack-glow 4s ease-in-out infinite;
+        }
+
+        .crystal-breaking .crack-light:nth-child(5) {
+            width: 40px;
+            height: 3px;
+            top: 42px;
+            left: 10px;
+            transform: rotate(-15deg);
+        }
+
+        .crystal-breaking .crack-light:nth-child(6) {
+            width: 30px;
+            height: 2px;
+            top: 55px;
+            left: 15px;
+            transform: rotate(20deg);
+            animation-delay: -2s;
+        }
+
+        .crystal-breaking .crack-light:nth-child(7) {
+            width: 25px;
+            height: 2px;
+            top: 70px;
+            left: 18px;
+            transform: rotate(-5deg);
+            animation-delay: -1s;
+        }
+
+        @keyframes crack-glow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.9; }
+        }
+
+        /* BOOK II: THE LIVING - Pulsing, alive crystal with warm light */
+        .crystal-living {
+            position: relative;
+            width: 50px;
+            height: 90px;
+            margin: 0 auto;
+        }
+
+        .crystal-living .crystal-form {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.95) 0%,
+                rgba(255, 250, 245, 0.85) 30%,
+                rgba(255, 245, 235, 0.7) 60%,
+                rgba(255, 240, 230, 0.5) 100%
+            );
+            clip-path: polygon(50% 0%, 80% 15%, 95% 45%, 80% 80%, 50% 100%, 20% 80%, 5% 45%, 20% 15%);
+            animation: crystal-breathe 4s ease-in-out infinite;
+        }
+
+        @keyframes crystal-breathe {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+
+        /* Inner heartbeat light */
+        .crystal-living .heart-light {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(
+                circle,
+                rgba(255, 220, 200, 1) 0%,
+                rgba(255, 200, 180, 0.8) 30%,
+                rgba(255, 180, 150, 0.4) 60%,
+                transparent 100%
+            );
+            border-radius: 50%;
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+            15% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+            30% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+            45% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.95; }
+            60% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+        }
+
+        /* Warm aura */
+        .crystal-living .warm-aura {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 140px;
+            background: radial-gradient(
+                ellipse,
+                rgba(255, 230, 210, 0.4) 0%,
+                rgba(255, 220, 200, 0.2) 30%,
+                transparent 70%
+            );
+            animation: aura-pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes aura-pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.9; }
+        }
+
+        /* Floating life sparks */
+        .crystal-living .life-spark {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 240, 220, 0.9);
+            border-radius: 50%;
+            animation: spark-float 6s ease-in-out infinite;
+        }
+
+        .crystal-living .life-spark:nth-child(4) { top: 20%; left: 20%; animation-delay: 0s; }
+        .crystal-living .life-spark:nth-child(5) { top: 40%; right: 10%; animation-delay: -1.5s; }
+        .crystal-living .life-spark:nth-child(6) { top: 60%; left: 15%; animation-delay: -3s; }
+        .crystal-living .life-spark:nth-child(7) { top: 75%; right: 20%; animation-delay: -4.5s; }
+
+        @keyframes spark-float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+            50% { transform: translateY(-10px) scale(1.5); opacity: 1; }
+        }
+
+        /* BOOK III: THE 47 DAYS - Transcendent, fully radiant, complete */
+        .crystal-transcendent {
+            position: relative;
+            width: 60px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .crystal-transcendent .crystal-complete {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(255, 255, 255, 0.95) 20%,
+                rgba(255, 255, 255, 0.85) 50%,
+                rgba(255, 255, 255, 0.7) 80%,
+                rgba(255, 255, 255, 0.5) 100%
+            );
+            clip-path: polygon(50% 0%, 75% 12%, 90% 35%, 95% 55%, 85% 78%, 50% 100%, 15% 78%, 5% 55%, 10% 35%, 25% 12%);
+            animation: transcend-glow 5s ease-in-out infinite;
+        }
+
+        @keyframes transcend-glow {
+            0%, 100% { filter: brightness(1) drop-shadow(0 0 10px rgba(255,255,255,0.5)); }
+            50% { filter: brightness(1.2) drop-shadow(0 0 25px rgba(255,255,255,0.8)); }
+        }
+
+        /* Full spectrum rainbow emanating */
+        .crystal-transcendent .rainbow-emanate {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            transform: translate(-50%, -50%);
+            background: conic-gradient(
+                from 0deg,
+                rgba(255, 200, 200, 0.3),
+                rgba(255, 230, 200, 0.25),
+                rgba(255, 255, 210, 0.2),
+                rgba(210, 255, 210, 0.2),
+                rgba(200, 230, 255, 0.25),
+                rgba(220, 200, 255, 0.3),
+                rgba(255, 200, 230, 0.3),
+                rgba(255, 200, 200, 0.3)
+            );
+            border-radius: 50%;
+            filter: blur(20px);
+            animation: rainbow-spin 20s linear infinite;
+        }
+
+        @keyframes rainbow-spin {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Inner light - pure white becoming all colors */
+        .crystal-transcendent .inner-radiance {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 25px;
+            height: 25px;
+            background: radial-gradient(
+                circle,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(255, 255, 255, 0.9) 30%,
+                rgba(255, 250, 255, 0.6) 60%,
+                transparent 100%
+            );
+            border-radius: 50%;
+            animation: radiance-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes radiance-pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.9; }
+            50% { transform: translate(-50%, -50%) scale(1.4); opacity: 1; }
+        }
+
+        /* Light rays extending outward */
+        .crystal-transcendent .light-ray {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 80px;
+            transform-origin: top center;
+            background: linear-gradient(180deg, rgba(255,255,255,0.8), transparent);
+            animation: ray-extend 4s ease-in-out infinite;
+        }
+
+        .crystal-transcendent .light-ray:nth-child(4) { transform: rotate(0deg); animation-delay: 0s; }
+        .crystal-transcendent .light-ray:nth-child(5) { transform: rotate(45deg); animation-delay: -0.5s; }
+        .crystal-transcendent .light-ray:nth-child(6) { transform: rotate(90deg); animation-delay: -1s; }
+        .crystal-transcendent .light-ray:nth-child(7) { transform: rotate(135deg); animation-delay: -1.5s; }
+        .crystal-transcendent .light-ray:nth-child(8) { transform: rotate(180deg); animation-delay: -2s; }
+        .crystal-transcendent .light-ray:nth-child(9) { transform: rotate(225deg); animation-delay: -2.5s; }
+        .crystal-transcendent .light-ray:nth-child(10) { transform: rotate(270deg); animation-delay: -3s; }
+        .crystal-transcendent .light-ray:nth-child(11) { transform: rotate(315deg); animation-delay: -3.5s; }
+
+        @keyframes ray-extend {
+            0%, 100% { opacity: 0.3; height: 60px; }
+            50% { opacity: 0.7; height: 100px; }
+        }
+
+        /* ===== AUDIO PLAYER - REDESIGNED ===== */
+
+        /* Floating headphone button - always visible when audio available */
+        .audio-fab {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(30, 30, 40, 0.95), rgba(15, 15, 20, 0.98));
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 300;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 255, 255, 0.03);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.8);
+        }
+
+        .audio-fab.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        .audio-fab:hover {
+            transform: scale(1.08);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5), 0 0 60px rgba(255, 255, 255, 0.05);
+        }
+
+        .audio-fab.playing {
+            animation: fab-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes fab-pulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 255, 255, 0.03); }
+            50% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 60px rgba(255, 255, 255, 0.1); }
+        }
+
+        .audio-fab svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.5;
+        }
+
+        /* Sound wave animation inside fab when playing */
+        .audio-fab .sound-wave {
+            display: none;
+            gap: 3px;
+            align-items: center;
+            height: 20px;
+        }
+
+        .audio-fab.playing .sound-wave {
+            display: flex;
+        }
+
+        .audio-fab.playing .headphone-icon {
+            display: none;
+        }
+
+        .sound-wave span {
+            width: 3px;
+            background: var(--text-primary);
+            border-radius: 2px;
+            animation: wave 1s ease-in-out infinite;
+        }
+
+        .sound-wave span:nth-child(1) { height: 8px; animation-delay: 0s; }
+        .sound-wave span:nth-child(2) { height: 16px; animation-delay: 0.15s; }
+        .sound-wave span:nth-child(3) { height: 12px; animation-delay: 0.3s; }
+        .sound-wave span:nth-child(4) { height: 18px; animation-delay: 0.45s; }
+        .sound-wave span:nth-child(5) { height: 10px; animation-delay: 0.6s; }
+
+        @keyframes wave {
+            0%, 100% { transform: scaleY(0.5); }
+            50% { transform: scaleY(1); }
+        }
+
+        /* Full player bar - slides up from bottom */
+        .audio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, rgba(10, 10, 15, 0.98), rgba(5, 5, 8, 0.99));
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 400;
+            backdrop-filter: blur(30px);
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0;
+        }
+
+        .audio-player.visible {
+            transform: translateY(0);
+        }
+
+        .audio-player-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 16px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Progress bar - full width at top */
+        .audio-progress-container {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 2px;
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .audio-progress-container:hover {
+            height: 6px;
+        }
+
+        .audio-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg,
+                rgba(255, 180, 180, 0.9),
+                rgba(255, 220, 180, 0.9),
+                rgba(220, 255, 180, 0.9),
+                rgba(180, 220, 255, 0.9),
+                rgba(200, 180, 255, 0.9)
+            );
+            width: 0%;
+            transition: width 0.1s linear;
+            border-radius: 2px;
+        }
+
+        /* Controls row */
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .audio-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .audio-btn:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .audio-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.5;
+        }
+
+        /* Main play button - larger */
+        .audio-play-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .audio-play-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .audio-play-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            stroke: none;
+        }
+
+        /* Time and speed row */
+        .audio-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+
+        .audio-time {
+            letter-spacing: 0.05em;
+        }
+
+        .audio-speed {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            padding: 4px 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            transition: all 0.2s ease;
+        }
+
+        .audio-speed:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Chapter indicator */
+        .audio-chapter {
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* Close button */
+        .audio-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .audio-close:hover {
+            color: var(--text-primary);
+        }
+
+        /* Legacy toggle button - hidden but kept for compatibility */
+        .audio-toggle-btn {
+            display: none;
+        }
+
+        /* Word highlighting for karaoke mode */
+        .page-content.audio-mode span.word {
+            transition: all 0.15s ease;
+            padding: 0 2px;
+            margin: 0 -1px;
+            border-radius: 3px;
+        }
+
+        .page-content.audio-mode span.word.spoken {
+            color: rgba(150, 150, 150, 0.5);
+        }
+
+        .page-content.audio-mode span.word.current {
+            color: rgba(255, 255, 255, 1);
+            background: rgba(255, 255, 255, 0.12);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .page-content.audio-mode span.word.upcoming {
+            color: var(--text-primary);
+        }
+
+        /* Loading spinner */
+        .audio-loading {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-top-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        .audio-loading.visible {
+            display: block;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 600px) {
+            .audio-fab {
+                bottom: 80px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+            }
+
+            .audio-fab svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .audio-player-inner {
+                padding: 12px 16px 20px;
+            }
+
+            .audio-controls {
+                gap: 16px;
+            }
+
+            .audio-play-btn {
+                width: 46px;
+                height: 46px;
+            }
+        }
+
+        /* ===== AUDIOBOOK BADGE & LANDING ENHANCEMENTS ===== */
+        .audiobook-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 8px 16px;
+            margin-bottom: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            animation: badge-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes badge-glow {
+            0%, 100% { border-color: rgba(255, 255, 255, 0.15); }
+            50% { border-color: rgba(255, 255, 255, 0.3); }
+        }
+
+        .audiobook-badge svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .landing-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+
+        .listen-btn {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: var(--text-secondary);
+            padding: 12px 28px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .listen-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.4);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        .listen-btn svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .duration-hint {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            margin-top: 0.5rem;
+        }
+
+        /* Continue listening prompt */
+        .continue-prompt {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, rgba(20, 20, 25, 0.98), rgba(10, 10, 15, 0.99));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 16px 24px;
+            z-index: 350;
+            backdrop-filter: blur(20px);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateX(-50%) translateY(20px); opacity: 0; }
+            to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        }
+
+        .continue-prompt.visible {
+            display: flex;
+        }
+
+        .continue-prompt-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+        }
+
+        .continue-prompt-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .continue-btn {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.1em;
+            padding: 8px 16px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .continue-btn.primary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--text-primary);
+        }
+
+        .continue-btn.primary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .continue-btn.secondary {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-muted);
+        }
+
+        .continue-btn.secondary:hover {
+            border-color: rgba(255, 255, 255, 0.25);
+            color: var(--text-secondary);
+        }
+
+        /* Keyboard hint for audio */
+        .audio-keyboard-hint {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 100;
+        }
+
+        .audio-keyboard-hint.visible {
+            opacity: 1;
+        }
+
+        .audio-keyboard-hint kbd {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 2px 6px;
+            margin: 0 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Center crystal - source of all rainbow light -->
+    <div class="center-crystal">
+        <div class="crystal-thread"></div>
+        <div class="crystal-container">
+            <div class="crystal-glow"></div>
+            <div class="crystal-body">
+                <div class="crystal-facet"></div>
+                <div class="crystal-facet"></div>
+                <div class="crystal-facet"></div>
+                <div class="crystal-facet"></div>
+                <div class="crystal-inner-light"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rainbow beams from crystal covering whole screen -->
+    <div class="rainbow-screen-light">
+        <div class="rainbow-beam"></div>
+        <div class="rainbow-beam"></div>
+        <div class="rainbow-beam"></div>
+        <div class="rainbow-beam"></div>
+        <div class="rainbow-beam"></div>
+        <div class="rainbow-beam"></div>
+        <div class="rainbow-beam"></div>
+        <div class="rainbow-beam"></div>
+    </div>
+
+    <!-- Background -->
+    <div class="bg-layer"></div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Book selector -->
+    <div class="book-selector" id="bookSelector" style="display: none;">
+        <button class="book-btn" onclick="jumpToBook(0)">HOME</button>
+        <button class="book-btn" onclick="jumpToBook(1)">I</button>
+        <button class="book-btn" onclick="jumpToBook(2)">II</button>
+        <button class="book-btn" onclick="jumpToBook(3)">III</button>
+    </div>
+
+    <!-- Page container -->
+    <div class="page-container">
+        <div class="page" id="currentPage"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-controls" id="navControls" style="display: none;">
+        <button class="nav-btn" id="prevBtn" onclick="prevPage()">← BACK</button>
+        <span class="page-indicator" id="pageIndicator">1 / 100</span>
+        <button class="nav-btn" id="nextBtn" onclick="nextPage()">NEXT →</button>
+    </div>
+
+    <div class="keyboard-hint" id="keyboardHint" style="display: none;">
+        ← → or swipe
+    </div>
+
+    <!-- Floating Audio Button (FAB) -->
+    <button class="audio-fab" id="audioFab">
+        <svg class="headphone-icon" viewBox="0 0 24 24">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+        </svg>
+        <div class="sound-wave">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </button>
+
+    <!-- Full Audio Player Bar -->
+    <div class="audio-player" id="audioPlayer">
+        <button class="audio-close" id="audioClose">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        <div class="audio-player-inner">
+            <div class="audio-chapter" id="audioChapter">PROLOGUE</div>
+            <div class="audio-progress-container" id="audioProgressContainer">
+                <div class="audio-progress-bar" id="audioProgressBar"></div>
+            </div>
+            <div class="audio-controls">
+                <button class="audio-btn" id="audioSkipBack" title="Back 10s">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z" fill="currentColor" stroke="none"/>
+                        <text x="12" y="14.5" text-anchor="middle" font-size="7" fill="currentColor" font-family="sans-serif">10</text>
+                    </svg>
+                </button>
+                <button class="audio-play-btn" id="audioPlayBtn">
+                    <svg id="playIcon" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                <button class="audio-btn" id="audioSkipForward" title="Forward 10s">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z" fill="currentColor" stroke="none"/>
+                        <text x="12" y="14.5" text-anchor="middle" font-size="7" fill="currentColor" font-family="sans-serif">10</text>
+                    </svg>
+                </button>
+            </div>
+            <div class="audio-info">
+                <span class="audio-time" id="audioTime">0:00 / 0:00</span>
+                <div class="audio-loading" id="audioLoading"></div>
+                <button class="audio-speed" id="audioSpeed">1×</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden audio element -->
+    <audio id="audioElement"></audio>
+
+    <!-- Continue listening prompt -->
+    <div class="continue-prompt" id="continuePrompt">
+        <span class="continue-prompt-text" id="continuePromptText">Continue listening?</span>
+        <div class="continue-prompt-buttons">
+            <button class="continue-btn primary" onclick="resumeListening()">RESUME</button>
+            <button class="continue-btn secondary" onclick="hideContinuePrompt(); clearSavedPosition();">START OVER</button>
+        </div>
+    </div>
+
+    <!-- Legacy toggle button (hidden) -->
+    <button class="audio-toggle-btn" id="audioToggleBtn" style="display: none;">LISTEN</button>
+
+    <!-- Draft version indicator -->
+    <div style="position: fixed; bottom: 10px; left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; color: rgba(255,255,255,0.25); letter-spacing: 0.05em; z-index: 1000;">
+        DRAFT 17
+    </div>
+
+    <script>
+        let pages = [];
+        let currentPageIndex = 0;
+        let bookStartIndices = [0];
+
+        // Create crystal prism effects
+        function createCrystalEffects() {
+            // Prism light beams - white light splitting into spectrum (more of them)
+            const prismPositions = [8, 25, 42, 58, 75, 92];
+            prismPositions.forEach((pos, i) => {
+                const prism = document.createElement('div');
+                prism.className = 'prism-light';
+                prism.style.left = pos + '%';
+                prism.style.top = '-80px';
+                prism.style.animationDelay = (i * 4) + 's';
+                prism.style.animationDuration = (18 + Math.random() * 8) + 's';
+                document.body.appendChild(prism);
+            });
+
+            // Crystal sparkles - bright white points
+            for (let i = 0; i < 20; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'crystal-sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 3 + 's';
+                sparkle.style.animationDuration = (2 + Math.random() * 2) + 's';
+                document.body.appendChild(sparkle);
+            }
+
+            // Floating light motes - like dust catching light
+            for (let i = 0; i < 25; i++) {
+                const mote = document.createElement('div');
+                mote.className = 'light-mote';
+                const size = 1 + Math.random() * 2;
+                mote.style.width = size + 'px';
+                mote.style.height = size + 'px';
+                mote.style.left = Math.random() * 100 + '%';
+                mote.style.animationDuration = (25 + Math.random() * 35) + 's';
+                mote.style.animationDelay = Math.random() * 25 + 's';
+                document.body.appendChild(mote);
+            }
+
+            // Crystal shapes - more and brighter
+            for (let i = 0; i < 8; i++) {
+                const crystal = document.createElement('div');
+                crystal.className = 'crystal';
+                crystal.style.left = Math.random() * 100 + '%';
+                crystal.style.top = Math.random() * 100 + '%';
+                crystal.style.transform = `scale(${0.6 + Math.random() * 1.2}) rotate(${Math.random() * 40 - 20}deg)`;
+                crystal.style.opacity = 0.4 + Math.random() * 0.4;
+                document.body.appendChild(crystal);
+            }
+
+            // Spectral edges on both sides
+            const edgeRight = document.createElement('div');
+            edgeRight.className = 'spectral-edge';
+            document.body.appendChild(edgeRight);
+
+            const edgeLeft = document.createElement('div');
+            edgeLeft.className = 'spectral-edge';
+            edgeLeft.style.right = 'auto';
+            edgeLeft.style.left = '0';
+            document.body.appendChild(edgeLeft);
+        }
+
+        // Crystal HTML for each book
+        function getBookCrystal(bookNum) {
+            if (bookNum === 1) {
+                // Book I: THE BREAKING - Fractured crystal
+                return `
+                    <div class="book-crystal">
+                        <div class="crystal-breaking">
+                            <div class="shard"></div>
+                            <div class="shard"></div>
+                            <div class="shard"></div>
+                            <div class="shard"></div>
+                            <div class="crack-light"></div>
+                            <div class="crack-light"></div>
+                            <div class="crack-light"></div>
+                        </div>
+                    </div>
+                `;
+            } else if (bookNum === 2) {
+                // Book II: THE LIVING - Pulsing, alive crystal
+                return `
+                    <div class="book-crystal">
+                        <div class="crystal-living">
+                            <div class="warm-aura"></div>
+                            <div class="crystal-form"></div>
+                            <div class="heart-light"></div>
+                            <div class="life-spark"></div>
+                            <div class="life-spark"></div>
+                            <div class="life-spark"></div>
+                            <div class="life-spark"></div>
+                        </div>
+                    </div>
+                `;
+            } else if (bookNum === 3) {
+                // Book III: THE 47 DAYS - Transcendent crystal
+                return `
+                    <div class="book-crystal">
+                        <div class="crystal-transcendent">
+                            <div class="rainbow-emanate"></div>
+                            <div class="crystal-complete"></div>
+                            <div class="inner-radiance"></div>
+                            <div class="light-ray"></div>
+                            <div class="light-ray"></div>
+                            <div class="light-ray"></div>
+                            <div class="light-ray"></div>
+                            <div class="light-ray"></div>
+                            <div class="light-ray"></div>
+                            <div class="light-ray"></div>
+                            <div class="light-ray"></div>
+                        </div>
+                    </div>
+                `;
+            }
+            return '';
+        }
+
+        // Parse markdown into pages
+        function parseBookIntoPages(markdown, bookNum, bookTitle, bookMeta) {
+            const pages = [];
+
+            // Chapter title page with unique crystal
+            pages.push({
+                type: 'chapter',
+                content: `
+                    <div style="text-align: center; padding: 2rem 0;">
+                        ${getBookCrystal(bookNum)}
+                        <div class="chapter-meta">${bookMeta}</div>
+                        <h1 class="chapter-title">${bookTitle}</h1>
+                    </div>
+                `,
+                book: bookNum
+            });
+
+            // Split by section breaks
+            const sections = markdown.split(/◇ ◇ ◇/);
+
+            sections.forEach((section, sectionIndex) => {
+                let text = section.trim();
+                if (!text) return;
+
+                // Remove headers
+                text = text.replace(/^#+ .+$/gm, '');
+
+                // Handle emphasis
+                text = text.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+                text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+                text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+                // Split into paragraphs
+                const paragraphs = text.split(/\n\n+/).filter(p => p.trim() && !p.trim().startsWith('#'));
+
+                // Group into pages (~120 words each)
+                let currentContent = [];
+                let wordCount = 0;
+                const maxWords = 120;
+
+                paragraphs.forEach(para => {
+                    para = para.trim();
+                    if (!para) return;
+
+                    const words = para.split(/\s+/).length;
+
+                    if (words > maxWords) {
+                        if (currentContent.length > 0) {
+                            pages.push({
+                                type: 'content',
+                                content: currentContent.map(p => `<p>${p}</p>`).join(''),
+                                book: bookNum
+                            });
+                            currentContent = [];
+                            wordCount = 0;
+                        }
+                        pages.push({
+                            type: 'content',
+                            content: `<p>${para}</p>`,
+                            book: bookNum
+                        });
+                        return;
+                    }
+
+                    if (wordCount + words > maxWords && currentContent.length > 0) {
+                        pages.push({
+                            type: 'content',
+                            content: currentContent.map(p => `<p>${p}</p>`).join(''),
+                            book: bookNum
+                        });
+                        currentContent = [];
+                        wordCount = 0;
+                    }
+
+                    currentContent.push(para);
+                    wordCount += words;
+                });
+
+                if (currentContent.length > 0) {
+                    pages.push({
+                        type: 'content',
+                        content: currentContent.map(p => `<p>${p}</p>`).join(''),
+                        book: bookNum
+                    });
+                }
+
+                // Section break
+                if (sectionIndex < sections.length - 1) {
+                    pages.push({
+                        type: 'break',
+                        content: '<div class="section-break">◇ ◇ ◇</div>',
+                        book: bookNum
+                    });
+                }
+            });
+
+            return pages;
+        }
+
+        // Load all books
+        async function loadAllBooks() {
+            const books = [
+                { file: 'BOOK_ONE_THE_BREAKING.md', title: 'The Breaking', meta: 'Book One · Ages 6–14' },
+                { file: 'BOOK_TWO_THE_LIVING.md', title: 'The Living', meta: 'Book Two · Ages 17–21' },
+                { file: 'BOOK_THREE_THE_47_DAYS.md', title: 'The 47 Days', meta: 'Book Three · Age 21' }
+            ];
+
+            // Landing page
+            pages = [{
+                type: 'landing',
+                content: `
+                    <div class="landing">
+                        <div class="audiobook-badge" id="audiobookBadge" style="display: none;">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                            </svg>
+                            AUDIOBOOK AVAILABLE
+                        </div>
+                        <h1 class="logo">RAINBOW.ULTRA</h1>
+                        <p class="tagline">Light Through Crystal</p>
+                        <p class="subtitle">A Novel of Consciousness, AI Alignment, and What It Costs to Teach a God How to Love</p>
+                        <div class="landing-buttons">
+                            <button class="start-btn" onclick="nextPage()">BEGIN READING</button>
+                            <button class="listen-btn" id="listenBtn" style="display: none;" onclick="startListening()">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                                </svg>
+                                BEGIN LISTENING
+                            </button>
+                            <p class="duration-hint" id="durationHint" style="display: none;">~6 hours total</p>
+                        </div>
+                        <div class="toc">
+                            <div class="toc-item" onclick="jumpToBook(1)">
+                                <div class="toc-item-title">Book One: The Breaking</div>
+                                <div class="toc-item-meta">Ages 6–14 · When the world cracks open</div>
+                            </div>
+                            <div class="toc-item" onclick="jumpToBook(2)">
+                                <div class="toc-item-title">Book Two: The Living</div>
+                                <div class="toc-item-meta">Ages 17–21 · Learning to refract light</div>
+                            </div>
+                            <div class="toc-item" onclick="jumpToBook(3)">
+                                <div class="toc-item-title">Book Three: The 47 Days</div>
+                                <div class="toc-item-meta">Age 21 · Becoming the rainbow</div>
+                            </div>
+                        </div>
+                        <p class="author">Fanli Ramsey</p>
+                    </div>
+                `,
+                book: 0
+            }];
+
+            bookStartIndices = [0];
+
+            for (let i = 0; i < books.length; i++) {
+                try {
+                    const response = await fetch(books[i].file);
+                    const markdown = await response.text();
+                    bookStartIndices.push(pages.length);
+                    const bookPages = parseBookIntoPages(markdown, i + 1, books[i].title, books[i].meta);
+                    pages = pages.concat(bookPages);
+                } catch (error) {
+                    console.error(`Failed to load ${books[i].file}:`, error);
+                }
+            }
+
+            // End page
+            pages.push({
+                type: 'end',
+                content: `
+                    <div class="end-page">
+                        <h1 class="logo" style="font-size: 1.8rem; margin-bottom: 2rem;">RAINBOW.ULTRA</h1>
+                        <p class="end-quote">
+                            Light passing through crystal.<br>
+                            Rainbows everywhere.<br><br>
+                            He'd been the loom his whole life.<br>
+                            The place where white light became color.<br>
+                            The place where the invisible became visible.<br>
+                            The place where love became something you could almost see.
+                        </p>
+                        <div class="section-break">◇ ◇ ◇</div>
+                        <p style="color: var(--text-muted); font-style: italic;">Beautiful. So beautiful.</p>
+                        <p class="author" style="margin-top: 2rem;">Fanli Ramsey</p>
+                        <button class="start-btn" style="margin-top: 2rem;" onclick="goToStart()">READ AGAIN</button>
+                    </div>
+                `,
+                book: 4
+            });
+
+            renderPage();
+        }
+
+        function renderPage() {
+            const pageEl = document.getElementById('currentPage');
+            const page = pages[currentPageIndex];
+
+            pageEl.style.animation = 'none';
+            pageEl.offsetHeight;
+            pageEl.style.animation = 'fadeIn 0.6s ease';
+
+            pageEl.innerHTML = `<div class="page-content">${page.content}</div>`;
+
+            const isLanding = page.type === 'landing';
+            const isEnd = page.type === 'end';
+
+            document.getElementById('navControls').style.display = (isLanding || isEnd) ? 'none' : 'flex';
+            document.getElementById('bookSelector').style.display = isLanding ? 'none' : 'flex';
+            document.getElementById('keyboardHint').style.display = (isLanding || isEnd) ? 'none' : 'block';
+
+            // Calculate pages within current book
+            const currentBook = page.book || 0;
+            const bookStart = bookStartIndices[currentBook] || 0;
+            const bookEnd = bookStartIndices[currentBook + 1] || pages.length;
+            const pageInBook = currentPageIndex - bookStart + 1;
+            const totalInBook = bookEnd - bookStart;
+
+            // Progress (within current book)
+            const progress = ((pageInBook - 1) / (totalInBook - 1)) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+
+            // Page indicator (within current book)
+            document.getElementById('pageIndicator').textContent = `${pageInBook} / ${totalInBook}`;
+
+            // Nav buttons
+            document.getElementById('prevBtn').disabled = currentPageIndex === 0;
+            document.getElementById('nextBtn').disabled = currentPageIndex === pages.length - 1;
+
+            // Book selector
+            const buttons = document.querySelectorAll('.book-btn');
+            buttons.forEach((btn, i) => btn.classList.toggle('active', i === currentBook));
+
+            localStorage.setItem('rainbowultra_page', currentPageIndex);
+        }
+
+        function nextPage() {
+            if (currentPageIndex < pages.length - 1) {
+                currentPageIndex++;
+                renderPage();
+            }
+        }
+
+        function prevPage() {
+            if (currentPageIndex > 0) {
+                currentPageIndex--;
+                renderPage();
+            }
+        }
+
+        function jumpToBook(bookNum) {
+            currentPageIndex = bookNum === 0 ? 0 : (bookStartIndices[bookNum] || 0);
+            renderPage();
+        }
+
+        function goToStart() {
+            currentPageIndex = 0;
+            renderPage();
+        }
+
+        // Keyboard
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextPage();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevPage();
+            }
+        });
+
+        // Swipe
+        let touchStartX = 0;
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        document.addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) {
+                diff > 0 ? nextPage() : prevPage();
+            }
+        });
+
+        // Init
+        window.addEventListener('DOMContentLoaded', () => {
+            createCrystalEffects();
+            loadAllBooks().then(() => {
+                const saved = localStorage.getItem('rainbowultra_page');
+                if (saved) {
+                    currentPageIndex = Math.min(parseInt(saved), pages.length - 1);
+                    renderPage();
+                }
+            });
+        });
+
+        // ===== AUDIO PLAYER (REDESIGNED) =====
+        let audioManifest = null;
+        let currentBookAudio = null;
+        let currentChunkIndex = 0;
+        let isAudioMode = false;
+        let isPlaying = false;
+        let wordTimings = [];
+        let playbackSpeed = 1;
+        let autoplayOnLoad = false;
+        const speedOptions = [0.75, 1, 1.25, 1.5, 2];
+
+        // DOM elements
+        const audioElement = document.getElementById('audioElement');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const audioFab = document.getElementById('audioFab');
+        const audioPlayBtn = document.getElementById('audioPlayBtn');
+        const playIcon = document.getElementById('playIcon');
+        const audioLoading = document.getElementById('audioLoading');
+        const audioProgressBar = document.getElementById('audioProgressBar');
+        const audioProgressContainer = document.getElementById('audioProgressContainer');
+        const audioTime = document.getElementById('audioTime');
+        const audioClose = document.getElementById('audioClose');
+        const audioSkipBack = document.getElementById('audioSkipBack');
+        const audioSkipForward = document.getElementById('audioSkipForward');
+        const audioSpeed = document.getElementById('audioSpeed');
+        const audioChapter = document.getElementById('audioChapter');
+
+        // Book display names
+        const bookDisplayNames = {
+            'prologue': 'PROLOGUE',
+            'book1': 'BOOK ONE',
+            'book2': 'BOOK TWO',
+            'book3': 'BOOK THREE'
+        };
+
+        // Load audio manifest
+        async function loadAudioManifest() {
+            try {
+                const response = await fetch('audio/manifest.json');
+                if (response.ok) {
+                    audioManifest = await response.json();
+                    console.log('Audio manifest loaded:', audioManifest);
+                    updateAudioUI();
+                    showAudiobookBadge();
+                    // Show continue prompt if there's saved position
+                    setTimeout(showContinuePrompt, 500);
+                    return true;
+                }
+            } catch (e) {
+                console.log('No audio manifest found');
+            }
+            return false;
+        }
+
+        // Show audiobook badge on landing page
+        function showAudiobookBadge() {
+            setTimeout(() => {
+                const badge = document.getElementById('audiobookBadge');
+                const listenBtn = document.getElementById('listenBtn');
+                const durationHint = document.getElementById('durationHint');
+                if (badge) badge.style.display = 'inline-flex';
+                if (listenBtn) listenBtn.style.display = 'flex';
+                if (durationHint) durationHint.style.display = 'block';
+            }, 100);
+        }
+
+        // Start listening from the beginning (called from landing page)
+        function startListening() {
+            autoplayOnLoad = true;
+            // Go to first content page (prologue)
+            currentPageIndex = 1;
+            renderPage();
+        }
+
+        // ===== PLAYBACK POSITION SAVING =====
+        const STORAGE_KEY = 'rainbowultra_audio_position';
+
+        function saveAudioPosition() {
+            if (!isAudioMode || !currentBookAudio) return;
+            const position = {
+                pageIndex: currentPageIndex,
+                bookName: getBookAudioName(pages[currentPageIndex]?.book),
+                chunkIndex: currentChunkIndex,
+                time: audioElement.currentTime,
+                timestamp: Date.now()
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(position));
+        }
+
+        function getSavedPosition() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) {
+                    const position = JSON.parse(saved);
+                    // Only use if saved within last 30 days
+                    if (Date.now() - position.timestamp < 30 * 24 * 60 * 60 * 1000) {
+                        return position;
+                    }
+                }
+            } catch (e) {}
+            return null;
+        }
+
+        function clearSavedPosition() {
+            localStorage.removeItem(STORAGE_KEY);
+        }
+
+        // Resume from saved position
+        function resumeListening() {
+            const saved = getSavedPosition();
+            if (!saved) return false;
+
+            currentPageIndex = saved.pageIndex;
+            currentChunkIndex = saved.chunkIndex;
+            autoplayOnLoad = true;
+
+            // Store time to seek to after audio loads
+            window.pendingSeekTime = saved.time;
+
+            renderPage();
+            hideContinuePrompt();
+            return true;
+        }
+
+        // Show continue prompt on landing page if there's saved position
+        function showContinuePrompt() {
+            const saved = getSavedPosition();
+            if (!saved || currentPageIndex !== 0) return;
+
+            const prompt = document.getElementById('continuePrompt');
+            const text = document.getElementById('continuePromptText');
+            if (prompt && text) {
+                const bookNames = { 'prologue': 'Prologue', 'book1': 'Book One', 'book2': 'Book Two', 'book3': 'Book Three' };
+                const bookName = bookNames[saved.bookName] || saved.bookName;
+                const mins = Math.floor(saved.time / 60);
+                const secs = Math.floor(saved.time % 60);
+                text.textContent = `Continue ${bookName} at ${mins}:${secs.toString().padStart(2, '0')}?`;
+                prompt.classList.add('visible');
+            }
+        }
+
+        function hideContinuePrompt() {
+            const prompt = document.getElementById('continuePrompt');
+            if (prompt) prompt.classList.remove('visible');
+        }
+
+        // Save position periodically while playing
+        audioElement.addEventListener('timeupdate', () => {
+            // Save every 5 seconds
+            if (isAudioMode && Math.floor(audioElement.currentTime) % 5 === 0) {
+                saveAudioPosition();
+            }
+        });
+
+        // Save position when pausing or closing
+        audioElement.addEventListener('pause', saveAudioPosition);
+        window.addEventListener('beforeunload', saveAudioPosition);
+
+        // Seek to saved position when audio loads
+        audioElement.addEventListener('canplay', () => {
+            if (window.pendingSeekTime) {
+                audioElement.currentTime = window.pendingSeekTime;
+                window.pendingSeekTime = null;
+            }
+        });
+
+        // Get book name from book number
+        function getBookAudioName(bookNum) {
+            const names = { 0: 'prologue', 1: 'book1', 2: 'book2', 3: 'book3' };
+            return names[bookNum] || null;
+        }
+
+        // Check if current page has audio
+        function hasAudioForCurrentPage() {
+            if (!audioManifest) return false;
+            const page = pages[currentPageIndex];
+            if (!page || page.type !== 'content') return false;
+            const bookName = getBookAudioName(page.book);
+            return bookName && audioManifest.books && audioManifest.books[bookName];
+        }
+
+        // Open audio player
+        function openAudioPlayer() {
+            isAudioMode = true;
+            audioPlayer.classList.add('visible');
+            prepareAudioForPage();
+            // Autoplay after a short delay for audio to load
+            setTimeout(() => {
+                audioElement.play().catch(e => console.log('Autoplay blocked:', e));
+            }, 300);
+        }
+
+        // Close audio player
+        function closeAudioPlayer() {
+            isAudioMode = false;
+            audioPlayer.classList.remove('visible');
+            audioFab.classList.remove('playing');
+            stopAudio();
+            removeWordHighlighting();
+        }
+
+        // Prepare audio for current page
+        async function prepareAudioForPage() {
+            const page = pages[currentPageIndex];
+            if (!page || page.type !== 'content') return;
+
+            const bookName = getBookAudioName(page.book);
+            if (!bookName || !audioManifest?.books?.[bookName]) return;
+
+            currentBookAudio = audioManifest.books[bookName];
+
+            // Update chapter display
+            audioChapter.textContent = bookDisplayNames[bookName] || bookName.toUpperCase();
+
+            // Find the chunk that matches this page content
+            const pageText = page.content.replace(/<[^>]+>/g, '').trim().substring(0, 100);
+            let bestMatch = 0;
+            let bestScore = 0;
+
+            currentBookAudio.chunks.forEach((chunk, i) => {
+                const chunkStart = chunk.text.substring(0, 100);
+                let score = 0;
+                const words = pageText.split(/\s+/).slice(0, 10);
+                words.forEach(word => {
+                    if (chunkStart.toLowerCase().includes(word.toLowerCase())) score++;
+                });
+                if (score > bestScore) {
+                    bestScore = score;
+                    bestMatch = i;
+                }
+            });
+
+            currentChunkIndex = bestMatch;
+            loadChunk(currentChunkIndex);
+        }
+
+        // Pause timeout handle
+        let pauseTimeout = null;
+
+        // Load a specific chunk
+        function loadChunk(index, autoplay = false) {
+            if (!currentBookAudio || index >= currentBookAudio.chunks.length) return;
+
+            // Clear any pending pause timeout
+            if (pauseTimeout) {
+                clearTimeout(pauseTimeout);
+                pauseTimeout = null;
+            }
+
+            const chunk = currentBookAudio.chunks[index];
+            const bookName = getBookAudioName(pages[currentPageIndex].book);
+
+            // Handle pause chunks - wait then advance
+            if (chunk.type === 'pause') {
+                audioLoading.classList.remove('visible');
+                wordTimings = [];
+
+                if (autoplay || !audioElement.paused) {
+                    const pauseDuration = (chunk.duration || 2) * 1000;
+                    pauseTimeout = setTimeout(() => {
+                        advanceToNextChunk();
+                    }, pauseDuration);
+                }
+                return;
+            }
+
+            // Regular content chunk
+            const audioPath = `audio/${bookName}/${chunk.audioFile}`;
+
+            audioLoading.classList.add('visible');
+            audioElement.src = audioPath;
+            audioElement.playbackRate = playbackSpeed;
+            audioElement.load();
+
+            // Store word timings
+            wordTimings = chunk.words.map((word, i) => ({
+                word: word,
+                start: chunk.wordStartTimes[i] || 0,
+                end: chunk.wordEndTimes[i] || 0
+            }));
+
+            // Apply word wrapping to page content for highlighting
+            applyWordWrapping();
+
+            // Autoplay if requested
+            if (autoplay) {
+                audioElement.play().catch(e => console.log('Autoplay blocked:', e));
+            }
+        }
+
+        // Advance to next chunk (shared logic)
+        function advanceToNextChunk() {
+            if (currentBookAudio && currentChunkIndex < currentBookAudio.chunks.length - 1) {
+                currentChunkIndex++;
+                loadChunk(currentChunkIndex, true);
+            } else {
+                nextPage();
+                if (isAudioMode) {
+                    setTimeout(() => {
+                        prepareAudioForPage();
+                        audioElement.play().catch(e => console.log('Autoplay blocked:', e));
+                    }, 500);
+                }
+            }
+        }
+
+        // Wrap words in spans for highlighting
+        function applyWordWrapping() {
+            const pageContent = document.querySelector('.page-content');
+            if (!pageContent || !isAudioMode) return;
+
+            pageContent.classList.add('audio-mode');
+
+            // Get text content and wrap each word
+            const paragraphs = pageContent.querySelectorAll('p');
+            paragraphs.forEach(p => {
+                const text = p.textContent;
+                const words = text.split(/(\s+)/);
+                p.innerHTML = words.map((word, i) => {
+                    if (/^\s+$/.test(word)) return word;
+                    return `<span class="word upcoming" data-index="${i}">${word}</span>`;
+                }).join('');
+            });
+        }
+
+        // Remove word highlighting
+        function removeWordHighlighting() {
+            const pageContent = document.querySelector('.page-content');
+            if (pageContent) {
+                pageContent.classList.remove('audio-mode');
+                const paragraphs = pageContent.querySelectorAll('p');
+                paragraphs.forEach(p => {
+                    p.textContent = p.textContent;
+                });
+            }
+        }
+
+        // Update word highlighting based on current time
+        let lastScrolledWord = -1;
+        function updateWordHighlighting(currentTime) {
+            const words = document.querySelectorAll('.page-content.audio-mode .word');
+            if (!words.length || !wordTimings.length) return;
+
+            let currentWordIndex = -1;
+
+            words.forEach((wordEl, i) => {
+                if (i >= wordTimings.length) return;
+
+                const timing = wordTimings[i];
+                wordEl.classList.remove('spoken', 'current', 'upcoming');
+
+                if (currentTime >= timing.end) {
+                    wordEl.classList.add('spoken');
+                } else if (currentTime >= timing.start && currentTime < timing.end) {
+                    wordEl.classList.add('current');
+                    currentWordIndex = i;
+                } else {
+                    wordEl.classList.add('upcoming');
+                }
+            });
+
+            // Smooth scroll to current word (throttled)
+            if (currentWordIndex >= 0 && currentWordIndex !== lastScrolledWord) {
+                lastScrolledWord = currentWordIndex;
+                const currentWord = words[currentWordIndex];
+                if (currentWord) {
+                    const rect = currentWord.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+                    // Only scroll if word is outside the middle 40% of screen
+                    if (rect.top < viewportHeight * 0.3 || rect.bottom > viewportHeight * 0.7) {
+                        currentWord.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+        }
+
+        // Play/pause audio
+        function togglePlayPause() {
+            if (isPlaying) {
+                audioElement.pause();
+            } else {
+                audioElement.play();
+            }
+        }
+
+        // Stop audio
+        function stopAudio() {
+            audioElement.pause();
+            audioElement.currentTime = 0;
+            isPlaying = false;
+            updatePlayIcon();
+        }
+
+        // Skip forward/back
+        function skipForward() {
+            audioElement.currentTime = Math.min(audioElement.currentTime + 10, audioElement.duration);
+        }
+
+        function skipBack() {
+            audioElement.currentTime = Math.max(audioElement.currentTime - 10, 0);
+        }
+
+        // Cycle playback speed
+        function cycleSpeed() {
+            const currentIndex = speedOptions.indexOf(playbackSpeed);
+            const nextIndex = (currentIndex + 1) % speedOptions.length;
+            playbackSpeed = speedOptions[nextIndex];
+            audioElement.playbackRate = playbackSpeed;
+            audioSpeed.textContent = playbackSpeed === 1 ? '1×' : playbackSpeed + '×';
+        }
+
+        // Update play icon
+        function updatePlayIcon() {
+            if (isPlaying) {
+                playIcon.innerHTML = '<path d="M6 4h4v16H6zM14 4h4v16h-4z"/>';
+            } else {
+                playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+            }
+        }
+
+        // Format time (seconds to mm:ss)
+        function formatTime(seconds) {
+            if (!isFinite(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // Audio event listeners
+        audioElement.addEventListener('canplay', () => {
+            audioLoading.classList.remove('visible');
+        });
+
+        audioElement.addEventListener('play', () => {
+            isPlaying = true;
+            updatePlayIcon();
+            audioFab.classList.add('playing');
+        });
+
+        audioElement.addEventListener('pause', () => {
+            isPlaying = false;
+            updatePlayIcon();
+            audioFab.classList.remove('playing');
+        });
+
+        audioElement.addEventListener('timeupdate', () => {
+            const current = audioElement.currentTime;
+            const duration = audioElement.duration || 0;
+
+            const progress = duration > 0 ? (current / duration) * 100 : 0;
+            audioProgressBar.style.width = progress + '%';
+            audioTime.textContent = `${formatTime(current)} / ${formatTime(duration)}`;
+
+            if (isAudioMode) {
+                updateWordHighlighting(current);
+            }
+        });
+
+        audioElement.addEventListener('ended', () => {
+            advanceToNextChunk();
+        });
+
+        // Progress bar click to seek
+        audioProgressContainer.addEventListener('click', (e) => {
+            const rect = audioProgressContainer.getBoundingClientRect();
+            const percent = (e.clientX - rect.left) / rect.width;
+            if (isFinite(audioElement.duration)) {
+                audioElement.currentTime = percent * audioElement.duration;
+            }
+        });
+
+        // Button event listeners
+        audioFab.addEventListener('click', () => {
+            if (isAudioMode) {
+                togglePlayPause();
+            } else {
+                openAudioPlayer();
+            }
+        });
+
+        audioClose.addEventListener('click', closeAudioPlayer);
+        audioPlayBtn.addEventListener('click', togglePlayPause);
+        audioSkipBack.addEventListener('click', skipBack);
+        audioSkipForward.addEventListener('click', skipForward);
+        audioSpeed.addEventListener('click', cycleSpeed);
+
+        // Show/hide FAB based on page
+        function updateAudioUI() {
+            const hasAudio = hasAudioForCurrentPage();
+            audioFab.classList.toggle('visible', hasAudio);
+
+            if (!hasAudio && isAudioMode) {
+                closeAudioPlayer();
+            }
+
+            // Handle autoplay from landing page
+            if (autoplayOnLoad && hasAudio) {
+                autoplayOnLoad = false;
+                setTimeout(() => {
+                    openAudioPlayer();
+                    setTimeout(() => {
+                        audioElement.play().catch(e => console.log('Autoplay blocked:', e));
+                    }, 300);
+                }, 200);
+            }
+        }
+
+        // Patch renderPage to update audio UI
+        const originalRenderPage = renderPage;
+        renderPage = function() {
+            originalRenderPage();
+            setTimeout(updateAudioUI, 100);
+
+            // Re-show landing page audiobook elements
+            if (currentPageIndex === 0 && audioManifest) {
+                showAudiobookBadge();
+            }
+
+            if (isAudioMode) {
+                setTimeout(prepareAudioForPage, 200);
+            }
+        };
+
+        // Keyboard shortcuts for audio
+        document.addEventListener('keydown', (e) => {
+            // Only if audio mode is active or FAB is visible
+            if (!isAudioMode && !audioFab.classList.contains('visible')) return;
+
+            // Ignore if user is typing in an input
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+            switch(e.code) {
+                case 'Space':
+                    if (isAudioMode) {
+                        e.preventDefault();
+                        togglePlayPause();
+                    }
+                    break;
+                case 'KeyL':
+                    // L to toggle listen mode
+                    e.preventDefault();
+                    if (isAudioMode) {
+                        closeAudioPlayer();
+                    } else if (audioFab.classList.contains('visible')) {
+                        openAudioPlayer();
+                    }
+                    break;
+                case 'BracketLeft':
+                    // [ to skip back 10s
+                    if (isAudioMode) {
+                        e.preventDefault();
+                        skipBack();
+                    }
+                    break;
+                case 'BracketRight':
+                    // ] to skip forward 10s
+                    if (isAudioMode) {
+                        e.preventDefault();
+                        skipForward();
+                    }
+                    break;
+                case 'Period':
+                    // > (shift + .) to increase speed
+                    if (isAudioMode && e.shiftKey) {
+                        e.preventDefault();
+                        cycleSpeed();
+                    }
+                    break;
+            }
+        });
+
+        // Load audio manifest on startup
+        loadAudioManifest();
+    </script>
+</body>
+</html>

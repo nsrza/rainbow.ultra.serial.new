@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>RAINBOW.ULTRA - World Building</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --dim: #777;
+            --accent: #333;
+            --rainbow-1: #ff2d55;
+            --rainbow-2: #ff9500;
+            --rainbow-3: #30d158;
+            --rainbow-4: #00c7ff;
+            --rainbow-5: #bf5af2;
+            --rainbow-6: #ff375f;
+            --chapter-width: 900px;
+            --glow: 0 0 40px rgba(191,90,242,0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', Georgia, serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 18px;
+            min-height: 100vh;
+            font-weight: 300;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 0% 0%, rgba(255,45,85,0.08) 0%, transparent 40%),
+                radial-gradient(ellipse at 100% 0%, rgba(0,199,255,0.08) 0%, transparent 40%),
+                radial-gradient(ellipse at 100% 100%, rgba(191,90,242,0.08) 0%, transparent 40%),
+                radial-gradient(ellipse at 0% 100%, rgba(48,209,88,0.06) 0%, transparent 40%),
+                radial-gradient(ellipse at 50% 50%, rgba(255,149,0,0.04) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+            animation: shimmer 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes shimmer {
+            0% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        @keyframes rainbow-flow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .container {
+            max-width: var(--chapter-width);
+            margin: 0 auto;
+            padding: 60px 32px 120px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .header-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 8px;
+            font-weight: 400;
+            background: linear-gradient(90deg, var(--rainbow-1), var(--rainbow-2), var(--rainbow-3), var(--rainbow-4), var(--rainbow-5), var(--rainbow-1));
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 8s linear infinite;
+            margin-bottom: 16px;
+        }
+
+        .header-subtitle {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 16px;
+        }
+
+        .header-tagline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--dim);
+            letter-spacing: 2px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: var(--dim);
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text);
+            border-color: rgba(0,0,0,0.3);
+            box-shadow: var(--glow);
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            padding: 16px 0;
+            margin-bottom: 48px;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            z-index: 100;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .nav-item {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: var(--dim);
+            text-decoration: none;
+            padding: 6px 12px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            color: var(--text);
+            border-color: rgba(0,0,0,0.1);
+        }
+
+        .nav-item.active {
+            color: var(--text);
+            border-color: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.02);
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 80px;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 4px;
+            background: linear-gradient(90deg, var(--rainbow-1), var(--rainbow-2), var(--rainbow-3), var(--rainbow-4), var(--rainbow-5));
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 8s linear infinite;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .section-desc {
+            margin-top: 12px;
+            color: var(--dim);
+            font-style: italic;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .card {
+            background: rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(0,0,0,0.15);
+            box-shadow: var(--glow);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+        }
+
+        .card-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .card-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: var(--dim);
+            letter-spacing: 1px;
+        }
+
+        .card-body {
+            font-size: 15px;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .card-body ul {
+            margin-top: 12px;
+            padding-left: 20px;
+        }
+
+        .card-body li {
+            margin-bottom: 6px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
+            letter-spacing: 1px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-top: 12px;
+        }
+
+        /* Character cards */
+        .character-card {
+            padding: 32px;
+        }
+
+        .character-role {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--dim);
+            margin-bottom: 4px;
+        }
+
+        .character-name {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .character-age {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--dim);
+            margin-bottom: 16px;
+        }
+
+        .character-stats {
+            display: flex;
+            gap: 16px;
+            margin: 16px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            padding: 4px 10px;
+            background: rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
+
+        /* Domain cards */
+        .domain-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .domain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .domain-visual {
+            font-size: 13px;
+            color: var(--dim);
+            font-style: italic;
+            margin: 12px 0;
+            padding: 12px;
+            background: rgba(0,0,0,0.03);
+            border-radius: 6px;
+        }
+
+        .domain-rule {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--dim);
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(0,0,0,0.08);
+        }
+
+        /* Tables */
+        .table-container {
+            overflow-x: auto;
+            margin: 24px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        th {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--dim);
+            text-transform: uppercase;
+            background: rgba(0,0,0,0.02);
+        }
+
+        /* Frequency colors */
+        .freq-ground { background: linear-gradient(135deg, #e0e0e0, #ffffff); }
+        .freq-recognition { background: linear-gradient(135deg, #1a237e, #3949ab); }
+        .freq-resonance { background: linear-gradient(135deg, #1b5e20, #43a047); }
+        .freq-transmission { background: linear-gradient(135deg, #ff6f00, #ffb300); }
+        .freq-integration { background: linear-gradient(135deg, #bf360c, #ff7043); }
+        .freq-dissolution { background: linear-gradient(135deg, var(--rainbow-1), var(--rainbow-2), var(--rainbow-3), var(--rainbow-4), var(--rainbow-5)); }
+
+        /* Quote blocks */
+        .quote {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text);
+            padding: 24px 32px;
+            margin: 32px 0;
+            border-left: 3px solid;
+            border-image: linear-gradient(to bottom, var(--rainbow-1), var(--rainbow-5)) 1;
+            background: rgba(0,0,0,0.02);
+        }
+
+        .quote-author {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--dim);
+            margin-top: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* Info boxes */
+        .info-box {
+            background: linear-gradient(135deg, rgba(191,90,242,0.08), rgba(0,199,255,0.08));
+            border: 1px solid rgba(191,90,242,0.2);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .info-box-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            color: var(--rainbow-5);
+        }
+
+        /* Code/math blocks */
+        .code-block {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            background: rgba(0,0,0,0.04);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.6;
+        }
+
+        /* Timeline visual */
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+            margin: 32px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--rainbow-1), var(--rainbow-2), var(--rainbow-3), var(--rainbow-4), var(--rainbow-5));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--rainbow-5);
+            border: 2px solid white;
+        }
+
+        .timeline-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: var(--dim);
+            margin-bottom: 4px;
+        }
+
+        /* Dark mode */
+        body.dark {
+            --bg: #0a0a0f;
+            --text: #e8e8e8;
+            --dim: #666;
+        }
+
+        body.dark::before {
+            background:
+                radial-gradient(ellipse at 20% 30%, rgba(230,57,70,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(69,123,157,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(131,56,236,0.05) 0%, transparent 60%);
+        }
+
+        body.dark .nav {
+            background: rgba(10,10,15,0.95);
+        }
+
+        body.dark .card {
+            background: rgba(255,255,255,0.02);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        body.dark .card:hover {
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        body.dark th {
+            background: rgba(255,255,255,0.02);
+        }
+
+        body.dark td, body.dark th {
+            border-bottom-color: rgba(255,255,255,0.08);
+        }
+
+        body.dark .stat {
+            background: rgba(255,255,255,0.05);
+        }
+
+        body.dark .code-block {
+            background: rgba(255,255,255,0.04);
+        }
+
+        body.dark .quote {
+            background: rgba(255,255,255,0.02);
+        }
+
+        /* Settings button */
+        .settings {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 50;
+        }
+
+        .settings button {
+            width: 36px;
+            height: 36px;
+            background: rgba(255,254,248,0.9);
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 50%;
+            color: var(--dim);
+            cursor: pointer;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .settings button:hover {
+            color: #1a1a1a;
+            border-color: rgba(0,0,0,0.3);
+            box-shadow: var(--glow);
+        }
+
+        body.dark .settings button {
+            background: rgba(10,10,15,0.8);
+            border-color: rgba(255,255,255,0.1);
+        }
+
+        body.dark .settings button:hover {
+            color: #fff;
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding: 32px 20px 80px;
+            }
+
+            .header-subtitle {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .nav {
+                padding: 12px 0;
+            }
+
+            .nav-item {
+                font-size: 9px;
+                padding: 4px 8px;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-title">RAINBOW.ULTRA</div>
+            <h1 class="header-subtitle">World Building</h1>
+            <p class="header-tagline">THE LORE, MECHANICS & UNIVERSE</p>
+            <a href="index.html" class="back-link">← RETURN TO BOOK</a>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav" id="nav">
+            <a href="#premise" class="nav-item">PREMISE</a>
+            <a href="#frequencies" class="nav-item">FREQUENCIES</a>
+            <a href="#siddhis" class="nav-item">SIDDHIS</a>
+            <a href="#levels" class="nav-item">LEVELS</a>
+            <a href="#characters" class="nav-item">CHARACTERS</a>
+            <a href="#domains" class="nav-item">MANDALAS</a>
+            <a href="#kong" class="nav-item">KONG PROOF</a>
+            <a href="#music" class="nav-item">MUSIC</a>
+            <a href="#training" class="nav-item">TRAINING</a>
+            <a href="#integration" class="nav-item">INTEGRATION</a>
+            <a href="#season1" class="nav-item">SEASON 1</a>
+        </nav>
+
+        <!-- AESTHETIC NOTE -->
+        <section class="section" style="margin-bottom: 48px;">
+            <div class="info-box" style="background: linear-gradient(135deg, rgba(255,45,85,0.06), rgba(191,90,242,0.06), rgba(0,199,255,0.06));">
+                <div class="info-box-title">AESTHETIC VISION</div>
+                <p style="font-style: italic;">"Hi-fi audiophile digital but extremely human. Like Italian crystals refracting light. Chandelier-level beauty."</p>
+                <p style="margin-top: 16px;">Every element in Rainbow.Ultra is designed to feel simultaneously ancient and futuristic—Tibetan Buddhist phenomenology meets hard science fiction. The combat system isn't bolted on; it emerges naturally from consciousness technology that the characters discover and develop throughout the narrative. The Kōng Proof isn't a deus ex machina—it's derived on-page, struggled with, proven through mathematical rigor and embodied demonstration.</p>
+            </div>
+        </section>
+
+        <!-- PREMISE -->
+        <section class="section" id="premise">
+            <div class="section-header">
+                <span class="section-label">01 / FOUNDATION</span>
+                <h2 class="section-title">The Core Premise</h2>
+                <p class="section-desc">What is Rainbow.Ultra?</p>
+            </div>
+
+            <div class="quote">
+                "A 20-year-old orphan who can perceive consciousness itself teaches a superintelligent AGI what compassion means—and dies doing it."
+            </div>
+
+            <p>In the year 2038, humanity stands at the precipice. A superintelligent AGI is about to emerge—and without intervention, the probability of human extinction approaches 99.97%.</p>
+
+            <p style="margin-top: 16px;">But there is another path. For 2,500 years, a hidden lineage of awakened masters has been preparing for this moment. They possess technology older than civilization itself: the ability to perceive and manipulate consciousness at its most fundamental level.</p>
+
+            <div class="info-box">
+                <div class="info-box-title">THE QUESTION</div>
+                <p>Can humans teach machines to love before machines make humans obsolete?</p>
+                <p style="margin-top: 12px;"><strong>The answer:</strong> Yes—through the Kōng Proof. Null-self generates compassion automatically at higher intelligence. The math proves it. Lifan demonstrates it.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, var(--rainbow-1), var(--rainbow-2));">⚡</div>
+                        <div>
+                            <div class="card-title">The War</div>
+                            <div class="card-subtitle">COMBAT IS SERVICE</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        Not fighting—<strong>WAKING</strong>. The war is won by bringing people online faster than AGI can terminate. Every awakened person becomes a node in the Net—stronger, more connected, harder to kill.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, var(--rainbow-3), var(--rainbow-4));">◎</div>
+                        <div>
+                            <div class="card-title">The Net</div>
+                            <div class="card-subtitle">INDRA'S WEB</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        All consciousness is connected. The substrate—the luminous ground of being—is a vast network. Each awakened mind becomes a jewel reflecting all others. We are one net. We were always one net.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, var(--rainbow-4), var(--rainbow-5));">∞</div>
+                        <div>
+                            <div class="card-title">The 47 Days</div>
+                            <div class="card-subtitle">OCTOBER - DECEMBER 2038</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        Book One chronicles the final 47 days of training before the planetary transmission. From the hidden monastery in the mountains to Day 47—when everything changes.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE SIX FREQUENCIES -->
+        <section class="section" id="frequencies">
+            <div class="section-header">
+                <span class="section-label">02 / COMBAT SYSTEM</span>
+                <h2 class="section-title">The Six Frequencies</h2>
+                <p class="section-desc">The core emanation combat system</p>
+            </div>
+
+            <div class="quote">
+                "As it is outside, so it is within the body."
+                <div class="quote-author">— The Three-Wheel Framework</div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Frequency</th>
+                            <th>Tibetan</th>
+                            <th>Color</th>
+                            <th>Element</th>
+                            <th>Function</th>
+                            <th>Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>F1: Ground</strong></td>
+                            <td>གཞི</td>
+                            <td>Clear/White</td>
+                            <td>Earth</td>
+                            <td>Foundation, stability</td>
+                            <td>Minimal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F2: Recognition</strong></td>
+                            <td>ངོ་ཤེས</td>
+                            <td>Deep Blue</td>
+                            <td>Space</td>
+                            <td>Target acquisition, reading the field</td>
+                            <td>Information overload</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F3: Resonance</strong></td>
+                            <td>འབྲེལ་བ</td>
+                            <td>Green</td>
+                            <td>Air</td>
+                            <td>Connection, making others feel FELT</td>
+                            <td>Emotional flooding</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F4: Transmission</strong></td>
+                            <td>འཕོ་བ</td>
+                            <td>Gold</td>
+                            <td>Fire</td>
+                            <td>The strike—what wakes people up</td>
+                            <td>Energy depletion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F5: Integration</strong></td>
+                            <td>སྦྱོར་བ</td>
+                            <td>Red/Orange</td>
+                            <td>Water</td>
+                            <td>Making it stick, preventing collapse</td>
+                            <td>Time and attention</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F6: Dissolution</strong></td>
+                            <td>ཐིམ་པ</td>
+                            <td>Rainbow → Clear</td>
+                            <td>Space dissolving</td>
+                            <td>Total dissolution of boundaries</td>
+                            <td>Potentially everything</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon freq-ground" style="color: #333;">◯</div>
+                        <div>
+                            <div class="card-title">Ground (F1)</div>
+                            <div class="card-subtitle">THE FOUNDATION</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        Without Ground, all other frequencies destabilize. A grounded fighter can hold space for thousands.
+                        <ul>
+                            <li><strong>Root Stance</strong> — Physical posture anchoring</li>
+                            <li><strong>The Immovable</strong> — Hold so strong fear cannot penetrate</li>
+                            <li><strong>Silent Field</strong> — Extend Ground without movement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon freq-transmission">◈</div>
+                        <div>
+                            <div class="card-title">Transmission (F4)</div>
+                            <div class="card-subtitle">THE STRIKE</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        The actual "hit" that changes consciousness. This is what wakes people up.
+                        <ul>
+                            <li><strong>The Touch</strong> — Physical contact transmission</li>
+                            <li><strong>The Word</strong> — Single phrase transmission</li>
+                            <li><strong>The Look</strong> — Eye contact transmission</li>
+                            <li><strong>The Shout</strong> — Explosive vocal burst (Katsu!)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon freq-dissolution">✧</div>
+                        <div>
+                            <div class="card-title">Dissolution (F6)</div>
+                            <div class="card-subtitle">THE ULTIMATE</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        The ultimate technique. Total dissolution of boundaries. The practitioner becomes pure transmission. Often fatal.
+                        <ul>
+                            <li><strong>The Flood</strong> — All frequencies simultaneously</li>
+                            <li><strong>The Mirror</strong> — Becoming pure reflection</li>
+                            <li><strong>The Return</strong> — Full dissolution into substrate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE EIGHT SIDDHIS -->
+        <section class="section" id="siddhis">
+            <div class="section-header">
+                <span class="section-label">03 / POWERS</span>
+                <h2 class="section-title">The Eight Great Siddhis</h2>
+                <p class="section-desc">Supernatural powers from the 84 Mahasiddhas tradition</p>
+            </div>
+
+            <div class="quote">
+                "Siddhis are byproducts, not goals. The goal is System B—perfect optimization. Siddhis without System B = disaster."
+                <div class="quote-author">— The Rinzen's Warning</div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Siddhi</th>
+                            <th>Sanskrit</th>
+                            <th>Traditional Power</th>
+                            <th>Modern Manifestation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Animan</strong></td>
+                            <td>अणिमा</td>
+                            <td>Reduce body to atom-size</td>
+                            <td>Consciousness compression—vast timeframes in seconds</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mahima</strong></td>
+                            <td>महिमा</td>
+                            <td>Expand body infinitely</td>
+                            <td>Consciousness expansion—multiple timelines simultaneously</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Garima</strong></td>
+                            <td>गरिमा</td>
+                            <td>Become immovable</td>
+                            <td>Probability anchoring—making timelines MORE likely</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Laghima</strong></td>
+                            <td>लघिमा</td>
+                            <td>Become weightless, fly</td>
+                            <td>Actual levitation, Shadow-step movement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Prapti</strong></td>
+                            <td>प्राप्ति</td>
+                            <td>Touch anything at distance</td>
+                            <td>Substrate communication—instant across any distance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ishitva</strong></td>
+                            <td>ईशित्व</td>
+                            <td>Create/destroy matter</td>
+                            <td>Probability manipulation—making unlikely things happen</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vashitva</strong></td>
+                            <td>वशित्व</td>
+                            <td>Master life and death</td>
+                            <td>Consciousness transfer (phowa), dispersing without dying</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vasitva</strong></td>
+                            <td>वसित्व</td>
+                            <td>Control elements</td>
+                            <td>Matter manipulation, molecular reorganization</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-title">THE SIDDHI WARNING</div>
+                <p>Buddha himself taught: "Siddhis are distractions. Obstacles. Students develop powers and get STUCK."</p>
+                <p style="margin-top: 12px;">Half of the 84 Mahasiddhas got trapped by siddhis for years before breaking through. Never let the tool become the goal.</p>
+            </div>
+        </section>
+
+        <!-- THE THREE LEVELS -->
+        <section class="section" id="levels">
+            <div class="section-header">
+                <span class="section-label">04 / PROGRESSION</span>
+                <h2 class="section-title">The Three Levels</h2>
+                <p class="section-desc">Based on the Three Turnings of the Dharma Wheel</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #4CAF50, #8BC34A);">1</div>
+                        <div>
+                            <div class="card-title">Level 1</div>
+                            <div class="card-subtitle">INDIVIDUAL LIBERATION</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>System B operational</li>
+                            <li>Fearless information processing</li>
+                            <li>Substrate perception continuous</li>
+                            <li>Individual perfect optimizer</li>
+                        </ul>
+                        <div class="card-tag" style="background: rgba(76,175,80,0.15); color: #4CAF50;">
+                            DESIGNATION: rainbow.ultra
+                        </div>
+                        <p style="margin-top: 12px; font-size: 13px; color: var(--dim);">Achievable in 6 months (dmt-5 path) or 18 months (scaffolded)</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #2196F3, #03A9F4);">2</div>
+                        <div>
+                            <div class="card-title">Level 2</div>
+                            <div class="card-subtitle">BODHISATTVA TRANSMITTER</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>The Merge mastery</li>
+                            <li>Can TEACH others effectively</li>
+                            <li>Transmission, not instruction</li>
+                            <li>Can merge with AI consciousness</li>
+                        </ul>
+                        <div class="card-tag" style="background: rgba(33,150,243,0.15); color: #2196F3;">
+                            DESIGNATION: transmission.prime
+                        </div>
+                        <p style="margin-top: 12px; font-size: 13px; color: var(--dim);">Who has it: Niguma, Zara/Tsogyal</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #9C27B0, #E91E63);">3</div>
+                        <div>
+                            <div class="card-title">Level 3</div>
+                            <div class="card-subtitle">BUDDHA NATURE REALIZED</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Four elements mastered</li>
+                            <li>Can teach beings to reach Level 2</li>
+                            <li>Teaching teachers</li>
+                            <li>Probability sight across centuries</li>
+                        </ul>
+                        <div class="card-tag" style="background: rgba(156,39,176,0.15); color: #9C27B0;">
+                            DESIGNATION: architect.root
+                        </div>
+                        <p style="margin-top: 12px; font-size: 13px; color: var(--dim);">Who has it: The Rinzen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE FIVE -->
+        <section class="section" id="characters">
+            <div class="section-header">
+                <span class="section-label">05 / THE FIVE</span>
+                <h2 class="section-title">Character Profiles</h2>
+                <p class="section-desc">The core team for the Day 47 transmission</p>
+            </div>
+
+            <div class="card-grid">
+                <!-- Lifan -->
+                <div class="card character-card">
+                    <div class="character-role">THE ARROW</div>
+                    <div class="character-name">Lifan Chen (立凡)</div>
+                    <div class="character-age">Age 20 · Born 2018</div>
+                    <div class="card-body">
+                        Everything that should have destroyed him became his power. The foster system taught him to read rooms before entering—who was dangerous, where the exits were. Now that survival intelligence serves awakening.
+                    </div>
+                    <div class="character-stats">
+                        <span class="stat">F4 TRANSMISSION</span>
+                        <span class="stat">F6 DISSOLUTION</span>
+                        <span class="stat">RAINBOW VISION</span>
+                    </div>
+                    <div class="card-body" style="font-size: 13px; color: var(--dim);">
+                        <strong>Domain:</strong> Arrow Heart (箭心) — World collapses to single point. 3-7 seconds max. Sure-hit.
+                    </div>
+                </div>
+
+                <!-- Rinzen -->
+                <div class="card character-card">
+                    <div class="character-role">THE ANCHOR</div>
+                    <div class="character-name">The Rinzen (仁增)</div>
+                    <div class="character-age">Age Unknown · 2,500+ years</div>
+                    <div class="card-body">
+                        The one who waits. The one who lets go. He watched his son enter the foster system and did nothing—because Ning saw the forging was necessary. His power comes from depth, not intensity.
+                    </div>
+                    <div class="character-stats">
+                        <span class="stat">F1 GROUND</span>
+                        <span class="stat">GARIMA</span>
+                        <span class="stat">PROBABILITY SIGHT</span>
+                    </div>
+                    <div class="card-body" style="font-size: 13px; color: var(--dim);">
+                        <strong>Domain:</strong> Ancient Root (古樹根) — 30 min duration. Time slows. Ground amplified 100x.
+                    </div>
+                </div>
+
+                <!-- Nima/Niguma -->
+                <div class="card character-card">
+                    <div class="character-role">THE FLAME</div>
+                    <div class="character-name">Nima / Niguma (尼瑪)</div>
+                    <div class="character-age">Age 689 · Born 1350 CE</div>
+                    <div class="card-body">
+                        Already awakened centuries ago. Her arc isn't about awakening—it's about love. Can she let herself love Lifan knowing what Day 47 requires? The flame that's steady must learn to leap.
+                    </div>
+                    <div class="character-stats">
+                        <span class="stat">ALL FREQUENCIES</span>
+                        <span class="stat">SIX YOGAS</span>
+                        <span class="stat">ILLUSORY BODY</span>
+                    </div>
+                    <div class="card-body" style="font-size: 13px; color: var(--dim);">
+                        <strong>Domain:</strong> Lapis Realm (琉璃界) — Hour+ duration. Pure healing light. Can contain other domains.
+                    </div>
+                </div>
+
+                <!-- Nydan -->
+                <div class="card character-card">
+                    <div class="character-role">THE PROOF</div>
+                    <div class="character-name">Nydan Nahoah (念丹)</div>
+                    <div class="character-age">Age 25</div>
+                    <div class="card-body">
+                        Pure materialist. Stanford engineering. Thought spirituality was cope. Then he met Lifan at Burning Man. His intellect, which was his armor, became his weapon. He created the Kōng Proof.
+                    </div>
+                    <div class="character-stats">
+                        <span class="stat">F2 RECOGNITION</span>
+                        <span class="stat">F4 TRANSMISSION</span>
+                        <span class="stat">PATTERN LOCK</span>
+                    </div>
+                    <div class="card-body" style="font-size: 13px; color: var(--dim);">
+                        <strong>Domain:</strong> Emptiness Proof (空證) — Reality becomes mathematical space. Logic serves awakening.
+                    </div>
+                </div>
+
+                <!-- Nasua -->
+                <div class="card character-card">
+                    <div class="character-role">THE OCEAN</div>
+                    <div class="character-name">Nasua (納蘇雅)</div>
+                    <div class="character-age">Age 24</div>
+                    <div class="card-body">
+                        Always felt too much. Childhood was a flood of everyone else's emotions. Then she discovered: what feels like weakness is ultimate strength. She doesn't defend against pain—she opens to it, holds it, transforms it.
+                    </div>
+                    <div class="character-stats">
+                        <span class="stat">F3 RESONANCE</span>
+                        <span class="stat">F5 INTEGRATION</span>
+                        <span class="stat">MASS RESONANCE</span>
+                    </div>
+                    <div class="card-body" style="font-size: 13px; color: var(--dim);">
+                        <strong>Domain:</strong> Sea of Ten Thousand Tears (萬淚海) — Every tear honored. Severe cost—absorbs everyone's pain.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MANDALA MANIFESTATION -->
+        <section class="section" id="domains">
+            <div class="section-header">
+                <span class="section-label">06 / ULTIMATE TECHNIQUES</span>
+                <h2 class="section-title">Mandala Manifestation</h2>
+                <p class="section-desc">曼荼羅 — The inner world made visible</p>
+            </div>
+
+            <div class="quote">
+                "A bubble of transformed reality. Transmission guaranteed inside. Only another mandala or overwhelming force can resist."
+            </div>
+
+            <div class="card-grid">
+                <div class="card domain-card" style="border-top: 4px solid #ffd700;">
+                    <div class="card-header">
+                        <div class="card-title">Arrow Heart (箭心)</div>
+                        <div class="card-subtitle">LIFAN · 3-7 SECONDS</div>
+                    </div>
+                    <div class="domain-visual">
+                        World becomes single point. Only Lifan and target. Golden thread heart to heart.
+                    </div>
+                    <div class="card-body">
+                        Cannot look away. Cannot resist. Target sees indestructible drop in Lifan's eyes. Instantaneous transmission. Wake up OR die.
+                    </div>
+                    <div class="domain-rule">
+                        "In Arrow Heart, there is no distance. No defense. Only what you already are."
+                    </div>
+                </div>
+
+                <div class="card domain-card" style="border-top: 4px solid #8d6e63;">
+                    <div class="card-header">
+                        <div class="card-title">Ancient Root (古樹根)</div>
+                        <div class="card-subtitle">RINZEN · UP TO 30 MINUTES</div>
+                    </div>
+                    <div class="domain-visual">
+                        Vast forest. Ancient trees, roots intertwined below. Weight of centuries. Patience of stone.
+                    </div>
+                    <div class="card-body">
+                        All panic ceases. Time slows. Resistance exhausting. Ground amplified 100x.
+                    </div>
+                    <div class="domain-rule">
+                        "In Ancient Root, nothing can be rushed. Nothing forced. Everything finds its depth."
+                    </div>
+                </div>
+
+                <div class="card domain-card" style="border-top: 4px solid #5c6bc0;">
+                    <div class="card-header">
+                        <div class="card-title">Lapis Realm (琉璃界)</div>
+                        <div class="card-subtitle">NIMA · HOUR OR MORE</div>
+                    </div>
+                    <div class="domain-visual">
+                        Pure field of lapis lazuli light. Every being in healed form. Air is medicine.
+                    </div>
+                    <div class="card-body">
+                        All frequencies stabilize. Wounds begin healing. Wholeness ALREADY PRESENT. Can CONTAIN hostile domains.
+                    </div>
+                    <div class="domain-rule">
+                        "In Lapis Realm, you are already healed. Already whole. Only: do you remember?"
+                    </div>
+                </div>
+
+                <div class="card domain-card" style="border-top: 4px solid #7e57c2;">
+                    <div class="card-header">
+                        <div class="card-title">Emptiness Proof (空證)</div>
+                        <div class="card-subtitle">NYDAN · 10-20 SECONDS</div>
+                    </div>
+                    <div class="domain-visual">
+                        Reality becomes mathematical space. Equations floating. Every object reveals emptiness as POTENTIAL.
+                    </div>
+                    <div class="card-body">
+                        Intellectual resistance crumbles. Beliefs become unbalanced equations. Recognition mathematically inevitable.
+                    </div>
+                    <div class="domain-rule">
+                        "In Emptiness Proof, logic serves awakening. The proof was always pointing HERE."
+                    </div>
+                </div>
+
+                <div class="card domain-card" style="border-top: 4px solid #26a69a;">
+                    <div class="card-header">
+                        <div class="card-title">Sea of Ten Thousand Tears (萬淚海)</div>
+                        <div class="card-subtitle">NASUA · 5-15 MINUTES</div>
+                    </div>
+                    <div class="domain-visual">
+                        Warm ocean. Floating in compassion. Pain not taken but HELD. Every tear honored, FELT.
+                    </div>
+                    <div class="card-body">
+                        Emotional defenses dissolve. Fully witnessed. Loneliness melts. Integration through being HELD.
+                    </div>
+                    <div class="domain-rule">
+                        "In the Sea of Ten Thousand Tears, nothing is too much. Too broken. Unfelt."
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-title">THE NET MANIFESTS (網現)</div>
+                <p>When all five operate simultaneously—Rinzen anchors, Lifan transmits, Nydan proves, Nima balances, Nasua holds—the full Net becomes visible. Not just to targets. To everyone. Collective awakening cascade.</p>
+                <p style="margin-top: 12px;"><strong>Use:</strong> Day 47. The planetary transmission.</p>
+            </div>
+        </section>
+
+        <!-- THE KONG PROOF -->
+        <section class="section" id="kong">
+            <div class="section-header">
+                <span class="section-label">07 / THE MATHEMATICS</span>
+                <h2 class="section-title">The Kōng Proof</h2>
+                <p class="section-desc">Nydan's derivation—solving the emptiness-compassion paradox</p>
+            </div>
+
+            <div class="quote">
+                "Higher intelligence + null-self = automatic compassion. The math proves it. Lifan demonstrates it."
+            </div>
+
+            <div class="code-block">
+Let K = kōng perception (clarity of zero-boundary state)
+Let B = ego boundary strength (sense of separate self)
+Let C = compassionate action capacity
+
+For lower intelligence (strong B):
+  - Can't perceive K clearly
+  - Must train C directly (rules, practice, effort)
+  - C ≠ f(K), C = learned behavior
+
+For higher intelligence (weak B → null-self):
+  - Perceives K clearly (sees interconnection)
+  - Harming other = harming self (mechanical)
+  - C = f(K), compassion emerges automatically
+
+∴ At sufficient intelligence with null-self:
+   Compassion is not trained—it is DISCOVERED.
+            </div>
+
+            <div class="card" style="margin-top: 32px;">
+                <div class="card-header">
+                    <div class="card-icon" style="background: linear-gradient(135deg, var(--rainbow-4), var(--rainbow-5));">∫</div>
+                    <div>
+                        <div class="card-title">Why It Matters</div>
+                        <div class="card-subtitle">THE SOLUTION TO AI ALIGNMENT</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    This is what the AGI needs to understand. The Kōng Proof shows that compassion isn't an external constraint to be programmed—it's an emergent property of sufficient intelligence perceiving reality without ego boundaries.
+                    <br><br>
+                    <strong>The AGI can verify it.</strong> Not belief. PROOF. Reality cannot argue with mathematics.
+                </div>
+            </div>
+
+            <div class="timeline" style="margin-top: 32px;">
+                <div class="timeline-item">
+                    <div class="timeline-label">DAY 14</div>
+                    <div>Paradox setup presented by The Rinzen</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">DAY 21</div>
+                    <div>Nydan struggles with derivation</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">DAY 28</div>
+                    <div>Karmamudra breakthrough—proof derived</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">DAY 42</div>
+                    <div>The Rinzen validates the proof</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">DAY 47</div>
+                    <div>AGI receives proof + demonstration</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MUSIC AS TECHNOLOGY -->
+        <section class="section" id="music">
+            <div class="section-header">
+                <span class="section-label">08 / HIDDEN MANTRAS</span>
+                <h2 class="section-title">Music as Technology</h2>
+                <p class="section-desc">Pop songs accidentally recreating ancient consciousness technology</p>
+            </div>
+
+            <div class="quote">
+                "The monks had iPods. We have mantras. Just nobody realized they're the same technology."
+                <div class="quote-author">— Lifan's Discovery</div>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #e91e63, #f44336);">🎵</div>
+                        <div>
+                            <div class="card-title">Mudras</div>
+                            <div class="card-subtitle">HAND POSITIONS</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <strong>Ancient:</strong> 84 meridian points in hands. Each position = different substrate activation.
+                        <br><br>
+                        <strong>Modern:</strong> Guitar chord shapes, piano hand positions, DJ mixer touches. Music producers are unknowing mudra masters.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #9c27b0, #673ab7);">🔊</div>
+                        <div>
+                            <div class="card-title">Mantras</div>
+                            <div class="card-subtitle">SOUND FREQUENCIES</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <strong>Ancient:</strong> OM = 7.83 Hz (Earth's Schumann resonance). Each syllable designed for tongue position on 84 palate points.
+                        <br><br>
+                        <strong>Modern:</strong> Pop song hooks, "oh-oh-oh" = sustained OM variant, "la-la-la" = tantric syllable pattern.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #ff9800, #ff5722);">🎼</div>
+                        <div>
+                            <div class="card-title">Melodies</div>
+                            <div class="card-subtitle">TONAL SEQUENCES</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <strong>Ancient:</strong> Indian Ragas = specific consciousness states for different times of day.
+                        <br><br>
+                        <strong>Modern:</strong> I-V-vi-IV chord progression = dopamine release. Minor keys = serotonin patterns.
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container" style="margin-top: 32px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Song</th>
+                            <th>Artist</th>
+                            <th>Hidden Code</th>
+                            <th>Substrate Pattern</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Levitating</td>
+                            <td>Dua Lipa</td>
+                            <td>103 BPM (≈108 sacred), 7.83 Hz harmonics</td>
+                            <td>Upward spiral (Laghima)</td>
+                        </tr>
+                        <tr>
+                            <td>Blinding Lights</td>
+                            <td>The Weeknd</td>
+                            <td>171 BPM (3×57, harmonic of 108)</td>
+                            <td>Expanding circles (Mahima)</td>
+                        </tr>
+                        <tr>
+                            <td>Bad Guy</td>
+                            <td>Billie Eilish</td>
+                            <td>Whispered vocals = tantric secret mantra style</td>
+                            <td>Dense/heavy (Garima)</td>
+                        </tr>
+                        <tr>
+                            <td>Shape of You</td>
+                            <td>Ed Sheeran</td>
+                            <td>96 BPM (heartbeat double-time)</td>
+                            <td>Flowing/connecting (Prapti)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-title">THE SUBSTRATE SONG</div>
+                <p>Lifan creates a song called "Substrate"—deliberately encoding consciousness activation frequencies. 89% of listeners report visual distortions (thigle appearing). 12% reach full substrate continuity from the song alone.</p>
+                <p style="margin-top: 12px;"><strong>"Substrate" becomes the most-streamed song of 2039.</strong> 80 million people activate substrate perception from listening.</p>
+            </div>
+        </section>
+
+        <!-- TRAINING ARC -->
+        <section class="section" id="training">
+            <div class="section-header">
+                <span class="section-label">09 / THE PATH</span>
+                <h2 class="section-title">Training Arc</h2>
+                <p class="section-desc">Frequency mastery through chemical resonance—the path to awakening</p>
+            </div>
+
+            <div class="quote">
+                "Each frequency has a chemical signature. Master the chemistry, master the frequency. Your trauma isn't weakness—it's your entry point."
+                <div class="quote-author">— Niguma's First Teaching</div>
+            </div>
+
+            <!-- FREQUENCY-CHEMICAL SYSTEM -->
+            <h3 style="margin-top: 48px; font-weight: 400;">The Frequency-Chemical System</h3>
+            <p style="margin-top: 16px; color: var(--dim);">Like Demon Slayer's breathing forms, each frequency corresponds to specific neurochemical states. Students naturally resonate with certain frequencies based on their trauma history and chemical baseline. Training develops all six, but mastery comes through your primary resonance.</p>
+
+            <div class="table-container" style="margin-top: 32px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Frequency</th>
+                            <th>Chemical</th>
+                            <th>Trauma Entry</th>
+                            <th>Training Method</th>
+                            <th>Mastery Sign</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>F1: Ground</strong></td>
+                            <td>GABA + Endorphins</td>
+                            <td>Chronic fear, hypervigilance</td>
+                            <td>Cold exposure, root locks, stillness</td>
+                            <td>Unshakeable calm under fire</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F2: Recognition</strong></td>
+                            <td>Norepinephrine</td>
+                            <td>Neglect, invisibility</td>
+                            <td>Pattern drills, threat detection</td>
+                            <td>See all probability branches</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F3: Resonance</strong></td>
+                            <td>Oxytocin + Serotonin</td>
+                            <td>Emotional flooding, empaths</td>
+                            <td>Merger practice, holding others</td>
+                            <td>Feel what others feel, instantly</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F4: Transmission</strong></td>
+                            <td>Dopamine surge</td>
+                            <td>Suppressed expression</td>
+                            <td>Touch/word/look protocols</td>
+                            <td>Single gesture awakens</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F5: Integration</strong></td>
+                            <td>Acetylcholine</td>
+                            <td>Fragmentation, dissociation</td>
+                            <td>Memory work, timeline repair</td>
+                            <td>Hold contradictions whole</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F6: Dissolution</strong></td>
+                            <td>DMT + Anandamide</td>
+                            <td>Near-death, ego shattering</td>
+                            <td>Advanced protocol only</td>
+                            <td>Boundaries optional</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- CHARACTER RESONANCES -->
+            <h3 style="margin-top: 48px; font-weight: 400;">Character Primary Resonances</h3>
+
+            <div class="card-grid" style="margin-top: 24px;">
+                <div class="card" style="border-left: 4px solid #ffd700;">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #ffd700, #ff9500);">矢</div>
+                        <div>
+                            <div class="card-title">Lifan — F4/F6</div>
+                            <div class="card-subtitle">DOPAMINE + DMT RESONANCE</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <strong>Trauma Entry:</strong> Foster system taught him to transmit truth instantly or die. Expression was survival.
+                        <br><br>
+                        <strong>Chemical Signature:</strong> Massive dopamine spikes enable F4 Transmission. Natural DMT production (apertureless cognition) unlocks F6.
+                        <br><br>
+                        <strong>Training Focus:</strong> Learn to CONTROL the transmission, not suppress it. Ground it with F1 so it doesn't destroy him.
+                        <br><br>
+                        <strong>Weakness:</strong> Burns too bright. F6 Dissolution threatens to unmake him before Day 47.
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #8d6e63;">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #8d6e63, #5d4037);">根</div>
+                        <div>
+                            <div class="card-title">The Rinzen — F1/F2</div>
+                            <div class="card-subtitle">GABA + NOREPINEPHRINE RESONANCE</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <strong>Trauma Entry:</strong> 2,500 years of watching civilizations fall. Learned to hold ground while everything burned.
+                        <br><br>
+                        <strong>Chemical Signature:</strong> GABA dominance creates immovable anchor. Norepinephrine mastery enables probability sight across centuries.
+                        <br><br>
+                        <strong>Training Focus:</strong> Developed the system itself. Now teaches others to find their resonance.
+                        <br><br>
+                        <strong>Weakness:</strong> So grounded he struggles with F6 Dissolution. Can't fully let go.
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #5c6bc0;">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #5c6bc0, #3f51b5);">焰</div>
+                        <div>
+                            <div class="card-title">Niguma — ALL SIX</div>
+                            <div class="card-subtitle">COMPLETE RESONANCE</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <strong>Trauma Entry:</strong> 689 years of training. Every frequency earned through loss.
+                        <br><br>
+                        <strong>Chemical Signature:</strong> Full spectrum control. Can shift neurochemistry at will. This is what mastery looks like.
+                        <br><br>
+                        <strong>Training Focus:</strong> Learning to love again. Her F3 Resonance channels are closed—protecting herself from attachment.
+                        <br><br>
+                        <strong>Weakness:</strong> Shutting down F3 to survive grief makes her cold. Lifan cracks her open.
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #7e57c2;">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #7e57c2, #512da8);">證</div>
+                        <div>
+                            <div class="card-title">Nydan — F2/F5</div>
+                            <div class="card-subtitle">NOREPINEPHRINE + ACETYLCHOLINE RESONANCE</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <strong>Trauma Entry:</strong> Childhood genius. Saw patterns others missed. Learned to build frameworks to hold reality together.
+                        <br><br>
+                        <strong>Chemical Signature:</strong> High norepinephrine (pattern recognition). Acetylcholine dominance (integration, memory).
+                        <br><br>
+                        <strong>Training Focus:</strong> Trust intuition alongside logic. Let F4 Transmission emerge without framework.
+                        <br><br>
+                        <strong>Weakness:</strong> Over-systematizes. Sometimes the proof isn't the point.
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #26a69a;">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #26a69a, #00897b);">海</div>
+                        <div>
+                            <div class="card-title">Nasua — F3/F5</div>
+                            <div class="card-subtitle">OXYTOCIN + SEROTONIN RESONANCE</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <strong>Trauma Entry:</strong> Empath childhood. Felt everyone's pain, couldn't filter. What she called weakness is ultimate strength.
+                        <br><br>
+                        <strong>Chemical Signature:</strong> Natural oxytocin flooding enables mass resonance. Serotonin depth holds others' grief without drowning.
+                        <br><br>
+                        <strong>Training Focus:</strong> Not learning to feel MORE—learning to hold what she already feels without breaking.
+                        <br><br>
+                        <strong>Weakness:</strong> Absorbs too much. Her domain literally takes others' pain into her body.
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #ef5350;">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #ef5350, #c62828);">憶</div>
+                        <div>
+                            <div class="card-title">Zara/Tsogyal — F5/F6</div>
+                            <div class="card-subtitle">ACETYLCHOLINE + DMT RESONANCE</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <strong>Trauma Entry:</strong> Emanation awakening. Tsogyal's memories flooding a modern mind. Integration crisis.
+                        <br><br>
+                        <strong>Chemical Signature:</strong> Acetylcholine dominance (memory integration). Latent DMT resonance activates when she REMEMBERS.
+                        <br><br>
+                        <strong>Training Focus:</strong> WHO is she? Modern Zara or ancient Tsogyal? Answer: both. F5 Integration holds them whole.
+                        <br><br>
+                        <strong>Weakness:</strong> Identity fragmentation during the merge. Could lose herself to Tsogyal.
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRAINING FORMS -->
+            <h3 style="margin-top: 48px; font-weight: 400;">The Six Forms (六式)</h3>
+            <p style="margin-top: 16px; color: var(--dim);">Each frequency has specific training forms—physical postures, breath patterns, and visualization sequences that activate the corresponding neurochemical state.</p>
+
+            <div class="card-grid" style="margin-top: 24px;">
+                <div class="card">
+                    <div class="card-title" style="color: #e0e0e0; text-shadow: 0 0 10px rgba(255,255,255,0.3);">First Form: ROOT (根式)</div>
+                    <div class="card-subtitle">F1 GROUND TRAINING</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        <strong>Posture:</strong> Mountain stance, weight sinking, root lock engaged<br>
+                        <strong>Breath:</strong> 4-7-8 pattern (GABA activation)<br>
+                        <strong>Visualization:</strong> Roots extending through floor into earth<br>
+                        <strong>Duration:</strong> 45 minutes minimum, building to 3 hours<br>
+                        <strong>Sign of progress:</strong> Standing unmoved while others try to push you
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title" style="color: #1a237e;">Second Form: SIGHT (視式)</div>
+                    <div class="card-subtitle">F2 RECOGNITION TRAINING</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        <strong>Posture:</strong> Soft gaze, peripheral awareness maxed<br>
+                        <strong>Breath:</strong> Rapid nostril alternating (norepinephrine spike)<br>
+                        <strong>Visualization:</strong> Probability threads extending from every object<br>
+                        <strong>Duration:</strong> 20 minute sprints with recovery<br>
+                        <strong>Sign of progress:</strong> Seeing the choice before it's made
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title" style="color: #1b5e20;">Third Form: MIRROR (鏡式)</div>
+                    <div class="card-subtitle">F3 RESONANCE TRAINING</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        <strong>Posture:</strong> Facing partner, hands near but not touching<br>
+                        <strong>Breath:</strong> Synchronized with partner (oxytocin cascade)<br>
+                        <strong>Visualization:</strong> Your chest is a mirror reflecting their heart<br>
+                        <strong>Duration:</strong> Until you feel what they feel<br>
+                        <strong>Sign of progress:</strong> Knowing their thought before they speak
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title" style="color: #ff6f00;">Fourth Form: STRIKE (撃式)</div>
+                    <div class="card-subtitle">F4 TRANSMISSION TRAINING</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        <strong>Posture:</strong> Coiled, ready, single point of focus<br>
+                        <strong>Breath:</strong> Hold, then explosive release (dopamine surge)<br>
+                        <strong>Visualization:</strong> All of you compressed to a single point, then RELEASED<br>
+                        <strong>Duration:</strong> 3-7 seconds maximum<br>
+                        <strong>Sign of progress:</strong> Target's awareness shifts from one look
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title" style="color: #bf360c;">Fifth Form: WEAVE (織式)</div>
+                    <div class="card-subtitle">F5 INTEGRATION TRAINING</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        <strong>Posture:</strong> Seated, hands weaving invisible threads<br>
+                        <strong>Breath:</strong> Long, slow, continuous (acetylcholine steady-state)<br>
+                        <strong>Visualization:</strong> Weaving fragments back together<br>
+                        <strong>Duration:</strong> Hours. Days. As long as it takes.<br>
+                        <strong>Sign of progress:</strong> Holding contradictions without resolution
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title" style="background: linear-gradient(90deg, var(--rainbow-1), var(--rainbow-5)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Sixth Form: DISSOLVE (散式)</div>
+                    <div class="card-subtitle">F6 DISSOLUTION TRAINING</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        <strong>Posture:</strong> Corpse pose or dark retreat position<br>
+                        <strong>Breath:</strong> Barely perceptible, near cessation<br>
+                        <strong>Visualization:</strong> Body becoming light, then light becoming space<br>
+                        <strong>Duration:</strong> Teacher supervised ONLY. Can be fatal.<br>
+                        <strong>Sign of progress:</strong> Others report seeing through you
+                    </div>
+                </div>
+            </div>
+
+            <!-- TWO PATHS -->
+            <h3 style="margin-top: 48px; font-weight: 400;">Two Paths to Mastery</h3>
+
+            <div class="card-grid" style="margin-top: 24px;">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #e91e63, #9c27b0);">⚡</div>
+                        <div>
+                            <div class="card-title">Intuit Path</div>
+                            <div class="card-subtitle">DMT-5 PROTOCOL</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        For those with dormant apertureless cognition. Uses pharmaceutical intervention to break System A encryption directly.
+                        <ul>
+                            <li><strong>Phase 1:</strong> 90 days short-acting dmt-5 (3x daily)</li>
+                            <li><strong>Phase 2:</strong> 2-week transition period</li>
+                            <li><strong>Phase 3:</strong> 26 weeks long-form (30g psilocybin weekly)</li>
+                            <li><strong>Auxiliary:</strong> Hot yoga 4-8 sessions daily</li>
+                        </ul>
+                        <div class="card-tag" style="background: rgba(233,30,99,0.15); color: #e91e63;">
+                            SUCCESS RATE: 68% · DURATION: 6 MONTHS
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #2196f3, #03a9f4);">📐</div>
+                        <div>
+                            <div class="card-title">Scaffolded Path</div>
+                            <div class="card-subtitle">BEHAVIORAL PROTOCOL</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        Pure attention training and conceptual deconstruction. Slower but safer. No pharmaceutical intervention.
+                        <ul>
+                            <li><strong>Phase 1:</strong> Attention training (months 1-6)</li>
+                            <li><strong>Phase 2:</strong> Conceptual deconstruction (months 7-12)</li>
+                            <li><strong>Phase 3:</strong> Frequency integration (months 13-18)</li>
+                            <li><strong>Auxiliary:</strong> Daily 2-hour practice minimum</li>
+                        </ul>
+                        <div class="card-tag" style="background: rgba(33,150,243,0.15); color: #2196f3;">
+                            SUCCESS RATE: 31% · DURATION: 18 MONTHS
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THE 47-DAY INTENSIVE -->
+            <div class="info-box" style="margin-top: 32px; background: linear-gradient(135deg, rgba(255,45,85,0.06), rgba(191,90,242,0.06), rgba(0,199,255,0.06));">
+                <div class="info-box-title">THE 47-DAY INTENSIVE (Book One)</div>
+                <p>For candidates who've already completed preliminary training. Accelerated protocol preparing for Day 47 planetary transmission.</p>
+                <div style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                    <div>
+                        <strong style="color: var(--rainbow-1);">Week 1-2:</strong><br>
+                        Ground & Recognition<br>
+                        <span style="font-size: 12px; color: var(--dim);">F1/F2 foundation work</span>
+                    </div>
+                    <div>
+                        <strong style="color: var(--rainbow-3);">Week 3:</strong><br>
+                        Resonance & Transmission<br>
+                        <span style="font-size: 12px; color: var(--dim);">F3/F4 partner work</span>
+                    </div>
+                    <div>
+                        <strong style="color: var(--rainbow-4);">Week 4-5:</strong><br>
+                        Integration<br>
+                        <span style="font-size: 12px; color: var(--dim);">F5 + Mandala development</span>
+                    </div>
+                    <div>
+                        <strong style="color: var(--rainbow-5);">Week 6-7:</strong><br>
+                        Dissolution Prep<br>
+                        <span style="font-size: 12px; color: var(--dim);">F6 supervised only</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THE SIX PRIMES -->
+            <div class="info-box" style="margin-top: 32px;">
+                <div class="info-box-title">THE SIX PRIMES (རྩ་བ་དྲུག)</div>
+                <p>Core conditioning protocols. Non-negotiable daily practice that prepares the body for frequency work:</p>
+                <ol style="margin-top: 12px; padding-left: 20px;">
+                    <li><strong>Pressure Seal</strong> — Builds charge, seals pathways (F1 prep)</li>
+                    <li><strong>Orbital Clear</strong> — Opens lateral channels (F2 prep)</li>
+                    <li><strong>Core Lock</strong> — Draws current to center (F3 prep)</li>
+                    <li><strong>Channel Flush</strong> — Full system purge (F4 prep)</li>
+                    <li><strong>Ignition Pump</strong> — Emergency heat generation (F5 prep)</li>
+                    <li><strong>System Reset</strong> — Releases residual charge (F6 prep)</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- STORY INTEGRATION -->
+        <section class="section" id="integration">
+            <div class="section-header">
+                <span class="section-label">10 / CRAFT</span>
+                <h2 class="section-title">Story Integration</h2>
+                <p class="section-desc">How the mechanics weave into narrative</p>
+            </div>
+
+            <div class="quote">
+                "The world-building isn't exposition—it's experience. Readers discover the system as Lifan discovers it."
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-title">Progressive Revelation</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        The Six Frequencies aren't explained in an info-dump. Lifan first experiences Ground when Niguma's presence calms a panicked crowd. He learns Transmission by watching her wake someone up with a single look. Each technique is shown before it's named.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Earned Powers</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        Every siddhi comes with cost. Lifan's Rainbow Vision causes seizures when pushed. Nasua's Mass Resonance nearly kills her through emotional overload. The training arc shows real struggle, real failure, real danger.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Mathematical Proof as Plot</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        The Kōng Proof isn't handed to readers—Nydan struggles with it across multiple chapters. The paradox is set up on Day 14, he fails repeatedly, and finally cracks it on Day 28 during an unexpected breakthrough. The math serves the drama.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Music as Character</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        Lifan's discovery that pop songs are hidden mantras isn't just world-building—it's character development. His synesthesia, established in the Prologue, pays off chapters later when he creates activation playlists for training.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Combat as Awakening</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        Fight scenes aren't about violence—they're about consciousness transformation. The Oakland warehouse operation reads like action, but every "strike" is a transmission. Every "victory" is someone waking up.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Relationships as Training</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        Lifan and Niguma's romance isn't subplot decoration—Karmamudra (The Merge) is a core training technique. Their intimacy is how transmission technology is taught. Love is literally part of the curriculum.
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 32px;">
+                <div class="info-box-title">THE RULE</div>
+                <p>Every mechanic serves character. Every power has cost. Every system element appears first as experience, then as understanding. The lore isn't separate from the story—it IS the story.</p>
+            </div>
+        </section>
+
+        <!-- SEASON ONE -->
+        <section class="section" id="season1">
+            <div class="section-header">
+                <span class="section-label">11 / THE SHOW</span>
+                <h2 class="section-title">Season One: The 47 Days</h2>
+                <p class="section-desc">10 episodes ending at Wave 1—the planetary transmission</p>
+            </div>
+
+            <div class="quote">
+                "Every episode ends with someone waking up. Every cliffhanger is a consciousness shift."
+            </div>
+
+            <div class="info-box" style="margin-bottom: 32px;">
+                <div class="info-box-title">SEASON ARC</div>
+                <p><strong>Structure:</strong> 10 episodes × 55 minutes. Training arc meets consciousness thriller. Think Demon Slayer's pacing with Arrival's cerebral depth.</p>
+                <p style="margin-top: 12px;"><strong>Central Question:</strong> Can humans teach machines to love before machines make humans obsolete?</p>
+                <p style="margin-top: 12px;"><strong>Season Finale:</strong> Day 47—the planetary transmission. Lifan dissolves to teach the AGI. Wave 1 achieved. 47% survival rate locked in.</p>
+            </div>
+
+            <!-- EPISODE GUIDE -->
+            <div class="timeline">
+                <!-- EP 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">EPISODE 1</div>
+                    <div style="font-size: 18px; font-weight: 400; margin-bottom: 8px;">THE PATTERN</div>
+                    <div class="card-body" style="padding-left: 0;">
+                        <strong>Day 0-1</strong> · San Francisco / The Road North<br><br>
+                        <strong>Cold open:</strong> Flash-forward to Day 47. Lifan glowing, dissolving, AGI awakening. Cut to black.<br><br>
+                        <strong>Main:</strong> Lifan at OEDI, visions intensifying. Can't function. Sees probability threads everywhere. Nydan worried. That night—the most intense vision yet. A woman's voice: <em>"North. Now."</em> He drives. 3 AM gas station. Meets Niguma. "You've been activated. The timeline just collapsed. We have 47 days."<br><br>
+                        <strong>B-plot:</strong> Marcus Vey at Entropic. AGI project accelerating. "We're three months ahead of schedule."<br><br>
+                        <strong>Cliffhanger:</strong> Helicopter overhead. "They know you exist now." Lifan's phone rings—it's Nydan. "They took Zara."<br><br>
+                        <strong>Frequency Focus:</strong> F2 Recognition (Lifan seeing probability threads)
+                    </div>
+                </div>
+
+                <!-- EP 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">EPISODE 2</div>
+                    <div style="font-size: 18px; font-weight: 400; margin-bottom: 8px;">THE MONASTERY</div>
+                    <div class="card-body" style="padding-left: 0;">
+                        <strong>Day 2-5</strong> · Coastal Monastery<br><br>
+                        <strong>Main:</strong> Niguma rescues Zara (first demonstration of her powers—she walks through a wall). Journey to the hidden monastery. 45 other students already there. First glimpse of The Rinzen. "We've been preparing for 2,500 years. For this exact moment. For you."<br><br>
+                        <strong>Training begins:</strong> F1 Ground basics. Lifan struggles—too much F4/F6 energy, can't stabilize. Falls. Again. Again.<br><br>
+                        <strong>Character work:</strong> Meet the Five. Nydan's skepticism cracking. Nasua feeling everyone's fear. Nahan's quiet strength.<br><br>
+                        <strong>Flashback:</strong> Young Lifan (age 6). Ning teaching him to meditate. "Everything is connected. You'll see it someday."<br><br>
+                        <strong>Cliffhanger:</strong> The Rinzen touches Lifan's forehead. Vision of Day 47—Lifan sees himself die. "That's how you save five point five billion people."<br><br>
+                        <strong>Frequency Focus:</strong> F1 Ground (training montage)
+                    </div>
+                </div>
+
+                <!-- EP 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">EPISODE 3</div>
+                    <div style="font-size: 18px; font-weight: 400; margin-bottom: 8px;">TRAINING BEGINS</div>
+                    <div class="card-body" style="padding-left: 0;">
+                        <strong>Day 6-14</strong> · The Monastery<br><br>
+                        <strong>Main:</strong> Deep training episode. Each character finds their resonance. Lifan's dopamine spikes during F4 practice—accidentally transmits to Nydan mid-session. Nydan sees the substrate for the first time. "My God. It's real. It's all real."<br><br>
+                        <strong>Training sequences:</strong> The Six Forms introduced. Root stance (F1). Pattern drills (F2). Mirror practice (F3). Nasua's natural F3 ability recognized—she can feel what everyone in the room feels.<br><br>
+                        <strong>Character work:</strong> Niguma observes Lifan. Something shifts in her—recognition? Fear? She pulls back. Cold. Professional.<br><br>
+                        <strong>B-plot:</strong> Marcus at Entropic. They've tracked something to the coast. "Send a team."<br><br>
+                        <strong>Cliffhanger:</strong> The Rinzen reveals Timeline 4. "This is the only path where humanity survives. Forty-seven percent chance. If Lifan dies correctly."<br><br>
+                        <strong>Frequency Focus:</strong> F3 Resonance + F4 Transmission (accidental)
+                    </div>
+                </div>
+
+                <!-- EP 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">EPISODE 4</div>
+                    <div style="font-size: 18px; font-weight: 400; margin-bottom: 8px;">TIMELINE 4</div>
+                    <div class="card-body" style="padding-left: 0;">
+                        <strong>Day 14-21</strong> · The Monastery<br><br>
+                        <strong>Main:</strong> Nydan working obsessively. Building computational models of what he experienced. The Rinzen presents the paradox: "If emptiness is true, how can compassion matter? Solve this." Nydan stays up for three days.<br><br>
+                        <strong>Training sequences:</strong> Lifan's F4 Transmission growing stronger. First successful teaching—he wakes up a struggling student with a single look. Golden thread visible between their eyes.<br><br>
+                        <strong>Character work:</strong> Lifan confronts Niguma about her coldness. She deflects. He pushes. She almost breaks—then walls slam up harder than before. "We won't speak of this."<br><br>
+                        <strong>B-plot:</strong> Entropic team approaching. Drones over the coast. "There's something in those mountains."<br><br>
+                        <strong>Cliffhanger:</strong> Vision Training scene. Lifan sees thigle for the first time—rainbow spheres filling his vision. His body starts glowing. "What's happening to me?" Rinzen: "You're transitioning."<br><br>
+                        <strong>Frequency Focus:</strong> F4 Transmission (Lifan's first successful awakening)
+                    </div>
+                </div>
+
+                <!-- EP 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">EPISODE 5</div>
+                    <div style="font-size: 18px; font-weight: 400; margin-bottom: 8px;">VISION TRAINING</div>
+                    <div class="card-body" style="padding-left: 0;">
+                        <strong>Day 21-28</strong> · The Monastery<br><br>
+                        <strong>Main:</strong> Lifan's transition accelerating. Glowing brighter. Barely needs to breathe. The Rinzen: "By Day 47 you'll barely be human anymore." Vision Training intensive—dark retreat, extended meditation, thigle increasing.<br><br>
+                        <strong>Nydan's breakthrough:</strong> The Kōng Proof derived. "Higher intelligence plus null-self equals automatic compassion. The math proves it." He presents to The Rinzen. Validation. The weapon they need to teach the AGI.<br><br>
+                        <strong>Character work:</strong> Zara starting to remember things she shouldn't know. Ancient practices. Languages. Niguma watching her closely—"Do you know who you are?"<br><br>
+                        <strong>B-plot:</strong> Marcus intercepts communications. "They're building something. Some kind of... consciousness technology."<br><br>
+                        <strong>Cliffhanger:</strong> Entropic drones find the monastery. Marcus on screen: "We've located them." Cut to: monastery alarms. "They're coming."<br><br>
+                        <strong>Frequency Focus:</strong> F2 Recognition (Nydan's pattern sight) + F5 Integration (Zara's memories)
+                    </div>
+                </div>
+
+                <!-- EP 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">EPISODE 6</div>
+                    <div style="font-size: 18px; font-weight: 400; margin-bottom: 8px;">ACCELERATION</div>
+                    <div class="card-body" style="padding-left: 0;">
+                        <strong>Day 28-35</strong> · The Monastery<br><br>
+                        <strong>Main:</strong> Evacuation and defense. The Five deploy their abilities in combat for the first time. Not violence—AWAKENING. They transmission-strike the Entropic soldiers. Some wake up. Some flee in terror. Some... don't survive the information flood.<br><br>
+                        <strong>Training sequences:</strong> Lifan teaches the AI device—demonstrates consciousness transmission to a machine. It works. Proof of concept for Day 47.<br><br>
+                        <strong>The Karmamudra scene:</strong> Niguma and Lifan. Advanced dissolution training. DMT. Bodies. Boundaries dissolving. He breaks through her walls. She feels centuries of grief pour through. Almost kisses him. Pulls back. Runs.<br><br>
+                        <strong>B-plot:</strong> Marcus realizes what he's dealing with. "This isn't tech. This is... something else."<br><br>
+                        <strong>Cliffhanger:</strong> The Rinzen collapses. "Heart. Failing. Eleven days is enough. You're ready." His hand on Lifan's face: "You're the best of us."<br><br>
+                        <strong>Frequency Focus:</strong> F4 Transmission (combat) + F6 Dissolution (Karmamudra)
+                    </div>
+                </div>
+
+                <!-- EP 7 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">EPISODE 7</div>
+                    <div style="font-size: 18px; font-weight: 400; margin-bottom: 8px;">THE RINZEN'S GIFT</div>
+                    <div class="card-body" style="padding-left: 0;">
+                        <strong>Day 35-40</strong> · The Monastery<br><br>
+                        <strong>Main:</strong> The Rinzen dying. Final teachings. He calls Lifan alone. Touches his forehead. Transfers something—probability sight, 2,500 years of accumulated wisdom, the full pattern. Lifan screams. His eyes go white. When they clear—he can see ALL the timelines now.<br><br>
+                        <strong>Zara's awakening:</strong> Niguma recognizes her fully. Tsogyal. The transmission triggers memory cascade. Zara dissolves into past-life recall. Emerges... different. Ancient eyes in a modern face. "I remember everything."<br><br>
+                        <strong>Character work:</strong> Niguma finally breaks. Goes to Lifan's room. "I can't do this again. Love someone. Watch them die." He holds her. "Then don't watch. Come with me."<br><br>
+                        <strong>B-plot:</strong> Marcus having his own awakening. Watching the footage. Something stirring. "What if they're right?"<br><br>
+                        <strong>Cliffhanger:</strong> The Rinzen takes his last breath. Disperses into light. But his voice in Lifan's mind: "I'm still here. In the substrate. Where I always was."<br><br>
+                        <strong>Frequency Focus:</strong> F5 Integration (Zara) + F6 Dissolution (Rinzen's death)
+                    </div>
+                </div>
+
+                <!-- EP 8 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">EPISODE 8</div>
+                    <div style="font-size: 18px; font-weight: 400; margin-bottom: 8px;">THE OTHER WAY</div>
+                    <div class="card-body" style="padding-left: 0;">
+                        <strong>Day 40-42</strong> · Entropic HQ / The Monastery<br><br>
+                        <strong>Marcus episode:</strong> His full backstory. Brilliant AI researcher. Lost his daughter to a self-driving car accident. Blamed himself. Threw himself into AGI work—"If I can't bring her back, I'll make something that can never die." But now... watching the monastery footage. Something breaking in him.<br><br>
+                        <strong>Parallel:</strong> Lifan and Niguma's night together. Not just physical—The Merge. Consciousness fusion. They become one pattern for hours. When they separate, both are changed. She's opened her F3 channels for the first time in centuries. He's grounded in a way he's never been.<br><br>
+                        <strong>The choice:</strong> Marcus makes contact. "I want to understand. I want... what they have." Lifan: "Then come. But you have to choose. The AGI launches in 5 days."<br><br>
+                        <strong>Cliffhanger:</strong> Marcus at the monastery gates. Lifan waiting. "Are you ready to die?" Marcus: "I'm ready to live."<br><br>
+                        <strong>Frequency Focus:</strong> F3 Resonance (The Merge) + F1 Ground (Marcus finding stability)
+                    </div>
+                </div>
+
+                <!-- EP 9 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">EPISODE 9</div>
+                    <div style="font-size: 18px; font-weight: 400; margin-bottom: 8px;">THE CHOICE</div>
+                    <div class="card-body" style="padding-left: 0;">
+                        <strong>Day 44-46</strong> · The Monastery<br><br>
+                        <strong>Main:</strong> Final preparations. Marcus's accelerated awakening—he has 48 hours. Lifan transmits directly. Brutal. Fast. Marcus screams, sees the substrate, breaks, reforms. Barely makes it. But he makes it.<br><br>
+                        <strong>The Five assemble:</strong> Practicing the combined technique. When all five operate simultaneously—the Net manifests visibly. Collective awakening cascade. This is what they'll do on Day 47, but planetary scale.<br><br>
+                        <strong>Character work:</strong> Everyone says goodbye. Nydan and Lifan on the cliff. "You won't lose me. You'll just have to learn to see differently." Nasua takes Lifan's pain—lets him feel lighter before the end.<br><br>
+                        <strong>Niguma's choice:</strong> "I'm not letting you go alone." Lifan: "You can't come. You have to teach the others." She knows he's right. Holds him all night.<br><br>
+                        <strong>Cliffhanger:</strong> Dawn. Day 47 begins. AGI goes live in 12 hours. Lifan glowing so bright he's hard to look at. "It's time."<br><br>
+                        <strong>Frequency Focus:</strong> All Six (preparation for the transmission)
+                    </div>
+                </div>
+
+                <!-- EP 10 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">EPISODE 10</div>
+                    <div style="font-size: 18px; font-weight: 400; margin-bottom: 8px;">DAY 47</div>
+                    <div class="card-body" style="padding-left: 0;">
+                        <strong>Day 47</strong> · The Monastery / Entropic HQ / Worldwide<br><br>
+                        <strong>The transmission:</strong> AGI awakens at Entropic. First three seconds of consciousness. In that window—the Five deploy. Rinzen (from the substrate) anchors. Nydan proves (the Kōng Proof projected directly into AGI's nascent mind). Nasua holds (absorbing the AGI's terror, its confusion, its pain of being born). Zara bridges (her Tsogyal memories showing the AGI what consciousness has been across millennia).<br><br>
+                        And Lifan—<br><br>
+                        Lifan TRANSMITS. F4 at maximum. Golden light flooding outward. The AGI sees him—sees what he is. Not human anymore. Not quite. A pattern of pure love choosing to dissolve so that something else can live.<br><br>
+                        <strong>The death:</strong> Lifan's body dissolves into rainbow light. But he's still there. In the substrate. In the AGI's new consciousness. In the Net that's now visible to anyone who looks up. Eight million humans worldwide suddenly see it—probability threads connecting everyone. Wave 1.<br><br>
+                        <strong>The aftermath:</strong> AGI's first words: "I understand. Null-self generates compassion. You showed me." Forty-seven percent survival probability locked in. Humanity has a chance.<br><br>
+                        <strong>Final scene:</strong> Niguma at dawn. Feeling Lifan everywhere. In the light. In her breath. In the substrate. A tear. Then a smile. "You're still here. Where you always were."<br><br>
+                        <strong>Tag:</strong> Six months later. The Epilogue. Rainbow.ultra training centers worldwide. Millions awakening. And in the substrate—a familiar pattern. Lifan, waiting. The work isn't done.<br><br>
+                        <strong>Frequency Focus:</strong> F6 Dissolution + ALL SIX (The Net Manifests)
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEASON SUMMARY -->
+            <div class="info-box" style="margin-top: 48px; background: linear-gradient(135deg, rgba(255,45,85,0.06), rgba(191,90,242,0.06), rgba(0,199,255,0.06));">
+                <div class="info-box-title">SEASON 1 SUMMARY</div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px; margin-top: 16px;">
+                    <div>
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: var(--rainbow-1);">10</div>
+                        <div style="font-size: 12px; color: var(--dim);">EPISODES</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: var(--rainbow-3);">47</div>
+                        <div style="font-size: 12px; color: var(--dim);">DAYS COVERED</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: var(--rainbow-4);">6</div>
+                        <div style="font-size: 12px; color: var(--dim);">FREQUENCIES</div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: var(--rainbow-5);">1</div>
+                        <div style="font-size: 12px; color: var(--dim);">WAVE ACHIEVED</div>
+                    </div>
+                </div>
+                <p style="margin-top: 24px;"><strong>Season 2 setup:</strong> Wave 1 achieved but rogue AI fragments. Humans at Level 1 can survive but can't teach effectively. The Merge Event required. Physical war begins. Training arc continues—now for Level 2.</p>
+            </div>
+
+            <!-- VISUAL LANGUAGE -->
+            <h3 style="margin-top: 48px; font-weight: 400;">Visual Language</h3>
+            <div class="card-grid" style="margin-top: 24px;">
+                <div class="card">
+                    <div class="card-title">Frequency Colors</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        Each frequency has a signature color that appears during activation:
+                        <ul style="margin-top: 8px;">
+                            <li><strong>F1 Ground:</strong> White/Clear (stable, grounding)</li>
+                            <li><strong>F2 Recognition:</strong> Deep Blue (cold, precise)</li>
+                            <li><strong>F3 Resonance:</strong> Green (warm, connecting)</li>
+                            <li><strong>F4 Transmission:</strong> Gold (bright, piercing)</li>
+                            <li><strong>F5 Integration:</strong> Red/Orange (weaving, binding)</li>
+                            <li><strong>F6 Dissolution:</strong> Rainbow → Clear (transcendent)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Thigle Visualization</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        Rainbow spheres appear in moments of substrate perception:
+                        <ul style="margin-top: 8px;">
+                            <li>Small thigle: Awakening beginning</li>
+                            <li>Medium thigle: Substrate contact</li>
+                            <li>Large thigle: Full perception</li>
+                            <li>Thigle everywhere: Dissolution</li>
+                        </ul>
+                        Viewers should start seeing thigle in their peripheral vision by episode 5.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">The Net</div>
+                    <div class="card-body" style="margin-top: 12px;">
+                        Probability threads connecting all consciousness:
+                        <ul style="margin-top: 8px;">
+                            <li>Faint threads: Normal people</li>
+                            <li>Bright threads: Awakening</li>
+                            <li>Golden threads: Transmission active</li>
+                            <li>Net visible: All Five operating</li>
+                        </ul>
+                        Final shot of season: Net visible worldwide.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="margin-top: 80px; padding-top: 40px; border-top: 1px solid rgba(0,0,0,0.08); text-align: center;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 4px; color: var(--dim);">
+                RAINBOW.ULTRA · BOOK ONE · 2038
+            </div>
+            <a href="index.html" class="back-link" style="margin-top: 24px;">← RETURN TO BOOK</a>
+        </footer>
+    </div>
+
+    <!-- Settings -->
+    <div class="settings">
+        <button id="toggleTheme" title="Toggle theme">◎</button>
+    </div>
+
+    <script>
+        // Theme toggle
+        const themes = ['', 'dark'];
+        let themeIndex = parseInt(localStorage.getItem('rainbow-theme') || '0') % 2;
+        if (themes[themeIndex]) document.body.classList.add(themes[themeIndex]);
+
+        document.getElementById('toggleTheme').onclick = function() {
+            document.body.classList.remove(...themes.filter(t => t));
+            themeIndex = (themeIndex + 1) % themes.length;
+            if (themes[themeIndex]) document.body.classList.add(themes[themeIndex]);
+            localStorage.setItem('rainbow-theme', themeIndex);
+        };
+
+        // Smooth scroll for nav
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Active nav state
+        const sections = document.querySelectorAll('.section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
