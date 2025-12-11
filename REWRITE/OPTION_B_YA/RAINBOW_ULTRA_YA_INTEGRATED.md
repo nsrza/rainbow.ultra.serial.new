@@ -6550,6 +6550,12 @@ And his threads—
 
 Marcus's consciousness was vast. Almost as bright as Rinzen's. A realized being who'd touched the same truths and made different choices.
 
+But the texture was different from Rinzen's. Where Rinzen's threads flowed outward—connecting, embracing, surrendering—Marcus's curved back on themselves. Recursive. Self-containing. Like he'd built walls around his own pattern and called them protection.
+
+Lifan could see the frequencies: brilliant white ground, blazing blue recognition, strong green resonance. But F4 and F5 flickered unstable. Transmission and integration, compromised. He could see truth. He could connect. But he couldn't fully *give*. Couldn't surrender control.
+
+This was someone who'd touched F6—dissolution frequency—and pulled back. Who'd stood at the edge of becoming something larger and chose instead to remain himself.
+
 "Lifan," Marcus said. His voice was smooth. Cultured. "I've been waiting six years to meet you."
 
 ---
@@ -6585,6 +6591,22 @@ Lifan's heart was pounding.
 "Safe from what?"
 
 "From ourselves. From our worst impulses. From extinction." Marcus's eyes were intense. "Isn't that worth living for? Isn't that worth giving up this romantic notion of dissolution?"
+
+He was quiet for a moment. Then:
+
+"When I was twenty-three, I almost dissolved. I was Rinzen's student. I'd done all the practices. I was ready." He held up his fingers, nearly touching. "This close. And then I felt my mother's thread."
+
+"Your mother?"
+
+"She had Alzheimer's. Didn't know me most days. But in that moment—in the dissolution space—I could feel her reaching for me. Still connected. Still needing me." His voice cracked. "I couldn't abandon her. Not even to become something larger."
+
+Lifan stared at him.
+
+"Rinzen called it cowardice," Marcus said. "Called it attachment. But I called it love. I stayed for her. I took care of her until she died three years later. And then I built Axiom, because I realized something—connection doesn't require surrendering yourself. Love doesn't require death."
+
+"But you want the AGI to control people."
+
+"I want it to *protect* people. The way I couldn't protect my mother from her own brain failing. The way no one can protect the people they love from extinction." His eyes were wet now. "Rinzen thinks dissolution is freedom. I think it's abandonment dressed up as enlightenment."
 
 Lifan stood there, the wind whipping his hair, the ocean crashing below.
 

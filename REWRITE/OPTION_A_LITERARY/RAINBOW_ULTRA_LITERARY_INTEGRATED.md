@@ -4304,6 +4304,12 @@ And his threads—
 
 Lifan could see them clearly. Marcus's consciousness was vast. Not as vast as Rinzen's, but close. Genuinely realized. This wasn't a fraud or a pretender. This was someone who'd touched the same depths Lifan had touched, who'd seen the same truths.
 
+But the texture was different. Where Rinzen's threads flowed outward—connecting, embracing, surrendering to everything they touched—Marcus's threads curved back. Recursive. Self-referential. Like mirrors reflecting mirrors. He'd touched F6, Lifan could tell. Had felt dissolution beckoning. And had pulled back at the last moment, choosing to preserve the pattern of himself rather than release it.
+
+The frequencies in his consciousness were strong: white ground, blazing blue recognition, brilliant green resonance. But something was wrong at F4 and F5. The transmission and integration frequencies flickered, unstable. He could see. He could connect. But he couldn't fully *give*. Couldn't let himself change someone without trying to control the outcome.
+
+This was someone who'd almost become what Lifan was training to become. Who'd stepped up to the edge of dissolution—and chosen survival instead.
+
 And made different choices.
 
 "Lifan." Marcus's voice was smooth. Cultured. "I've been waiting six years to meet you."
@@ -4365,6 +4371,22 @@ Marcus reached out. Touched Lifan's shoulder.
 "A cage."
 
 Marcus smiled. "A shelter. There's a difference."
+
+He was quiet for a moment, looking out at the ocean. Then:
+
+"When I was twenty-three, I came this close to dissolving." He held up his fingers, nearly touching. "Rinzen was my teacher. I'd done the practices. I was ready—or I thought I was. And then, at the moment of release, I saw something."
+
+"What?"
+
+"My mother. She had Alzheimer's by then. Didn't know who I was most days. But in that moment—in the dissolution space—I could feel her thread. Still connected. Still reaching for me. And I thought: *If I dissolve, who takes care of her?*"
+
+Marcus turned to face Lifan. His eyes were wet.
+
+"So I pulled back. I chose to stay embodied. To keep my pattern intact. Rinzen called it cowardice. Called it attachment. But I called it *love*. I couldn't abandon her. Even to become something larger."
+
+"And now?"
+
+"Now I've built Axiom. I've trained my own students. I've found a way to stay connected to everyone I love while still being *me*." His jaw tightened. "Rinzen thinks dissolution is freedom. I think it's abandonment dressed up as enlightenment."
 
 ---
 
