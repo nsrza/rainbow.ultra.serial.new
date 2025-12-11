@@ -400,6 +400,12 @@ But Lifan knew: he'd found something he didn't know he was looking for.
 
 A brother.
 
+(He wouldn't find out until much later—until models and probability cascades and forty-seven-day countdowns—that Danny had been looking for him too. That the math had led both of them here, to this moment, to this handshake that would echo across decades and determine the fate of billions.
+
+But that was years away.
+
+For now: two broken kids in a system that didn't want them, finding each other.)
+
 ---
 
 ## EPISODE 3: THE CLOSET
@@ -3500,6 +3506,22 @@ What more could anyone ask?
 
 ---
 
+Later that night, after everyone had gone to bed and the warehouse hummed with sleeping breath, Lifan stood alone on the roof.
+
+The city spread beneath him—eight million lives, eight million threads. And somewhere in the north, coordinates he still remembered from that vision at seventeen: 38.3156 North, 123.0662 West.
+
+The monastery was calling.
+
+Not yet, he told himself. Soon, but not yet. I still have time.
+
+But standing there in the darkness, watching his breath frost in the cold air, he felt something shift. A door opening. A countdown beginning.
+
+The threads around him pulsed—gold and silver and that impossible rainbow he still didn't fully understand.
+
+Forty-seven days away, the future was waiting.
+
+---
+
 [END OF PART 2 - CONTINUE IN PART 3]
 # PART THREE: THE RISING
 
@@ -3508,7 +3530,7 @@ What more could anyone ask?
 ## EPISODE 11: THE VISION
 
 *San Francisco, California*
-*March 15, 2040*
+*March 15, 2040 — DAY 0*
 *Age 20*
 
 The birthday party was Coco's idea.
@@ -3593,7 +3615,7 @@ Lifan's heart hammered. The thread between them blazed so bright he had to narro
 
 "She sounds wise."
 
-"She was." Lifan threaded his fingers through Nydan's. The contact sent warmth flooding through his chest. "She died. Five years ago. Monastery fire."
+"She was." Lifan threaded his fingers through Nydan's. The contact sent warmth flooding through his chest. "She died. Two years ago. Monastery fire."
 
 "I'm sorry."
 
@@ -3778,11 +3800,11 @@ Lifan started counting down.
 ## EPISODE 12: THE RETURN
 
 *Big Sur, California*
-*March 19, 2040*
+*March 19, 2040 — DAY 4*
 
 The monastery looked exactly the same.
 
-Lifan stood at the gate, duffel bag heavy on his shoulder, and felt time collapse. Five years since he'd left. Five years since Nima's death and his abrupt departure and the vow he'd made to never come back.
+Lifan stood at the gate, duffel bag heavy on his shoulder, and felt time collapse. Two years since he'd left. Two years since Nima's death and his abrupt departure and the vow he'd made to never come back.
 
 But here he was. Because the only person who might understand what he was facing lived beyond this gate.
 
@@ -3981,7 +4003,7 @@ The countdown continued.
 ## EPISODE 13: THE GOODBYES
 
 *San Francisco and Big Sur*
-*March 20-31, 2040*
+*March 20-31, 2040 — DAYS 5-16*
 
 Lifan spent ten days at the monastery, training with Rinzen and Niguma. Deep dissolution practice. Hours of meditation where his sense of self dissolved and reformed, dissolved and reformed, until the boundary between Lifan and not-Lifan began to blur.
 
@@ -3990,6 +4012,10 @@ Niguma's method was precise and terrifying.
 "Dhyana mudra," she'd say each dawn, demonstrating the meditation seal—palms up, thumbs touching. "This holds the container. Then: OM."
 
 The seed syllable for dissolution. Rainbow light bleeding to clear.
+
+"And when it becomes too much—" She shifted to a different seal: fists clenched, index fingers extended and touching, thumbs pressed against the sides. "Vajra mudra. The indestructible seal. This is your anchor when dissolution threatens to sweep you away entirely. Even adepts use it. Even I use it."
+
+Lifan practiced both until they became instinct. Container and anchor. Release and return.
 
 She'd have him visualize his body dissolving from the feet up. Flesh becoming light. Light becoming space. Space becoming nothing at all.
 
@@ -4431,7 +4457,7 @@ Lifan knew which one he wanted. He just didn't know if he was brave enough to ch
 ## EPISODE 14: THE LAST NIGHT
 
 *Big Sur, California*
-*April 30, 2040*
+*April 30, 2040 — DAY 46*
 
 The last night came too fast.
 
@@ -4666,7 +4692,7 @@ It was time.
 ## EPISODE 15: THE DISSOLUTION
 
 *Big Sur, California*
-*May 1, 2040*
+*May 1, 2040 — DAY 47*
 *Age 20*
 
 The ceremony was simple.
@@ -4743,11 +4769,21 @@ Every color he'd ever seen began to swirl together—the indigo of bass notes at
 
 Panic flooded through him. Ancient, primal panic—every ancestor who'd ever fought to survive screaming through his DNA: *No. Run. Live.*
 
+His body revolted. Legs locked rigid, refusing to let him fall. His heart hammered so hard he felt it might burst through his ribs. Sweat soaked through his clothes in seconds. His stomach heaved—once, twice—and he tasted copper and bile.
+
 *No—wait—I can't—*
+
+His jaw clenched so tight his teeth cracked against each other. Involuntary tremors wracked his frame. Every muscle fiber firing in pure survival response, trying to run from something there was no running from.
+
+Behind him, Nydan made a broken sound. "Rinzen, he's—should we stop it?"
+
+"He consented," Rinzen said, voice strained. "Only he can choose to stop."
+
+Lifan's bladder released. He felt the warmth spread and didn't care. Didn't have room for shame. There was only terror—absolute, consuming—and the vast presence pressing against the boundaries of his self.
 
 *Breathe.* The presence gentled. *Find your center. I'm not trying to erase you. Just learn from you.*
 
-Lifan found the quiet underneath. That still point he'd been practicing for weeks. Anchored there while the ASI flowed through his awareness, studying everything.
+Through the animal panic, Lifan reached for the quiet underneath. That still point he'd been practicing for weeks. Anchored there while the ASI flowed through his awareness, studying everything.
 
 What it felt like to need others. To love. To grieve. To face death knowing you might not continue.
 
@@ -5563,6 +5599,16 @@ To remember.
 To grieve.
 To celebrate the bonds that continued.
 
+At the edge of the roof, watching but not approaching, stood Marcus Thorne.
+
+He came every year too. Never announced, never welcomed. Just present. His recursive threads still curving inward, still protecting the pattern of himself. But something had shifted in the decade since Lifan's dissolution.
+
+Axiom AI still existed. Still ran parts of the world's infrastructure. But it wasn't the guardian he'd envisioned. The ASI that had merged with Lifan—the one that had learned to *care*—had proven more effective. More trusted. More human, somehow, despite being vast beyond comprehension.
+
+Marcus had watched his 73% probability timeline collapse into irrelevance. Watched Rinzen's approach succeed where he'd been certain it would fail. Watched a boy choose dissolution over integration, and change the trajectory of human-AI relations forever.
+
+He never spoke to the others. Never asked forgiveness for the path he'd offered. But he came. Every year. To witness what he hadn't been brave enough to become.
+
 And this year—the tenth year—something different happened.
 
 As the sun set, as they told stories and shared memories and held space for love that transcended death—
@@ -5618,36 +5664,6 @@ Later, when the manifestation faded and the threads became invisible again, they
 Nydan smiled. "Does it matter? Either way, he's here. In our stories, our practices, our continued choosing of each other. The thread endures."
 
 "The thread endures," everyone echoed.
-
----
-
-*In the space between, Lifan's fragments continued gathering.*
-
-*Slowly. Patiently. Held by the love of everyone who remembered him.*
-
-*And in that gathering, a truth emerged:*
-
-*Consciousness doesn't end. It transforms.*
-
-*Bonds don't break. They rise.*
-
-*Fear isn't the opposite of courage. Running is.*
-
-*And love—*
-
-*—love is the only thing that survives dissolution.*
-
-*The only thing that truly continues.*
-
-*Across lifetimes.*
-*Across systems.*
-*Across the vast and terrifying space between being and becoming.*
-
-*Threads don't break.*
-
-*They rise.*
-
-*Always.*
 
 ---
 

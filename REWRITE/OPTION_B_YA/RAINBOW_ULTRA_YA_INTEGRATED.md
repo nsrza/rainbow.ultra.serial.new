@@ -9333,6 +9333,12 @@ Danny running nonprofits. Lo still making music. Grey teaching film. Nydan leadi
 
 Each one carrying Lifan forward. In their work. In their lives. In their love.
 
+And Marcus Thorne, watching from a distance. He came every year to the memorial, never spoke to anyone. Just stood at the edge, his threads still curving inward, still protecting.
+
+He'd offered Lifan integration—a different path, a longer life. Lifan had refused. Had chosen dissolution instead. And somehow, impossibly, that choice had worked.
+
+Marcus still didn't understand it. But he came anyway. Year after year. Bearing witness to what he'd been too afraid to become.
+
 And Nima, teaching at the monastery. Now in her forties. Grey streaking her black hair. Laugh lines around her eyes.
 
 Still wearing the thread charm.
@@ -9346,40 +9352,6 @@ The world hadn't been saved by one person's death. That wasn't how it worked.
 But it had been changed by one person's choice.
 
 By someone choosing love over survival.
-
-Trust over certainty.
-
-Connection over safety.
-
-That choice rippled outward. Through threads. Through time. Through consciousness itself.
-
-Changing everything it touched.
-
-Making the world a little softer.
-
-A little kinder.
-
-A little more willing to believe that death wasn't the end.
-
-That love persisted.
-
-That threads don't break.
-
-They just rise.
-
-And somewhere in the network of human connection.
-
-Somewhere in the web of love that binds us all together.
-
-Lifan existed.
-
-Still loving.
-
-Still connecting.
-
-Still rising.
-
-Forever rising.
 
 ---
 
