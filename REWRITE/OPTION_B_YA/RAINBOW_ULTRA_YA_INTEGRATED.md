@@ -2729,7 +2729,17 @@ Their lips met.
 
 Soft. Tentative. Lifan's first kiss ever, and he had no idea what he was doing, but it didn't matter because Nima was kissing him and the world was exploding into light.
 
-Their threads merged completely. He felt everything she felt. Joy. Nervousness. Affection. Wonder.
+And then—
+
+The threads.
+
+He'd seen merged threads before, during deep meditation. But this was different. Their F3 frequencies—resonance, connection—didn't just touch. They *braided*. His silver-gold weaving into her rainbow light, the two threads becoming something new. Something neither of them had been alone.
+
+He could feel her heartbeat in his chest. Her nervousness that was also excitement. Her wonder that mirrored his own.
+
+For one impossible second, he couldn't tell where he ended and she began.
+
+Then the kiss broke, gently, and they were separate again.
 
 When they pulled apart, they were both grinning like idiots.
 

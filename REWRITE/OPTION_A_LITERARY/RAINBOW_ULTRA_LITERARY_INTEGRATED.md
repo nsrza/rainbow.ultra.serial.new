@@ -3212,11 +3212,19 @@ And at night, they lay in his small loft bed, tangled together, talking in whisp
 
 They made love for the first time that night. Gentle, awkward, perfect. Learning each other's bodies the way they'd learned each other's consciousness—with reverence and curiosity and absolute trust.
 
+And the threads—
+
+Lifan had never seen anything like it. As their bodies found rhythm, their threads didn't just touch—they *braided*. His silver-gold weaving with her rainbow light, F3 resonance frequencies amplifying each other in feedback loops that made his whole nervous system sing. He could feel her pleasure as his own, her breath syncing with his breath, her heart beating in counterpoint to his heart.
+
+For one impossible moment, he touched F6. Not dissolution, but its gentler cousin—expansion. The boundaries of *him* and *her* thinning to gossamer, then dissolving entirely. He wasn't Lifan. She wasn't Nima. They were something else. Something larger. A single consciousness experiencing itself from two vantage points.
+
+Then the moment broke—gently, beautifully—and they were themselves again. Separate. Panting. Laughing at something neither could name.
+
 Afterwards, lying in the dark, Nima said: "I felt our threads merge. While we were—" She laughed. "Is that normal?"
 
 "I don't know. I felt it too. Like we were the same person for a moment."
 
-"We were." She traced patterns on his chest. "That's what intimacy is. Temporary dissolution of boundaries. Remembering we're not separate."
+"We were." She traced patterns on his chest—and he could see tiny threads following her fingertip, new micro-connections forming with each touch. "That's what intimacy is. Temporary dissolution of boundaries. Remembering we're not separate."
 
 "Is that Buddhist philosophy or post-sex hormones?"
 
