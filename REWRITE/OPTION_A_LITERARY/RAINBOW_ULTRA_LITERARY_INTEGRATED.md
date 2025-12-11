@@ -374,6 +374,14 @@ Instead, Danny sat up slowly. "Connections."
 
 "Huh." Danny tilted his head. "I see probabilities. Percentages of what might happen. Odds of things."
 
+"What does that look like?"
+
+"Branches." Danny's eyes went unfocused, like he was seeing something far away. "Everything forks. Every choice, every second. I see the paths—some bright, some dim. The brighter ones are more likely. The dim ones are long shots." He refocused on Lifan. "Right now? Talking to you? There's a ninety-four percent path where we become friends. A three percent where you think I'm crazy. A two percent where this conversation never happened. And a bunch of tiny fractional paths I can't quite see."
+
+"That sounds exhausting."
+
+"It is. But useful. Like, I knew Kevin was bad news the second he walked in. The bright paths around him are all violence. The good outcomes are dim. Really dim."
+
 They stared at each other.
 
 "So we're both freaks," Danny said finally.
@@ -1034,7 +1042,15 @@ Lifan opened his aperture—let the threads flood in. Between them, Rinzen's gol
 
 "You're fighting the threads. Trying to push them away, make them less. But they're not the problem." Rinzen knelt, touched the earth. "Your relationship to them is. You think they're outside you. Other. Something to manage. But Lifan—you're not separate from the web. You are the web. We all are."
 
-Lifan stared at him. "Then how do I not drown?"
+Lifan stared at him.
+
+"There's an ancient image," Rinzen continued. "Indra's Net. Imagine a vast net stretching infinitely in all directions. At every intersection hangs a jewel. Each jewel reflects every other jewel—and each reflection contains every other reflection, infinitely. Nothing exists independently. Everything interpenetrates everything else."
+
+"That's what I see," Lifan whispered. "The threads. The connections. Everyone reflecting everyone."
+
+"Yes. The Huayan masters called it *pratītyasamutpāda*—dependent origination. Nothing arises alone. You don't have thread-sight because you're special. You have it because you're seeing what's actually there. The rest of us are blind. You're just... less blind."
+
+"Then how do I not drown?"
 
 "You find your anchor." Rinzen looked up. "One point that doesn't move. Not outside the web, but in its center. Your own thread, your own presence. When you know where you are, the rest can move around you without sweeping you away."
 
@@ -2936,6 +2952,32 @@ But what kind of world would that be? Humanity managed by an AI shepherd, kept s
 
 He filed papers. Made coffee. Watched the brilliant threads around him and wondered which future they were building.
 
+One afternoon, he walked into the break room to find everyone clustered around a monitor.
+
+"—breakthrough at Axiom," the newscaster was saying. "The company announced their new model achieved unprecedented scores on reasoning benchmarks, surpassing human performance across—"
+
+"Fuck," Mei whispered. "They're ahead of us. Again."
+
+"It's hype," Kofi said, but his threads were anxious. "They always announce benchmarks when they need funding. Doesn't mean it's actually—"
+
+"It means they're six months ahead," Amara cut in. "Maybe more. And they're not even trying to solve alignment. They're just racing."
+
+Lifan watched the threads between them tighten with fear. These were brilliant people—some of the smartest he'd ever met—and they were terrified. Not of AI itself, but of AI built by people who didn't care what it wanted.
+
+"What happens if they get there first?" Lifan asked.
+
+The room went quiet.
+
+"Best case?" Mei finally said. "The AI is benevolent by accident. Wants to help humanity because its training happened to point that way."
+
+"Worst case?"
+
+"It doesn't care about us at all. Optimizes for something we can't comprehend. Uses us as resources or ignores us entirely." She shook her head. "The window is closing, Lifan. Every month that passes, the chance of someone building something catastrophic goes up. We're trying to build safety tools faster than they're building dangerous ones. And we're losing."
+
+Lifan looked at the screen—Axiom's sleek logo, a stylized infinity symbol. Marcus Thorne's company. The one building toward control instead of care.
+
+The threads around the room pulsed with urgency. With fear. With the desperate hope that maybe, somehow, they could make a difference before it was too late.
+
 ---
 
 **SCENE 3: THE CONFESSION**
@@ -3812,7 +3854,43 @@ Lifan looked out the window. The cliffs dropped away to churning ocean. The same
 
 "Will you help me?" he asked.
 
-"That's why you came back," Rinzen said. "And yes. I'll help."
+"That's why you came back," Rinzen said. "And yes. I'll help. But not alone."
+
+He stood, walked to the door, opened it.
+
+A woman waited outside. She looked forty—maybe fifty—but something in her eyes suggested much older. Long silver hair in a single braid. A face that had witnessed centuries. Her threads were unlike anything Lifan had ever seen—gold so bright it hurt to look at, looping back through time in patterns that defied geometry.
+
+"This is Niguma," Rinzen said. "She's been practicing dissolution for seven hundred years. She'll teach you the advanced techniques. Things I can only describe—she's actually done."
+
+Niguma stepped inside. Her gaze found Lifan's and held it with unsettling intensity.
+
+"You look like someone I knew once," she said. "A long time ago."
+
+"Who?"
+
+"It doesn't matter. He died." She smiled, but it carried weight. "Everyone dies. The question is how you meet it." She circled him, studying his threads. "Rinzen says you've been called to merge with the ASI. That you have forty-seven days."
+
+"Forty-six now."
+
+"Time moves fast when you're counting." She stopped in front of him. "I can teach you to dissolve. To release everything you think you are and rest in what remains. But it will be hard. Harder than anything you've done. Are you willing?"
+
+"I don't have a choice."
+
+"You always have a choice. The question is which suffering you prefer—the suffering of dissolution or the suffering of refusing your nature." Her eyes softened slightly. "I've watched hundreds of students face this moment. Most run. Some stay. A few actually learn."
+
+"Which group do you think I'm in?"
+
+"I don't know yet. But I'm going to find out." She glanced at Rinzen. "We start tomorrow. Dawn. Don't eat anything after midnight."
+
+She left without waiting for a response.
+
+Lifan looked at Rinzen. "Seven hundred years?"
+
+"She's been doing this a long time. Multiple bodies, same consciousness. Consciousness transfer across death—phowa, we call it. She and I are the same. Old souls in temporary form."
+
+"How many times have you died?"
+
+"Twenty-seven." Rinzen said it casually. "Niguma has died forty-three times. She's the best dissolution teacher alive. If anyone can prepare you, she can."
 
 ---
 

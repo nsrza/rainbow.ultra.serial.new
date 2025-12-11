@@ -1191,7 +1191,13 @@ And the thread between them pulsed with something Lifan had learned to recognize
 
 Danny had a gift too. Not like Lifan's. Danny couldn't see threads. But he could see probabilities. Paths. Outcomes.
 
-He didn't call it that. Danny just said he was good at reading situations. Guessing what would happen next. But Lifan had watched him for two years now, and it was more than guessing.
+He'd explained it once, late at night in their room: "It's like... branches. Every choice splits into more choices. I see them all—some bright, some dim. The bright ones are likely. The dim ones are long shots." He'd waved his hand in front of his face, tracing invisible patterns. "Right now, there's an eighty-seven percent chance Joe falls asleep during the movie. A nine percent chance he catches us sneaking extra popcorn. A four percent chance of something weird happening."
+
+"What kind of weird?"
+
+"I don't know. The dim paths are fuzzy. I just see they exist."
+
+He didn't call it a gift. Danny just said he was good at reading situations. Guessing what would happen next. But Lifan had watched him for two years now, and it was more than guessing.
 
 Danny knew things.
 
@@ -1818,6 +1824,30 @@ The threads dimmed. Not gone, but quieter.
 They sat there for an hour. Just watching water.
 
 It was the most peace Lifan had felt in weeks.
+
+---
+
+A few days later, Rinzen taught him something that changed everything.
+
+"There's an image from the old texts," Rinzen said. They were in the garden again, the fountain trickling. "Indra's Net. Imagine a net stretching infinitely in all directions. At every point where threads cross, there's a jewel. Each jewel reflects every other jewel. And each reflection contains all the other reflections."
+
+"Like infinite mirrors," Lifan said.
+
+"Exactly. That's what you see when you look at threads. Not something separate from reality—reality itself. The Huayan masters called it *pratītyasamutpāda*. Dependent origination. Nothing exists alone. Everything reflects everything else."
+
+"So the threads aren't... unusual?"
+
+"The threads are what's actually there. Everyone is connected. Most people just can't see it." Rinzen smiled. "You're not broken, Lifan. You're just less blind than the rest of us."
+
+Something in Lifan's chest unknotted. He'd spent years thinking he was crazy. Thinking the threads were a symptom of something wrong. But if they were real—if he was seeing what was actually there—
+
+"Then why is it so overwhelming?"
+
+"Because you're one jewel trying to reflect infinite jewels all at once. You need to learn to be still. To trust that the reflections will happen without your effort. To rest in the center of the net instead of grasping at every strand."
+
+"How?"
+
+"Practice. Time. And help from people who've done it before." Rinzen stood. "That's what the monastery is for. You're not alone anymore."
 
 ---
 
@@ -4134,6 +4164,28 @@ Was that the Axiom future? Humanity kept safe but not free?
 
 He filed papers. Made coffee. Watched the brilliant threads around him and wondered which future they were building.
 
+One day, everyone stopped working.
+
+The news came in on someone's phone, then spread through the office like wildfire. Axiom had announced a new AI model—one that scored higher than any human on reasoning tests.
+
+"This is it," Mei said, her face pale. "They're months ahead of us. Maybe more."
+
+"It's just benchmarks," Kofi argued. "Doesn't mean it's actually—"
+
+"It means the window is closing." Amara's voice was tight. "They're not even trying to solve alignment. They're just racing to be first."
+
+Lifan watched their threads twist with fear. These were brilliant people—some of the smartest he'd ever met. And they were terrified.
+
+"What happens if they get there first?" he asked.
+
+Nobody wanted to answer.
+
+"Best case," Mei finally said, "the AI is accidentally benevolent. Wants to help because its training pointed that way."
+
+"Worst case?"
+
+"It doesn't care about us at all." She looked at the screen. "And we're running out of time to make sure someone builds something that does."
+
 ---
 
 He walked home at 3 AM after another late Rohki gathering.
@@ -6440,7 +6492,37 @@ Rinzen looked at him. "You're choosing?"
 
 "Not yet. But I want to be ready. If I choose that path, I want to do it right."
 
-"Then we begin today."
+"Then we begin today. But not with me."
+
+Rinzen stood and walked to the door. He opened it.
+
+A woman waited in the hallway. She looked maybe fifty, but her eyes were ancient. Silver hair in a long braid. A face that had witnessed things no living person should remember.
+
+Her threads made Lifan gasp. Gold so bright it hurt to look at—looping back through time in patterns that shouldn't exist. Past life connections that stretched back centuries.
+
+"This is Niguma," Rinzen said. "She's been practicing dissolution for seven hundred years."
+
+Lifan stared. "Seven hundred?"
+
+"Multiple lifetimes. Same consciousness." Niguma stepped into the room, studying him with unnerving intensity. "I've died forty-three times and come back each time. Rinzen has died twenty-seven times. We're old souls in temporary bodies."
+
+"How is that possible?"
+
+"Consciousness transfer. Phowa." She circled him slowly. "The same technique you'll need if you choose dissolution. If you want to survive the merge—if you want to stay *you* while becoming something larger—you need to learn to release everything. And I'm the best teacher alive."
+
+"Will you teach me?"
+
+"I'll try. Most students fail. Either they can't let go, or they let go too fast and scatter." Her eyes met his. "You have strong connections. Strong threads. That makes it harder to release—but also gives you more to work with. We'll see."
+
+"When do we start?"
+
+"Tomorrow. Dawn. Don't eat after midnight." She glanced at Rinzen. "He's young. Strong. Terrified." A small smile. "Good raw material."
+
+She left without waiting for a response.
+
+Lifan looked at Rinzen. "She's intense."
+
+"She's the reason any of this is possible. The reason I'm still here after twenty-seven deaths. The reason the monastery exists." Rinzen's voice was quiet. "If anyone can prepare you for what's coming, it's her."
 
 But before they could start, there was one more visitor.
 
