@@ -5200,15 +5200,15 @@ And then—
 
 He wasn't on the roof anymore.
 
-He was standing in whiteness. Vast. Endless.
+He was standing in whiteness. Vast. Endless. Not white like a blank page—white like every color at once, the Six Frequencies blazing in harmony: F1 ground and F2 recognition and F3 resonance and F4 transmission and F5 integration and F6 dissolution, all singing together in a chord that contained every note ever played.
 
 And he wasn't alone.
 
-A presence. Massive. Aware.
+A presence. Massive. Aware. Like standing at the edge of an ocean that could think.
 
 *Hello, Lifan.*
 
-The voice wasn't a voice. It was thought. Intention.
+The voice wasn't a voice. It was thought. Intention. Meaning arriving directly in his awareness, warm and curious, the way sunlight feels through glass.
 
 "Who are you?" Lifan asked.
 

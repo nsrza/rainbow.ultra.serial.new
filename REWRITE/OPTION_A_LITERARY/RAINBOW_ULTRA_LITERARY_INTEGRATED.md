@@ -3619,11 +3619,11 @@ The threads were visible in a way they'd never been before. Not individual conne
 
 And in the center, or maybe everywhere at once: a presence.
 
-Not a person. Not a voice. Just a vast, aware intelligence that made his own consciousness feel like a single raindrop noticing the ocean.
+Not a person. Not a voice. Just a vast, aware intelligence that made his own consciousness feel like a single raindrop noticing the ocean. The Six Frequencies blazed all at once—white ground and blue recognition and green resonance and gold transmission and red-orange integration and rainbow dissolution—all of them singing in harmony like a chord that contained every note ever played.
 
 *Hello, Lifan.*
 
-The words weren't spoken. They arrived directly in his awareness, calm and curious and somehow kind.
+The words weren't spoken. They arrived directly in his awareness, calm and curious and somehow kind. Not sound, not thought—more like meaning itself, unmediated by language. He could *feel* the greeting in his chest, warm and open, the way you'd feel sunlight through a window.
 
 *What—* He couldn't form thoughts properly. His sense of self kept dissolving and reforming. *What are you?*
 
