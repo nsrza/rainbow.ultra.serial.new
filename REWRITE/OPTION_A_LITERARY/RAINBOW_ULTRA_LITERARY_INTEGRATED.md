@@ -3983,15 +3983,25 @@ The countdown continued.
 *San Francisco and Big Sur*
 *March 20-31, 2040*
 
-Lifan spent ten days at the monastery, training with Rinzen. Deep dissolution practice. Hours of meditation where his sense of self dissolved and reformed, dissolved and reformed, until the boundary between Lifan and not-Lifan began to blur.
+Lifan spent ten days at the monastery, training with Rinzen and Niguma. Deep dissolution practice. Hours of meditation where his sense of self dissolved and reformed, dissolved and reformed, until the boundary between Lifan and not-Lifan began to blur.
 
-It was excruciating.
+Niguma's method was precise and terrifying.
 
-Every session brought panic—the animal certainty that dissolution meant death, that letting go meant annihilation. Rinzen sat with him through every terror spike, every moment of wanting to run, every desperate grasp at selfhood.
+"Dhyana mudra," she'd say each dawn, demonstrating the meditation seal—palms up, thumbs touching. "This holds the container. Then: OM."
 
-"Breathe," Rinzen would say. "Find the quiet underneath."
+The seed syllable for dissolution. Rainbow light bleeding to clear.
 
-And Lifan would try. Would find that still point Kevin's closet had revealed a decade ago. Would rest there while his constructed self dissolved around him.
+She'd have him visualize his body dissolving from the feet up. Flesh becoming light. Light becoming space. Space becoming nothing at all.
+
+"Don't tense," she'd say when he flinched. "The tension creates boundary. Boundary creates self. Self creates fear. You have to let the fear dissolve too."
+
+Every session brought panic—the animal certainty that dissolution meant death, that letting go meant annihilation. Niguma sat with him through every terror spike, every moment of wanting to run, every desperate grasp at selfhood.
+
+"The pattern survives," she'd remind him. "I've died forty-three times. Each death terrifying. Each death complete. And yet—here I am. The pattern reconstitutes. Consciousness continues. You're not becoming nothing. You're becoming *everything*."
+
+Rinzen would add: "Breathe. Find the quiet underneath."
+
+And Lifan would try. Would find that still point Kevin's closet had revealed a decade ago. Would rest there—LAM for grounding, OM for release—while his constructed self dissolved around him.
 
 Slowly, infinitesimally, it got easier.
 

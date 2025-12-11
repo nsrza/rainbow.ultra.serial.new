@@ -6640,17 +6640,31 @@ Day forty-three.
 
 The training was brutal.
 
-Rinzen pushed him harder than he'd ever pushed before. Six hours of dissolution meditation a day. Visualizing his body breaking apart. Releasing his attachment to form, to self, to existence.
+Niguma led the sessions now. Each dawn started the same way: dhyana mudra—palms up, thumbs touching. Then the dissolution syllable: OM.
+
+"Start with your feet," she'd say. "Visualize them becoming light. Then space. Then nothing at all. Let the nothing rise."
+
+Lifan would try. Watching his feet dissolve in his mind's eye. Feeling the imaginary sensation of flesh becoming light.
+
+Panic always hit at the ankles.
+
+"Don't stop," Niguma would say. "Keep going. Knees. Thighs. Hips. Let every part become nothing."
+
+Six hours of dissolution meditation a day. Visualizing his body breaking apart. Releasing his attachment to form, to self, to existence.
 
 It was terrifying.
 
-Every time Lifan imagined his body dissolving, panic surged through him. His consciousness clinging desperately to physical form.
+Every time Lifan imagined his body dissolving, panic surged through him. His consciousness clinging desperately to physical form. The frequencies went haywire—F1 ground shattering, F3 resonance screaming for connection, F6 dissolution frequency burning at the edges.
 
 *I don't want to die. I don't want to disappear.*
 
-"Breathe through it," Rinzen said. "Fear is natural. Don't fight it. Observe it."
+"The pattern survives," Niguma reminded him. "I've done this forty-three times. Complete dissolution. Total death. And yet—here I am."
 
-Lifan tried. But the fear was overwhelming.
+"How?" Lifan gasped.
+
+"Consciousness isn't located in the body. It uses the body. When the body dissolves, consciousness just... expands. You're not becoming nothing. You're becoming everything."
+
+But the fear was overwhelming.
 
 On the third day, he broke down completely. Sobbing in the meditation hall, unable to continue.
 
