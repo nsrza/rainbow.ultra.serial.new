@@ -1723,7 +1723,7 @@ Nydan. Fifteen, tall and gangly, with green eyes that seemed to calculate everyt
 
 Lifan blinked. "MIT?"
 
-"Physics. Pattern recognition. The mathematical structure of consciousness." Nydan shrugged like this was boring. "Rinzen thinks meditation and equations are the same thing. He's probably right. Still boring though."
+"Physics. Pattern recognition. The mathematical structure of consciousness." Nydan shrugged like this was boring. "Rinzen thinks meditation and equations are the same thing. He's probably right. Still boring though." He tapped his temple. "I'm also working on brain-computer interface designs. Ways to connect human consciousness directly to machines. Rinzen says it's 'missing the point,' but I think it's the future."
 
 "Why do you stay?"
 
@@ -3792,7 +3792,7 @@ Three other people were there. All young. All with threads that felt... differen
 
 Lifan sat carefully.
 
-"So," Leky said. He was tall, white, probably nineteen. Dreadlocks and kind eyes. "Rinzen says you're a thread-seer."
+"So," Leky said. He was tall, white, maybe twenty. Dreadlocks and kind eyes that saw more than they let on. His threads were anchors—stable, grounding, the kind you grabbed when everything was falling apart. "Rinzen says you're a thread-seer."
 
 Lifan tensed. "How do you know about threads?"
 
@@ -3800,9 +3800,9 @@ Lifan tensed. "How do you know about threads?"
 
 "You're all... gifted?"
 
-"That's one word for it," Grey said. He was Black, skinny, with a camera hanging around his neck. "Freaks is another."
+"That's one word for it," Grey said. He was Black, tall, with a camera hanging around his neck that seemed like an extension of his body. His threads carried something heavy—loss, grief—but also fierce determination. He moved like he was always filming, always composing shots. "Freaks is another."
 
-"We prefer 'energetically aware,'" Coco added. She was Latina, covered in paint stains, with a soft voice. "Sounds better."
+"We prefer 'energetically aware,'" Coco added. They were Latinx, twenty-something, with purple-streaked hair and paint stains across their fingers. Their threads danced in constant motion, reflecting something fluid and searching. "Sounds better."
 
 Lifan stared at them. He'd never met other people like him. Ever.
 

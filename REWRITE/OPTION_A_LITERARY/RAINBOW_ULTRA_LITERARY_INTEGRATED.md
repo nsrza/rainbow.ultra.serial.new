@@ -2724,7 +2724,13 @@ Lo showed him the city—record stores and murals, late-night taco trucks and th
 
 They didn't judge each other. Just witnessed. It was enough.
 
-Through Lo, Lifan met the wider Rohki community. Grey, a documentary filmmaker who'd lost his sister to addiction. Coco, a dancer processing gender identity through movement. Leky, a sound engineer with a quiet steady presence that reminded Lifan of Danny.
+Through Lo, Lifan met the wider Rohki community.
+
+Grey was tall, Black, moved like he was always filming something—angles and compositions playing behind his eyes. He'd lost his sister Cara to addiction two years ago, and his documentary work had become a way of processing that grief. "I capture people at their realest," he'd explained. "When the masks slip. That's where the truth lives." His threads carried perpetual sorrow, but also fierce determination—a need to make meaning from loss.
+
+Coco was a dancer—twenty-three, Latinx, with a shock of purple hair and clothes that changed style every week as they explored identity. Their threads were in constant motion, reflecting the fluidity of their gender expression. "I don't know what I am yet," they'd told Lifan over coffee. "But I know I'm not what people assumed. So I'm finding out. Through movement. Through trying things." Their gift was presence—when Coco danced, the whole room watched.
+
+Leky was the steady one—twenty-eight, white with dreadlocks, soft-spoken in a way that made people lean in to hear him. A sound engineer who'd learned that listening was more important than talking. His threads were anchors—stable connections that others grabbed onto when things got chaotic. He reminded Lifan of Danny: the person you called when everything was falling apart because somehow they'd make it feel manageable.
 
 They absorbed him into their circle without fanfare. Just: you're here, you're one of us, welcome.
 
@@ -3517,7 +3523,7 @@ Lifan stood, shaking his head but smiling. The threads between all of them blaze
 
 "Okay, fine. A speech." He looked at each of them in turn. Grey with his camera. Leky with his practical kindness. Lo watching him with those sharp eyes that had seen the edge and stepped back. Coco in the corner, documenting everything in thread-paintings that got more surreal and beautiful with each passing month.
 
-And Nydan. Twenty-six, MIT physicist turned AI researcher, green eyes that saw patterns the way Lifan saw threads. He'd arrived at Rohki three months ago—recruited by Axiom AI but disillusioned by their reckless rush toward AGI, he'd quit to work on alignment problems independently. Now he stood near the roof's edge, backlit by the setting sun, freckles scattered across dark skin, long hair loose around his shoulders. His silver thread to Lifan pulsed with something that felt like longing and restraint in equal measure. They'd been circling each other since he arrived—probability models meeting thread-sight, rationalist meeting mystic. Both recognizing something in the other they couldn't name.
+And Nydan. Twenty-six, MIT physicist turned AI researcher, green eyes that saw patterns the way Lifan saw threads. He'd arrived at Rohki three months ago—recruited by Axiom AI but disillusioned by their reckless rush toward AGI, he'd quit to work on alignment problems independently. Now he stood near the roof's edge, backlit by the setting sun, freckles scattered across dark skin, long hair loose around his shoulders. At his left temple, a thin silver thread of neural lace glinted—the BCI he used for direct interface with AI systems. "It's not cheating," he'd explained when Lifan first noticed it. "It's scaffolding. The natural abilities are still mine. The tech just helps me access them faster." His silver thread to Lifan pulsed with something that felt like longing and restraint in equal measure. They'd been circling each other since he arrived—probability models meeting thread-sight, rationalist meeting mystic. Both recognizing something in the other they couldn't name.
 
 "A year ago," Lifan began, "I thought I was dying. Alone in a hospital room, watching my body fail, with no one who really knew me. And now I'm here. Still dying, probably—" Nervous laughter. "—but not alone. Never alone. You all showed up. Kept showing up. Made space for me to be exactly who I am, threads and strangeness and all."
 
