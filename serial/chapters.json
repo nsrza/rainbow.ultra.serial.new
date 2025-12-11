@@ -1,0 +1,26 @@
+{
+  "title": "RAINBOW.ULTRA",
+  "subtitle": "Book One: The Breaking",
+  "timeline": {
+    "start": "2038-10-14T23:47:00",
+    "end": "2039-04-15T06:00:00"
+  },
+  "chapters": [
+    { "id": "prologue", "file": "BOOK_ONE_PROLOGUE_V2.txt", "label": "PROLOGUE", "title": "The Pattern", "day": 0, "time": "23:47" },
+    { "id": "ch1", "file": "BOOK_ONE_CHAPTER_01_V2.txt", "label": "CHAPTER 1", "title": "North", "day": 1, "time": "00:30" },
+    { "id": "ch1.5", "file": "BOOK_ONE_CHAPTER_01_5_MARCUS.txt", "label": "CHAPTER 1.5", "title": "The Other Path", "day": 1, "time": "01:00" },
+    { "id": "ch2", "file": "BOOK_ONE_CHAPTER_02_V2.txt", "label": "CHAPTER 2", "title": "The Monastery", "day": 1, "time": "04:47" },
+    { "id": "ch3", "file": "BOOK_ONE_CHAPTER_03_V2.txt", "label": "CHAPTER 3", "title": "First Light", "day": 2, "time": "05:53" },
+    { "id": "ch4", "file": "BOOK_ONE_CHAPTER_04_V2.txt", "label": "CHAPTER 4", "title": "Timeline 4", "day": 2, "time": "10:00" },
+    { "id": "ch5", "file": "BOOK_ONE_CHAPTER_05_V3.txt", "label": "CHAPTER 5", "title": "Week One", "day": 14, "time": "07:00" },
+    { "id": "ch5.5", "file": "BOOK_ONE_CHAPTER_05_5_V1.txt", "label": "CHAPTER 5.5", "title": "Doubt", "day": 15, "time": "14:00" },
+    { "id": "ch6", "file": "BOOK_ONE_CHAPTER_06_V2.txt", "label": "CHAPTER 6", "title": "Acceleration", "day": 22, "time": "05:00" },
+    { "id": "ch6.5", "file": "BOOK_ONE_CHAPTER_06_5_KARMAMUDRA.txt", "label": "CHAPTER 6.5", "title": "Karmamudra", "day": 35, "time": "22:00" },
+    { "id": "ch7", "file": "BOOK_ONE_CHAPTER_07_V2.txt", "label": "CHAPTER 7", "title": "The Last Teaching", "day": 40, "time": "04:00" },
+    { "id": "ch8", "file": "BOOK_ONE_CHAPTER_08_MARCUS.txt", "label": "CHAPTER 8", "title": "The Other Way", "day": 40, "time": "06:00" },
+    { "id": "ch9", "file": "BOOK_ONE_CHAPTER_09_CHOICE.txt", "label": "CHAPTER 9", "title": "The Choice", "day": 40, "time": "18:00" },
+    { "id": "ch10", "file": "BOOK_ONE_CHAPTER_10_FINAL_DAYS.txt", "label": "CHAPTER 10", "title": "The Final Days", "day": 46, "time": "20:00" },
+    { "id": "ch11", "file": "BOOK_ONE_CHAPTER_11_DAY47.txt", "label": "CHAPTER 11", "title": "Day 47", "day": 47, "time": "05:47" },
+    { "id": "epilogue", "file": "BOOK_ONE_EPILOGUE.txt", "label": "EPILOGUE", "title": "After", "day": 227, "time": "06:00" }
+  ]
+}
