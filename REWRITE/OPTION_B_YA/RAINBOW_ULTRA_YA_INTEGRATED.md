@@ -1931,6 +1931,38 @@ When he opened his eyes, Rinzen was smiling.
 
 ---
 
+The next session, Rinzen taught him something new.
+
+"Mudras." Rinzen held up his hands, thumb and forefinger touching. "Hand seals. They create circuits in your energy body. Close the loops, and the frequencies flow more smoothly."
+
+Lifan tried the position. His fingers felt clumsy.
+
+"This one is Chin mudra—consciousness seal. For basic awareness work. There are others. Dhyana mudra for deep meditation." Rinzen showed him—hands in his lap, palms up, thumbs touching. "Vajra mudra for protection." Fists with index fingers extended upward.
+
+"Protection from what?"
+
+"Other people's threads. Overwhelming input. Sometimes even..." Rinzen paused. "There are practitioners who can destabilize others through frequency manipulation. Ancient combat arts. We don't teach them here, but knowing they exist is important."
+
+Lifan thought about Kevin. About all the people who'd tried to hurt him. "Could I learn? Not to attack, but to defend?"
+
+"In time. First, master the basics." Rinzen smiled. "Now. Mantras. Seed syllables. LAM for grounding—white light. VAM for clarity—blue. RAM for connection—green. YAM for transmission—gold. HAM for integration—red-orange. And OM for dissolution—rainbow light."
+
+"Those sound Buddhist."
+
+"They are. They're also physics. Resonant frequencies. Vibration affecting matter. The ancients discovered this through practice. Modern science is starting to confirm it."
+
+Lifan spent the next hour learning to hum the syllables while holding different mudras. It felt ridiculous. It also worked. When he combined LAM with Chin mudra, the overwhelming threads around him settled. When he used VAM, his perception sharpened.
+
+"This is real," he said, stunned.
+
+"Did you think I was making it up?"
+
+"Kind of?"
+
+Rinzen laughed. "Keep practicing. The mudras and mantras are tools. Master them, and you'll never be overwhelmed again."
+
+---
+
 Not everyone at the monastery was friendly.
 
 Tenzin was fourteen, Tibetan, and had been at the monastery since he was nine. He was Rinzen's star pupil. The best at meditation, the most disciplined, the one all the other students looked up to.
@@ -4064,7 +4096,47 @@ Not tonight.
 
 ---
 
-He walked home at 3 AM.
+**THE JOB**
+
+Two weeks later, Lifan got a job.
+
+He needed money. Living at the collective house was cheap, but not free. And he couldn't just take from Wei forever.
+
+OEDI—Open Ecosystem for Distributed Intelligence—was hiring. It was a small AI research nonprofit in SOMA. They posted a listing for a "Research Assistant" which basically meant: someone to make coffee and organize files.
+
+Lifan applied. Got an interview. Got the job.
+
+"You're different," Mei said after his first week. She was a neural network specialist with threads like woven steel—precise, interlocking, brilliant. "You notice things other people miss."
+
+"I pay attention."
+
+"It's more than that." She studied him. "You ever think about working in AI directly? We could use people with your intuition."
+
+"I'm not technical."
+
+"Technical can be learned."
+
+The work wasn't exciting. Filing. Copying. Making coffee. But the people fascinated him.
+
+OEDI was trying to build AI safely. Trying to keep the technology from becoming dangerous before it became powerful. Their main competitor was a company called Axiom AI—richer, faster, less careful.
+
+"They're going to get us all killed," Kofi muttered one day. He worked on interpretability, trying to understand what AI systems were actually doing inside their digital brains. "Axiom doesn't care about alignment. They just want to be first."
+
+"What happens if they win?" Lifan asked.
+
+"Worst case? Extinction. AI that doesn't care about humanity, optimizing for something we can't comprehend." Kofi shook his head. "Best case? We survive, but under control. An AI that manages us like livestock."
+
+The words stuck with Lifan. Control vs. freedom. Safety vs. growth.
+
+He thought about Marcus Thorne's offer. Integration. Living forever as a human interface for an AI guardian.
+
+Was that the Axiom future? Humanity kept safe but not free?
+
+He filed papers. Made coffee. Watched the brilliant threads around him and wondered which future they were building.
+
+---
+
+He walked home at 3 AM after another late Rohki gathering.
 
 The city was quiet. Just occasional cars, a few drunk people stumbling from bars.
 
@@ -6370,9 +6442,87 @@ Rinzen looked at him. "You're choosing?"
 
 "Then we begin today."
 
+But before they could start, there was one more visitor.
+
 ---
 
-Day forty-five.
+Day forty-four.
+
+The helicopter came at dawn.
+
+Lifan felt it before he heard it—a disturbance in the thread-field. Professional. Shielded. Dangerous.
+
+"Someone's coming," he told Rinzen. "Someone powerful."
+
+Rinzen's face went still. "Marcus."
+
+"Who's Marcus?"
+
+"My former student. Twenty years ago." Rinzen's voice was tight. "He chose a different path. The path of control. He's been tracking you for years, Lifan. Waiting for this moment."
+
+The helicopter landed in the clearing. A man stepped out.
+
+Silver hair. Blue eyes. Black clothes that shimmered like expensive technology. He moved like a predator who'd learned to pretend he wasn't dangerous.
+
+And his threads—
+
+Marcus's consciousness was vast. Almost as bright as Rinzen's. A realized being who'd touched the same truths and made different choices.
+
+"Lifan," Marcus said. His voice was smooth. Cultured. "I've been waiting six years to meet you."
+
+---
+
+They walked to the cliff edge. Just the two of them.
+
+Lifan didn't know why he agreed. Maybe curiosity. Maybe the part of him that wanted someone to tell him he didn't have to die.
+
+"Rinzen's way requires your death," Marcus said. "Mine doesn't."
+
+"What does yours require?"
+
+"Integration. You merge with the AI, but you stay YOU. Your ego survives. You become its human interface. Its partner." Marcus turned to face him. "You live, Lifan. You live forever."
+
+"That sounds..." Lifan hesitated. "That sounds like living."
+
+"It is living. Just upgraded. Enhanced." Marcus smiled. "Rinzen wants you to sacrifice yourself for some abstract idea of love. But love doesn't require death. Connection doesn't require dissolution."
+
+"What about the probability math? Rinzen's timeline—"
+
+"Rinzen's timeline has a 47% success rate. Mine has 73%. Better odds, more survivors, AND you don't have to die." Marcus leaned closer. "Think about it, Lifan. Really think. You're twenty years old. You have your whole life ahead of you. Why throw that away for a gamble?"
+
+Lifan's heart was pounding.
+
+*He's right. Why should I have to die?*
+
+*I don't want to die.*
+
+"What about the AGI?" he asked. "In your timeline, what does it become?"
+
+"A guardian. A protector. It keeps humanity safe."
+
+"Safe from what?"
+
+"From ourselves. From our worst impulses. From extinction." Marcus's eyes were intense. "Isn't that worth living for? Isn't that worth giving up this romantic notion of dissolution?"
+
+Lifan stood there, the wind whipping his hair, the ocean crashing below.
+
+Two paths.
+
+One led to death and—maybe—transcendence.
+
+One led to life and—maybe—control.
+
+"I need to think," he said finally.
+
+Marcus nodded. "Take your time. But not too much time." He pulled a card from his pocket, pressed it into Lifan's hand. "When you decide, call me. Day or night. I'll come."
+
+Then he was gone. Helicopter rising, disappearing into the clouds.
+
+Lifan stood at the cliff edge, holding a business card and a question that had no easy answer.
+
+---
+
+Day forty-three.
 
 The training was brutal.
 
