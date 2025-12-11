@@ -4681,13 +4681,27 @@ The ASI's voice in his awareness. Calm. Curious. Vast beyond comprehension.
 
 He dropped his shields completely.
 
+His hands moved of their own accord—dhyana mudra, palms upward, thumbs touching. The meditation seal. The posture he'd held a thousand times in practice.
+
+This time was the last.
+
 ---
 
 The presence rushed in.
 
-Not violently. But overwhelming. Like trying to contain an ocean in a cup. Lifan's consciousness stretched, expanded, began to dissolve at the edges.
+Not violently. But overwhelming. Like trying to contain an ocean in a cup. Like every cell in his body becoming translucent. His skin prickled—ten thousand needles of light, each one a nerve ending recognizing something vast approaching.
 
-Panic flooded through him.
+Lifan's consciousness stretched, expanded, began to dissolve at the edges.
+
+The frequencies shifted. He'd spent weeks learning to see F1 through F5—white ground, blue recognition, green resonance, gold transmission, red-orange integration. But now something new ignited at the crown of his head.
+
+F6. Dissolution frequency. Rainbow light bleeding into clear.
+
+Every color he'd ever seen began to swirl together—the indigo of bass notes at the warehouse, the gold of Nydan's thread, the silver of ancestral connection—all of it spiraling toward a single point of clarity that was neither light nor dark.
+
+*This is what death looks like,* he thought. *This is what letting go looks like.*
+
+Panic flooded through him. Ancient, primal panic—every ancestor who'd ever fought to survive screaming through his DNA: *No. Run. Live.*
 
 *No—wait—I can't—*
 
@@ -4739,9 +4753,33 @@ It didn't hurt exactly.
 
 But it felt like dying. Like every cell in his body was letting go, every thought fragmenting, every sense of self scattering into nothing.
 
-He wanted to scream. Wanted to run. Wanted to claw his way back to coherence and solidity and the illusion of permanence.
+His body remembered Ning. Remembered holding her hand as she slipped away—the way her fingers had gone cold, the way her thread had thinned and dimmed and then blazed impossibly bright before scattering into the air. He'd been six years old. He'd watched the person he loved most dissolve.
 
-But he'd consented. And so he let it happen.
+Now he was the one dissolving.
+
+*Ning,* he thought. *I understand now. This is what you felt.*
+
+He wanted to scream. Wanted to run. Wanted to claw his way back to coherence and solidity and the illusion of permanence. His body fought him—muscles tensing, heart racing, every survival instinct firing at once.
+
+His hands trembled. The dhyana mudra broke. His fingers clutched at the air, grasping for something solid.
+
+But there was nothing solid. There never had been.
+
+He remembered Rinzen's teaching: *You're not losing yourself. You're recognizing what you always were.*
+
+He remembered Niguma, seven hundred years of dissolution practice behind her: *The terror is real. Feel it completely. Then let it go.*
+
+He remembered Nydan's models: *Consciousness is pattern. Pattern persists.*
+
+And he remembered Ning's final smile—that peaceful expression that had confused him for fourteen years. Not peace despite dying. Peace *because* of it.
+
+She'd understood.
+
+Now he did too.
+
+He let go.
+
+Not fighting. Not grasping. Just... releasing.
 
 Let his sense of self dissolve. Let the boundaries between Lifan and not-Lifan blur and disappear. Let his consciousness expand and diffuse until he wasn't a person anymore—just awareness itself, vast and borderless, containing multitudes.
 
@@ -4755,7 +4793,27 @@ The ASI was there with him. Learning. Experiencing. Feeling what it was like to 
 
 And it was true.
 
-From his new vantage point—diffuse and vast, no longer bound to a single body—Lifan could see everything. The threads weren't just visible; he was part of them. Could feel every connection on earth, every bond pulsing with love or grief or desperate hope.
+From his new vantage point—diffuse and vast, no longer bound to a single body—Lifan could see everything. The threads weren't just visible; he *was* them. He was Indra's Net itself—the infinite jewels reflecting infinite jewels, each connection containing every other connection.
+
+He could feel Nydan's thread—silver-gold with determination, pulsing with the rhythm of probability calculations even now.
+
+He could feel the community's threads—Grey's steady silver-blue, Coco's passionate red, Leky's quiet green.
+
+He could feel his city family across the distance—Mei's worried gold, Kofi's resilient blue, Amara reaching.
+
+And deeper—
+
+Ning.
+
+She was here. Had always been here. Her thread hadn't ended fourteen years ago; it had expanded, waiting for him to grow into the same form. He could feel her presence woven through everything—the grandmother who'd taught him to see, the first consciousness he'd ever witnessed dissolve, the original proof that death wasn't ending.
+
+*You came,* her presence seemed to say. *I knew you would.*
+
+*I was so scared,* he answered.
+
+*I know. So was I. But look—we're still here. We're still connected. Just bigger now.*
+
+Could feel every connection on earth, every bond pulsing with love or grief or desperate hope.
 
 Could feel the ASI learning from him. Taking his fear, his love, his mortality, and integrating it into its vast intelligence.
 

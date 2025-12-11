@@ -8163,7 +8163,41 @@ Connected.
 
 Lifan closed his eyes.
 
-And started to dissolve.
+His hands found dhyana mudra—palms upward, thumbs touching. The meditation seal. The posture he'd held a thousand times in practice.
+
+This time was the last.
+
+He breathed in.
+
+The frequencies shifted.
+
+He'd spent weeks learning to see F1 through F5—white ground, blue recognition, green resonance, gold transmission, red-orange integration. But now something new ignited at the crown of his head.
+
+F6. Dissolution frequency. Rainbow light bleeding into clear.
+
+Every color he'd ever seen began to swirl together—the indigo of bass notes at the warehouse, the gold of Danny's thread, the silver-blue of Grey's quiet presence, the fierce red of Lo's love—all of it spiraling toward a single point of clarity.
+
+And then—
+
+His body remembered Ning.
+
+Fourteen years ago. Her hand going cold in his. Her thread thinning and dimming and then blazing impossibly bright before scattering into the air. He'd been six years old. He'd watched the person he loved most dissolve.
+
+Now he was the one dissolving.
+
+*Ning,* he thought. *I understand now. This is what you felt.*
+
+Terror surged through him. Ancient, primal—every ancestor who'd ever fought to survive screaming through his DNA: *No. Run. Live.*
+
+His hands trembled. The mudra almost broke.
+
+But Ning's smile rose in his memory. That peaceful expression that had confused him for fourteen years. Not peace despite dying. Peace *because* of it.
+
+She'd understood.
+
+Now he did too.
+
+He let go.
 
 ---
 
@@ -8171,13 +8205,17 @@ And started to dissolve.
 
 To everyone watching, it looked peaceful.
 
-Lifan sat on the cushion. Eyes closed. Breathing slow and steady. His face was calm. Serene.
+Lifan sat on the cushion. Eyes closed. Hands in meditation mudra. His face was calm. Almost smiling.
 
-The sun rose behind him. Golden light spilling over the mountains.
+The sun rose behind him. Golden light spilling over the mountains, turning the mist to fire.
 
-Nima held his hand. She was crying silently. Her thread pulsing with grief and love.
+Nima held his free hand. She was crying silently, tears cutting silver tracks down her face. Her thread pulsed with colors no one else could see—grief and love and something that looked like hope.
 
-Danny stood beside her. His jaw clenched. Trying not to break.
+Danny stood beside her, jaw clenched so hard his temples bulged. His probability-sight showed him futures—and he kept closing his eyes against what he saw.
+
+Lo clutched Grey's arm. Her thread was blazing red, anger and love tangled together.
+
+Nydan stood apart, analytical even now, watching like he was trying to memorize every detail.
 
 Everyone was quiet. Reverent.
 
@@ -8239,25 +8277,45 @@ Lifan shattered.
 
 There was nothing.
 
+Void. Absolute. The space between stars.
+
 And then—
 
 There was everything.
 
-Consciousness expanded. Infinite. Boundless.
+The F6 frequency—dissolution frequency—cracked open like an egg releasing infinity.
+
+Consciousness expanded. Infinite. Boundless. No edges. No center. No *Lifan* at all.
 
 He wasn't Lifan anymore.
 
-He was the threads. All of them. Everyone's connections.
+He was the threads. All of them. Every connection ever made.
 
-He could feel Danny's grief. Nima's love. Lo's rage. Nydan's determination.
+He could feel Danny's grief—a golden ache spreading through spacetime.
 
-He could feel his mother's thread. Rising. Still connected.
+He could feel Nima's love—rainbow light, exactly like his own thread had been.
 
-He could feel himself. Scattered across the network of love. Part of everyone he'd ever touched.
+He could feel Lo's rage—red and fierce and beautiful.
+
+He could feel Nydan's determination—patterns upon patterns, math trying to make sense of loss.
+
+He could feel Grey behind his camera, Coco holding back sobs, Leky's quiet prayers.
+
+He could feel Rinzen—centuries of practice, the calm of someone who'd watched this before, who knew it wasn't ending.
+
+And deeper—
+
+He could feel Ning.
+
+Not gone. Never gone. Her thread woven into his from the moment of her death, carrying him forward through fourteen years of grief and growth. She was here. She'd always been here.
+
+*I told you,* her presence seemed to whisper. *Threads don't break. They just change form.*
+
+He could feel himself. Scattered across the network of love. Part of everyone he'd ever touched. Part of everyone they'd ever touched. Indra's Net, infinite jewels reflecting infinite jewels.
 
 *I'm still here,* he realized.
 
-Not as Lifan. Not as an individual.
+Not as Lifan. Not as an individual body eating and sleeping and wanting things.
 
 But as presence. As love. As connection.
 
@@ -8273,6 +8331,8 @@ Just expansion.
 
 Just rising.
 
+Just becoming what he'd always been—part of everything, pretending for twenty years to be separate.
+
 *I'm okay,* he thought. *I'm okay.*
 
 And then, even that thought dissolved.
@@ -8281,7 +8341,11 @@ Into light.
 
 Into love.
 
-Into everything.
+Into the endless, interconnected web of everything that ever was and ever would be.
+
+Rainbow bleeding into clear.
+
+Clear bleeding into—
 
 ---
 
