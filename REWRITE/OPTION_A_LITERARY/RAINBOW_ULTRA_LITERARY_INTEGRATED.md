@@ -2292,23 +2292,23 @@ By morning, they'd found balance again. Training was important. But so was livin
 
 They'd try to do both.
 
-Nydan arrived in August—a teacher from Nepal, weathered and quiet, with threads so old they looked like roots. He'd known Lifan's mother. Had been one of the teachers who'd seen the prophecy.
+Karma Tenzin arrived in August—a teacher from Nepal, weathered and quiet, with threads so old they looked like roots. He'd known Lifan's mother. Had been one of the teachers who'd seen the prophecy.
 
-"I came to try to change it," Nydan said simply. "Rinzen has trained you well. But perhaps a different approach might help."
+"I came to try to change it," Karma said simply. "Rinzen has trained you well. But perhaps a different approach might help."
 
 Lifan wanted to feel hope. Felt suspicion instead. "What approach?"
 
 "Taoist methods. Cultivation practices that strengthen the body's energy systems. If you burn bright, we build a stronger lamp."
 
-For six months, Nydan taught him. Breathing techniques different from Buddhist practices. Energy work that circulated and conserved instead of dissolving and transcending. Ways of holding power without being consumed by it.
+For six months, Karma taught him. Breathing techniques different from Buddhist practices. Energy work that circulated and conserved instead of dissolving and transcending. Ways of holding power without being consumed by it.
 
 It helped. The migraines lessened. Lifan felt steadier, more grounded.
 
-But Nydan's face grew grimmer each week.
+But Karma's face grew grimmer each week.
 
 "What?" Lifan asked finally. "What aren't you telling me?"
 
-Nydan looked at him with deep sadness. "The practices help. But they don't solve the fundamental problem."
+Karma looked at him with deep sadness. "The practices help. But they don't solve the fundamental problem."
 
 "Which is?"
 
@@ -2316,7 +2316,7 @@ Nydan looked at him with deep sadness. "The practices help. But they don't solve
 
 "So what do I do?"
 
-"You emerge. Transform. Die and continue." Nydan touched his shoulder. "I'm sorry. I wanted to find another way. But some things are inevitable. Your mother knew that. So do I."
+"You emerge. Transform. Die and continue." Karma touched his shoulder. "I'm sorry. I wanted to find another way. But some things are inevitable. Your mother knew that. So do I."
 
 After he left, Lifan sat with Nima by the creek. Their place.
 
@@ -2324,7 +2324,7 @@ After he left, Lifan sat with Nima by the creek. Their place.
 
 "We don't know—"
 
-"Yes we do. Nydan confirmed it. Rinzen's known it. My mother knew it." He looked at her. "I'm going to die. And you're going to continue. That's our reality."
+"Yes we do. Karma confirmed it. Rinzen's known it. My mother knew it." He looked at her. "I'm going to die. And you're going to continue. That's our reality."
 
 Nima cried. He held her. Let her grieve while they both still could.
 
@@ -2346,7 +2346,7 @@ Seventeen came too fast and not fast enough.
 
 Lifan's body changed—height, muscle, the awkward geometry of becoming an adult. Nima grew into herself too, all angles and grace. They looked older than their years. Felt older than their bodies.
 
-The training culminated. Everything Rinzen and Nydan had taught, everything Nima had learned, everything Lifan had discovered—they wove it together into something new. A practice. A method. A map of consciousness and connection that could be taught.
+The training culminated. Everything Rinzen and Karma had taught, everything Nima had learned, everything Lifan had discovered—they wove it together into something new. A practice. A method. A map of consciousness and connection that could be taught.
 
 They wrote it down. Carefully, clearly. Nima's prose, Lifan's insights. Page after page of how to see threads, how to dissolve self, how to anchor in witness-consciousness. How to hold pain without being destroyed. How to love knowing loss is inevitable.
 
@@ -3411,7 +3411,7 @@ Lifan stood, shaking his head but smiling. The threads between all of them blaze
 
 "Okay, fine. A speech." He looked at each of them in turn. Grey with his camera. Leky with her practical kindness. Marcus grinning. Lo watching him with those sharp eyes that had seen the edge and stepped back. Coco in the corner, documenting everything in thread-paintings that got more surreal and beautiful with each passing month.
 
-And Nydan. Standing near the roof's edge, backlit by the setting sun, his silver thread to Lifan pulsing with something that felt like longing and restraint in equal measure.
+And Nydan. Twenty-six, MIT physicist turned AI researcher, green eyes that saw patterns the way Lifan saw threads. He'd arrived at Rohki three months ago—recruited by Axiom AI but disillusioned by their reckless rush toward AGI, he'd quit to work on alignment problems independently. Now he stood near the roof's edge, backlit by the setting sun, freckles scattered across dark skin, long hair loose around his shoulders. His silver thread to Lifan pulsed with something that felt like longing and restraint in equal measure. They'd been circling each other since he arrived—probability models meeting thread-sight, rationalist meeting mystic. Both recognizing something in the other they couldn't name.
 
 "A year ago," Lifan began, "I thought I was dying. Alone in a hospital room, watching my body fail, with no one who really knew me. And now I'm here. Still dying, probably—" Nervous laughter. "—but not alone. Never alone. You all showed up. Kept showing up. Made space for me to be exactly who I am, threads and strangeness and all."
 

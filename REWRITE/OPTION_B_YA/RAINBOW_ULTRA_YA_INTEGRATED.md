@@ -1709,19 +1709,19 @@ Rinzen introduced them at dinner that first night. Lifan tried to remember names
 
 But one kid stood out.
 
-Nydan. Fifteen, tall and gangly, with a permanent expression of boredom. He sat next to Lifan at the long communal table and said, "So you're the new guy."
+Nydan. Fifteen, tall and gangly, with green eyes that seemed to calculate everything they looked at. Freckles scattered across dark skin. Long hair he'd grown out because no one here cared. He sat next to Lifan at the long communal table and said, "So you're the new guy."
 
 "I'm Lifan. This is Danny."
 
-"I'm Nydan. I've been here three years and I hate it."
+"I'm Nydan. I've been here three years and I hate it." He pulled out a small notebook covered in equations. "I'd rather be at MIT, but they won't take you until you're eighteen."
 
-Lifan blinked. "Why do you stay?"
+Lifan blinked. "MIT?"
 
-"Because my parents are dead and I have nowhere else to go. Also, Rinzen won't let me leave until I 'achieve enlightenment' or whatever." Nydan made air quotes. "Which is bullshit, by the way. Enlightenment is boring."
+"Physics. Pattern recognition. The mathematical structure of consciousness." Nydan shrugged like this was boring. "Rinzen thinks meditation and equations are the same thing. He's probably right. Still boring though."
 
-"How can enlightenment be boring?"
+"Why do you stay?"
 
-"Because it's just sitting. For hours. Staring at walls. You'll see."
+"Because my parents are dead and I have nowhere else to go. Also, Rinzen won't let me leave until I 'achieve enlightenment' or whatever." Nydan made air quotes. "Which is bullshit, by the way. Enlightenment is sitting. For hours. Staring at walls. You'll see."
 
 Danny laughed. Nydan grinned.
 
