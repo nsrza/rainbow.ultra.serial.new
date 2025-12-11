@@ -3924,7 +3924,7 @@ Lo spotted him immediately. "You came!"
 
 She dragged him into the crowd.
 
-Names blurred together. Jasmine, who could read objects' histories. Marcus, who manipulated probability. Talia, who dreamed other people's dreams.
+Names blurred together. Jasmine, who could read objects' histories. Chen, who manipulated probability. Talia, who dreamed other people's dreams.
 
 Everyone was gifted. Everyone was strange.
 

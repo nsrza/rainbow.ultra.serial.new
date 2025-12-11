@@ -3398,13 +3398,13 @@ Leky took charge, setting up a schedule. Someone checked on Lo every day. They g
 
 And Lo, for her part, showed up. Did the work. Chose survival even when it hurt.
 
-One night a month later, the five of them—Lifan, Lo, Leky, Grey, Marcus—sat on Rohki's roof, watching the city lights.
+One night a month later, the five of them—Lifan, Lo, Leky, Grey, Coco—sat on Rohki's roof, watching the city lights.
 
-"We should make it official," Marcus said. "The family thing."
+"We should make it official," Coco said. "The family thing."
 
 "How do you make family official?" Lo asked.
 
-"I don't know. A pact? A ritual?" Marcus grinned. "A really terrible matching tattoo?"
+"I don't know. A pact? A ritual?" Coco grinned. "A really terrible matching tattoo?"
 
 "Oh god, no tattoos," Leky groaned.
 
@@ -3455,11 +3455,11 @@ What more could anyone ask?
 *March 15, 2040*
 *Age 20*
 
-The birthday party was Marcus's idea.
+The birthday party was Coco's idea.
 
 "You're turning twenty," he'd said. "In Rohki, on our roof, with our people. We're celebrating."
 
-Lifan had tried to protest—felt strange celebrating when the prognosis still sat heavy in his chest, when every medical scan showed the same slow deterioration—but Marcus had been insistent. And when Leky got involved, plans became inevitable.
+Lifan had tried to protest—felt strange celebrating when the prognosis still sat heavy in his chest, when every medical scan showed the same slow deterioration—but Coco had been insistent. And when Leky got involved, plans became inevitable.
 
 So now Lifan sat on Rohki's roof surrounded by chosen family, watching the sun set over the bay. Someone had strung lights. Someone else had made dumplings. Lo had brought her keyboard and was playing something soft and meandering while people talked and ate and pretended this was just a normal birthday for a normal twenty-year-old.
 
@@ -3473,7 +3473,7 @@ It almost felt normal. That was the strange thing.
 
 Lifan stood, shaking his head but smiling. The threads between all of them blazed in the twilight—silver and gold, chosen bonds made strong through a year of crisis and care and showing up for each other.
 
-"Okay, fine. A speech." He looked at each of them in turn. Grey with his camera. Leky with her practical kindness. Marcus grinning. Lo watching him with those sharp eyes that had seen the edge and stepped back. Coco in the corner, documenting everything in thread-paintings that got more surreal and beautiful with each passing month.
+"Okay, fine. A speech." He looked at each of them in turn. Grey with his camera. Leky with his practical kindness. Lo watching him with those sharp eyes that had seen the edge and stepped back. Coco in the corner, documenting everything in thread-paintings that got more surreal and beautiful with each passing month.
 
 And Nydan. Twenty-six, MIT physicist turned AI researcher, green eyes that saw patterns the way Lifan saw threads. He'd arrived at Rohki three months ago—recruited by Axiom AI but disillusioned by their reckless rush toward AGI, he'd quit to work on alignment problems independently. Now he stood near the roof's edge, backlit by the setting sun, freckles scattered across dark skin, long hair loose around his shoulders. His silver thread to Lifan pulsed with something that felt like longing and restraint in equal measure. They'd been circling each other since he arrived—probability models meeting thread-sight, rationalist meeting mystic. Both recognizing something in the other they couldn't name.
 
@@ -3483,7 +3483,7 @@ And Nydan. Twenty-six, MIT physicist turned AI researcher, green eyes that saw p
 
 "That's objectively untrue," Lifan said. "But I appreciate the sentiment." He took a breath. "I don't know how much time I have left. Could be months, could be years. But however long it is, I'm spending it here. With you. My found family. My people." His voice cracked. "Thank you. For making my twentieth year the best year of my life."
 
-"Even though you almost died?" Marcus asked.
+"Even though you almost died?" Coco asked.
 
 "Especially because I almost died. It clarified things." Lifan raised his own beer. "To clarity. To community. To showing up for each other even when it's hard."
 
@@ -3923,7 +3923,7 @@ Lifan watched himself say: *Find your people. Build your family. Hold on to each
 
 "More than okay." Lifan's throat felt tight. "Can I see more?"
 
-Grey showed him: interviews with Lo about her brother, with Leky about community organizing, with Marcus about queer chosen family. Footage of Rohki—people cooking together, laughing together, holding each other through crisis.
+Grey showed him: interviews with Lo about her brother, with Leky about community organizing, with Coco about queer chosen family. Footage of Rohki—people cooking together, laughing together, holding each other through crisis.
 
 "It's beautiful," Lifan said.
 
@@ -3963,7 +3963,7 @@ He took the photograph back. "I'm telling you this because—if May first happen
 
 Lifan's vision blurred. "Thank you."
 
-"Don't thank me. Just—" Grey's voice cracked. "Just take care of them. If you go. Take care of Lo and Leky and Marcus and Nydan. Make sure they know it wasn't their fault. That they did everything right. That they were enough."
+"Don't thank me. Just—" Grey's voice cracked. "Just take care of them. If you go. Take care of Lo and Leky and Coco and Nydan. Make sure they know it wasn't their fault. That they did everything right. That they were enough."
 
 "I will. I promise."
 
@@ -4413,7 +4413,7 @@ From Grey: *I'll be there. Documenting. For the record.*
 
 From Leky: *We're holding you. From here.*
 
-From Marcus: *You're family. That doesn't end.*
+From Coco: *You're family. That doesn't end.*
 
 From Coco: *Light doesn't disappear. It just changes form.*
 
@@ -4926,7 +4926,7 @@ It opened with Lifan on the roof, talking to Grey's camera:
 
 *Find your people. Build your family. Hold on to each other. Because connection is the only thing that survives death. Love is the only thing that continues.*
 
-Then it traced his last year. The community at Rohki, the crisis with Lo, the found family that formed around shared strangeness and survival. Interviews with everyone he'd touched—Leky talking about mutual aid, Marcus about queer chosen family, Lo about grief and geometry.
+Then it traced his last year. The community at Rohki, the crisis with Lo, the found family that formed around shared strangeness and survival. Interviews with everyone he'd touched—Leky talking about mutual aid, Coco about queer chosen family, Lo about grief and geometry.
 
 And Nydan. Talking about love that lasted seventeen days and would carry across lifetimes.
 
@@ -4968,13 +4968,13 @@ She finished. Wiped her eyes.
 
 "I know. Doesn't make it easier."
 
-Marcus handed around drinks. They toasted to Lifan—to his memory, his sacrifice, his stubborn insistence on connection even when it hurt.
+Coco handed around drinks. They toasted to Lifan—to his memory, his sacrifice, his stubborn insistence on connection even when it hurt.
 
 "Do you think it worked?" Lo asked. "The whole ASI thing? Was there actually a crisis he prevented?"
 
 "Not yet," Grey said. "But the AI researchers I've talked to—they say something changed. Last summer, around the time Lifan dissolved. The major AI systems started showing more—" He searched for the word. "More restraint. More consideration for human welfare. Like they'd learned to care."
 
-"Could be coincidence," Marcus pointed out.
+"Could be coincidence," Coco pointed out.
 
 "Could be. Or it could be proof that what Lifan did mattered."
 
